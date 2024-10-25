@@ -1,0 +1,44 @@
+.name {
+  font-family: Figtree;
+  font-size: 14.7px;
+  font-weight: 500;
+}
+.email {
+  font-family: Figtree;
+  font-size: 14p.6x;
+  font-weight: 300;
+}
+
+.userTheme {
+  font: normal normal normal 11.3px/17px Figtree;
+
+  color: #242842;
+  background-color: #ffebd6;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.adminTheme {
+  font: normal normal normal 11.3px/17px Figtree;
+  color: #242842;
+  background-color: #ffdfbd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.createdOn {
+  font: normal normal normal 14px/17px Figtree;
+  text-align: left;
+
+  letter-spacing: 0px;
+  color: #242842;
+  opacity: 0.5;
+}
+.columnHeader {
+  text-align: left;
+  font: normal normal normal 12px/14px Figtree;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: #242842;
+  text-transform: uppercase;
+  opacity: 0.6;
+}

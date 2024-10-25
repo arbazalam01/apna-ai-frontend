@@ -1,0 +1,17 @@
+.reset_btn{
+    margin-top: 10;
+    background-color: white;
+    font-size: 0.9rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #999999;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+.reset_btn:hover{
+
+    /* color: #e5e7e7; */
+    color: #6a6a6a;
+ 
+}

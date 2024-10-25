@@ -1,0 +1,26 @@
+.container_theme {
+  /* background-color: #d2d2d2 !important; */
+  /* height:1rem; */
+  border-radius: 0.18rem;
+  /* padding: 0.11rem; */
+  
+}
+
+.content_status_created {
+  font-size: 0.75rem;
+  background-color: #d6f4be;
+  color: #000;
+  border-radius: 0.2rem;
+  padding: 0.35rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.content_status_pending {
+  font-size: 0.75rem;
+  background-color: #ffe4b2;
+  color: #000;
+  border-radius: 0.2rem;
+  padding: 0.35rem 1.5rem;
+  text-transform: uppercase;
+
+}

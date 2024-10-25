@@ -1,0 +1,19 @@
+.icon_url {
+  letter-spacing: 0px;
+  font-size: 0.75rem !important;
+  color: #747474e1;
+  display: flex;
+
+  align-self: center;
+  /* opacity: 0.5; */
+}
+.followers{
+    font-weight: 600;
+letter-spacing: 0px;
+color: #242842;
+font-size: 0.8rem;
+/* opacity: 1; */
+}
+.company_sector{
+  width: 78%;
+}

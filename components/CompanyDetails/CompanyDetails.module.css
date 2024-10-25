@@ -1,0 +1,29 @@
+.chatbot{
+
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #3b3bb6;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display:flex;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 22px;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+.chatbotHeader{
+    background-color: #3b3bb6;
+    color: #fff;
+    font-family: Figtree;
+    font-size: 1.35rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+  }

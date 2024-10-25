@@ -1,0 +1,31 @@
+/* NAME COMPONENT */
+.company_name{
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+}
+
+ .company_sector{
+
+    margin-bottom: 1rem;
+    font-size: 0.8rem !important;
+
+  }
+
+  /* SOCIAL */
+.icon_url {
+    letter-spacing: 0px;
+    color: #747474e1;
+    font-size:1rem;
+    /* opacity: 0.5; */
+  }
+  .followers{
+    font-size:0.9rem;
+
+      font-weight: 600;
+  letter-spacing: 0px;
+  color: #242842;
+  /* opacity: 1; */
+  }
+ 
+
+  
