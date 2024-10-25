@@ -2,7 +2,6 @@ import React from 'react';
 import { ChevronDown, Calendar } from 'lucide-react';
 
 const InsightData = () => {
-  // Sample data structure
   const csvData = {
     "happySalesCSV": {
       "csv name": "happy",
@@ -61,13 +60,13 @@ const InsightData = () => {
             <div className="flex justify-between items-center">
               <span className="text-gray-700 font-semibold">{segment.segmentName}</span>
               <ChevronDown 
-                className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'transform rotate-180' : ''}`}
+                className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
               />
             </div>
           </button>
 
           {isOpen && (
-            <div className="absolute z-20 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
+            <div className="absolute z-20 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 transition-all ease-in-out">
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
                   <div className="text-xs text-gray-500">Demographic Name</div>
@@ -106,13 +105,13 @@ const InsightData = () => {
             <div className="flex justify-between items-center">
               <span className="text-lg font-medium text-gray-900">{data["csv name"]}</span>
               <ChevronDown 
-                className={`w-5 h-5 text-gray-500 transition-transform ${isOpen ? 'transform rotate-180' : ''}`}
+                className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
               />
             </div>
           </button>
 
           {isOpen && (
-            <div className="mt-3 bg-gray-50 border border-gray-200 rounded-lg p-5">
+            <div className="mt-3 bg-gray-50 border border-gray-200 rounded-lg p-5 transition-all ease-in-out">
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-4 h-4 text-gray-500" />

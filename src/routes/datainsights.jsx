@@ -9,7 +9,7 @@ const DataInsights = () => {
   const { companyId } = useParams();
   const { data, error, isLoading, isError } = useCompanyCompetitor(companyId);
 
-  if (isLoading) return <Loader />;
+  // if (isLoading) return <Loader />;
 
   return (
     <div className="w-full min-h-screen p-4">
@@ -20,6 +20,7 @@ const DataInsights = () => {
         <div className="w-full">
           <InsightData />
         </div>
+        Hii
       </div>
     </div>
   );
