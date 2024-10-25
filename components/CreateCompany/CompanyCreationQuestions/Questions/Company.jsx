@@ -14,7 +14,7 @@ const Company = ({ nextStep }) => {
           </Grid>
           <Grid>
             <Typography variant="smallGreyHeading1">
-              Our AI will analyze your platforms to gather information about your offerings, target industries, strengths, positioning, and anything else we can find.
+              Our AI will analyze your platforms to gather information about your offerings, Target Audience, strengths, positioning, and anything else we can find.
             </Typography>
           </Grid>
          

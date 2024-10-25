@@ -13,7 +13,6 @@ import IndustryTheme from "./BrandAwarenessQuestions/Questions/IndustryTheme";
 import Review from "./BrandAwarenessQuestions/Questions/Review";
 import StrengthPositioning from "./BrandAwarenessQuestions/Questions/StrengthPositioning";
 import Loader from "../Loader";
-import { DevTool } from "@hookform/devtools";
 
 const ThoughtLeadershipCampaign = ({
   Objective,

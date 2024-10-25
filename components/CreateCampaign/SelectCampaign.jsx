@@ -44,16 +44,6 @@ const SelectCampaign = ({selectedObj, setSelectedObj}) => {
         "Build awareness around a specific product or service, and how it addresses your users’ pain points and motivations.",
     },
     {
-      name: "Thought Leadership",
-      description:
-        "Create content around trending industry themes to establish your brand as a thought leader.",
-    },
-    {
-      name: "Email Campaign",
-      description:
-        "Squeeze the most out of email marketing with an extensive, hyper-personalised email campaign.",
-    },
-    {
       name: "Event Promotion",
       description: "Build awareness and excitement around an upcoming event.",
     },

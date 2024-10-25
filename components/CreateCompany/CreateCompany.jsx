@@ -423,7 +423,7 @@ const SectionInput = ({
             )}
           />
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Controller
             name={`${name}.linkedinUrl`}
             control={control}
@@ -445,7 +445,7 @@ const SectionInput = ({
               />
             )}
           />
-        </Grid>
+        </Grid> */}
         {isDelete && (
           <Grid item xs={12} md={2}>
             <IconButton aria-label="delete" onClick={() => handleDelete(index)}>

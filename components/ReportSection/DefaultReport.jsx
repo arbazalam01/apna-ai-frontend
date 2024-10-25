@@ -45,7 +45,7 @@ const DefaultReport = () => {
         )
       }
       {
-        section === "Target Industries" && (
+        section === "Target Audience" && (
           <Grid item xs={12}>
             <MainIndustriesDrawer />
           </Grid>

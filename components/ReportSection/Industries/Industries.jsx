@@ -15,7 +15,7 @@ const Industries = () => {
   return (
     <Box>
       <Typography variant="MainHeading">
-        Target Industries
+        Target Audience
       </Typography>
       <Grid container direction="column" mt={1} >
         {companyIndustries?.slice(0, 5).map((item,index,array) => (

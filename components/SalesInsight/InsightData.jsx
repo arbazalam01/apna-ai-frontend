@@ -52,14 +52,14 @@ const InsightData = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-      <div className="ml-8 mb-2">
+      <div className="ml-6 mb-3">
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2 text-left shadow-sm hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-left shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           >
             <div className="flex justify-between items-center">
-              <span className="text-gray-700">{segment.segmentName}</span>
+              <span className="text-gray-700 font-semibold">{segment.segmentName}</span>
               <ChevronDown 
                 className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'transform rotate-180' : ''}`}
               />
@@ -67,26 +67,24 @@ const InsightData = () => {
           </button>
 
           {isOpen && (
-            <div className="absolute z-20 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg">
-              <div className="p-4">
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <div className="text-sm text-gray-500">Demographic Name</div>
-                    <div className="font-medium text-gray-900">{segment.demographicName}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500">Buying Pattern</div>
-                    <div className="font-medium text-gray-900">{segment["Buying pattern"]}</div>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <div className="text-sm text-gray-500">Product Category</div>
-                  <div className="font-medium text-gray-900">{segment["Product Category"]}</div>
+            <div className="absolute z-20 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <div className="text-xs text-gray-500">Demographic Name</div>
+                  <div className="font-medium text-gray-900">{segment.demographicName}</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500">Analysis Description</div>
-                  <div className="text-gray-700">{segment.analysisDescription}</div>
+                  <div className="text-xs text-gray-500">Buying Pattern</div>
+                  <div className="font-medium text-gray-900">{segment["Buying pattern"]}</div>
                 </div>
+              </div>
+              <div className="mb-3">
+                <div className="text-xs text-gray-500">Product Category</div>
+                <div className="font-medium text-gray-900">{segment["Product Category"]}</div>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500">Analysis Description</div>
+                <div className="text-gray-700">{segment.analysisDescription}</div>
               </div>
             </div>
           )}
@@ -99,7 +97,7 @@ const InsightData = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-      <div className="mb-4">
+      <div className="mb-6">
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -114,7 +112,7 @@ const InsightData = () => {
           </button>
 
           {isOpen && (
-            <div className="mt-1 bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <div className="mt-3 bg-gray-50 border border-gray-200 rounded-lg p-5">
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-4 h-4 text-gray-500" />
@@ -125,7 +123,7 @@ const InsightData = () => {
                 </div>
               </div>
               
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="text-sm font-medium text-gray-500 mb-2">Segments</div>
                 {data.segments.map((segment, index) => (
                   <SegmentDropdown key={index} segment={segment} />
@@ -139,7 +137,7 @@ const InsightData = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4">
+    <div className="w-full max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow">
       {Object.entries(csvData).map(([name, data]) => (
         <CSVDropdown key={name} name={name} data={data} />
       ))}

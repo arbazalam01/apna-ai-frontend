@@ -125,7 +125,7 @@ export default function ContentThemes() {
       <Grid item container xs={12}>
         <Grid>
           <Typography variant="AvgHeading">
-            Choose up to 3 themes to build your campaign around.
+            Choose up to 3 segments to build your campaign around.
           </Typography>
         </Grid>
         <Grid ml={6.5} alignContent={"center"}>

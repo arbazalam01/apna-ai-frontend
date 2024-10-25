@@ -41,7 +41,8 @@ const UploadSales = () => {
   };
 
   return (
-    <Box justifyContent="center" alignItems="center" sm={{ padding: 3 }} mt={2} width="70%">
+    <div className="w-2xl mx-4 p-2 bg-white">
+          <Box justifyContent="center" alignItems="center" sm={{ padding: 3 }} mt={2} width="70%">
       <div
         style={{
 
@@ -74,6 +75,7 @@ const UploadSales = () => {
         </Button>
       </div>
     </Box>
+    </div>
   );
 };
 

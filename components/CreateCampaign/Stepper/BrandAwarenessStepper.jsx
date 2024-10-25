@@ -17,7 +17,7 @@ const BrandAwarenessStepper = ({ quesnumber, customCampaign }) => {
 
   const [data, setData] = useState([
     { title: "Duration", description: "" },
-    { title: "Target Industries", description: "" },
+    { title: "Target Audience", description: "" },
     { title: "Content Themes", description: "" },
     { title: "Content Formats", description: "" },
     { title: "Content Mix", description: "" },
@@ -54,7 +54,7 @@ const BrandAwarenessStepper = ({ quesnumber, customCampaign }) => {
         description: duration,
       },
       {
-        title: "Target Industries",
+        title: "Target Audience",
         description: values[2]
         ? values[2].join(", ") // Handles the array of strings ["Fintech", "EdTech"]
         : "",

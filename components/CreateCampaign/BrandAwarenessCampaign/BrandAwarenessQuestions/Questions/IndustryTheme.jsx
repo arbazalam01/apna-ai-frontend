@@ -34,7 +34,7 @@ const IndustryTheme = ({ handleQuestion, industryData }) => {
           {/* <Typography variant="caption2">Industry Themes</Typography>
           <br /> */}
           <Typography variant="AvgHeading">
-          Which industries do you want to target?
+          Which Audience Insight do you want to target?
           </Typography>
 
           {/* Checkbox group */}

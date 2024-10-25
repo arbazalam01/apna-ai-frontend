@@ -193,30 +193,7 @@ const SectionInput = ({
           {/* Button to delete this section */}
         </Grid>
 
-        <Grid item xs={4}>
-          <Controller
-            name={`${name}.linkedinUrl`}
-            control={control}
-            defaultValue=""
-            rules={{
-              pattern: {
-                value: /^(https?:\/\/)?(www\.)?linkedin\.com\/.*$/,
-                message: "Enter a valid LinkedIn URL",
-              },
-            }}
-            render={({ field , fieldState }) => (
-              <TextField
-                {...field}
-                label="Company Linkedin URL"
-                variant="outlined"
-                fullWidth
-                error={!!fieldState.error}
-                helperText={fieldState.error ? fieldState.error.message : null}
-              />
-            )}
-          />
-          {/* Button to delete this section */}
-        </Grid>
+
 
         {isDelete && (
           <Grid item xs={12} md={2}>

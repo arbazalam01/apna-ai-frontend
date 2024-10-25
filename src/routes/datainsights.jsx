@@ -1,4 +1,3 @@
-import { Grid, Box, Typography } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import useCompanyCompetitor from "@hooks/useCompanyCompetitor";
@@ -13,14 +12,16 @@ const DataInsights = () => {
   if (isLoading) return <Loader />;
 
   return (
-    <Grid container justifyContent="center">
-      <Grid item xs={12} md={6} lg={6}>
-        <UploadSales />
-      </Grid>
-      <Grid>
-        <InsightData />
-      </Grid>
-    </Grid>
+    <div className="w-full min-h-screen p-4">
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-6">
+        <div className="w-full">
+          <UploadSales />
+        </div>
+        <div className="w-full">
+          <InsightData />
+        </div>
+      </div>
+    </div>
   );
 };
 
