@@ -245,7 +245,7 @@ console.log("selectedObj industryData", industryData);
         </FormProvider>
         </>
       )}
-      {/* <DevTool control={control} /> */}
+      <DevTool control={control} />
     </>
   );
 };
