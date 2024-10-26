@@ -29,7 +29,7 @@ const UploadSales = () => {
       formData.append("file", currFile);
       formData.append("companyId", companyId);
 
-      await api.post("http://localhost.com/segment", formData, {
+      await api.post("http://localhost:3000/usersegments/createUserSegment", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       // handle success (e.g., display a success message)

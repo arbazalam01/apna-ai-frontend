@@ -1,7 +1,10 @@
 import React from 'react';
 import { ChevronDown, Calendar } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const InsightData = () => {
+  // Sample data structure
   const csvData = {
     "happySalesCSV": {
       "csv name": "happy",
@@ -51,44 +54,36 @@ const InsightData = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-      <div className="ml-6 mb-3">
-        <div className="relative">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-left shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-          >
-            <div className="flex justify-between items-center">
-              <span className="text-gray-700 font-semibold">{segment.segmentName}</span>
-              <ChevronDown 
-                className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-              />
-            </div>
-          </button>
-
-          {isOpen && (
-            <div className="absolute z-20 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 transition-all ease-in-out">
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <div className="text-xs text-gray-500">Demographic Name</div>
-                  <div className="font-medium text-gray-900">{segment.demographicName}</div>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-500">Buying Pattern</div>
-                  <div className="font-medium text-gray-900">{segment["Buying pattern"]}</div>
-                </div>
-              </div>
-              <div className="mb-3">
-                <div className="text-xs text-gray-500">Product Category</div>
-                <div className="font-medium text-gray-900">{segment["Product Category"]}</div>
+      <Card className="mb-4 shadow-md"> {/* Added shadow-md for subtle shadow */}
+        <CardHeader className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+          <CardTitle className="text-sm font-medium flex justify-between items-center">
+            {segment.segmentName}
+            <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'transform rotate-180' : ''}`} />
+          </CardTitle>
+        </CardHeader>
+        {isOpen && (
+          <CardContent>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <div>
+                <div className="text-xs text-muted-foreground">Demographic Name</div>
+                <div className="font-medium">{segment.demographicName}</div>
               </div>
               <div>
-                <div className="text-xs text-gray-500">Analysis Description</div>
-                <div className="text-gray-700">{segment.analysisDescription}</div>
+                <div className="text-xs text-muted-foreground">Buying Pattern</div>
+                <div className="font-medium">{segment["Buying pattern"]}</div>
               </div>
             </div>
-          )}
-        </div>
-      </div>
+            <div className="mb-3">
+              <div className="text-xs text-muted-foreground">Product Category</div>
+              <div className="font-medium">{segment["Product Category"]}</div>
+            </div>
+            <div>
+              <div className="text-xs text-muted-foreground">Analysis Description</div>
+              <div className="text-sm">{segment.analysisDescription}</div>
+            </div>
+          </CardContent>
+        )}
+      </Card>
     );
   };
 
@@ -96,50 +91,64 @@ const InsightData = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-      <div className="mb-6">
-        <div className="relative">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-left shadow-sm hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-          >
-            <div className="flex justify-between items-center">
-              <span className="text-lg font-medium text-gray-900">{data["csv name"]}</span>
-              <ChevronDown 
-                className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-              />
-            </div>
-          </button>
-
-          {isOpen && (
-            <div className="mt-3 bg-gray-50 border border-gray-200 rounded-lg p-5 transition-all ease-in-out">
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Calendar className="w-4 h-4 text-gray-500" />
-                  <span className="text-sm text-gray-500">Date Range</span>
-                </div>
-                <div className="font-medium text-gray-900">
-                  {data["start date"]} - {data["end date"]}
-                </div>
+      <Card className="mt-6 mb-6 shadow-lg" style={{
+         boxShadow:'0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+         marginTop:'10px',
+         marginBottom:'10px'
+      }}> {/* Added shadow-lg for more pronounced shadow */}
+        <CardHeader className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+          <CardTitle className="text-lg font-medium flex justify-between items-center">
+            {data["csv name"]}
+            <ChevronDown className={`w-5 h-5 transition-transform ${isOpen ? 'transform rotate-180' : ''}`} />
+          </CardTitle>
+        </CardHeader>
+        {isOpen && (
+          <CardContent>
+            <div className="mb-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Calendar className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">Date Range</span>
               </div>
-              
-              <div className="space-y-3">
-                <div className="text-sm font-medium text-gray-500 mb-2">Segments</div>
-                {data.segments.map((segment, index) => (
-                  <SegmentDropdown key={index} segment={segment} />
-                ))}
+              <div className="font-medium">
+                {data["start date"]} - {data["end date"]}
               </div>
             </div>
-          )}
-        </div>
-      </div>
+            
+            <div className="space-y-3">
+              <div className="text-sm font-medium text-muted-foreground mb-2">Segments</div>
+              {data.segments.map((segment, index) => (
+                <SegmentDropdown key={index} segment={segment} />
+              ))}
+            </div>
+          </CardContent>
+        )}
+      </Card>
     );
   };
 
+  // Simulating loading state
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate API call
+    setTimeout(() => setIsLoading(false), 2000);
+  }, []);
+
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow">
-      {Object.entries(csvData).map(([name, data]) => (
-        <CSVDropdown key={name} name={name} data={data} />
-      ))}
+    <div className="w-full shadow-md max-w-2xl pt-6 pb-6"
+    style={{
+      width:'73%',
+    }}>
+      {isLoading ? (
+        <div className="space-y-4">
+          <Skeleton className="h-12 w-full" />
+          <Skeleton className="h-12 w-full" />
+        </div>
+      ) : (
+        Object.entries(csvData).map(([name, data]) => (
+          <CSVDropdown key={name} name={name} data={data} />
+        ))
+      )}
     </div>
   );
 };

@@ -20,7 +20,6 @@ const DataInsights = () => {
         <div className="w-full">
           <InsightData />
         </div>
-        Hii
       </div>
     </div>
   );
