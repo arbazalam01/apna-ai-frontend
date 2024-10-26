@@ -39,9 +39,9 @@ const UploadProspects = () => {
       setUploading(true);
       const formData = new FormData();
       formData.append("file", currFile);
-      formData.append("product",guidelines.product)
-      formData.append("objectives",guidelines.objectives)
-      formData.append("numberOfEmails",guidelines.numberOfEmails)
+      formData.append("product", guidelines.product);
+      formData.append("objectives", guidelines.objectives);
+      formData.append("numberOfEmails", guidelines.numberOfEmails);
       // console.log("CurrFile------->", currFile);
       // formData.append("companyId", companyId);
 
@@ -62,11 +62,11 @@ const UploadProspects = () => {
           key: prospect._id,
           prospectname: prospect.name,
           email: prospect.email,
-          role: prospect.title,
-          company: prospect.companyName,
-          designation: prospect.title,
+          // role: prospect.title,
+          // company: prospect.companyName,
+          // designation: prospect.title,
           prospectId: prospect._id,
-          industry: prospect.industry,
+          // industry: prospect.industry,
         };
       });
       setProspectUploadDialog(false);

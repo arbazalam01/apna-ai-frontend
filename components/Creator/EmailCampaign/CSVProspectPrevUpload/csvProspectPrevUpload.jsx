@@ -94,11 +94,11 @@ export default function CSVProspectPrevUpload() {
         key: prospect._id,
         prospectname: prospect.name,
         email: prospect.email,
-        role: prospect.title,
-        company: prospect.companyName,
-        designation: prospect.title,
+        // role: prospect.title,
+        // company: prospect.companyName,
+        // designation: prospect.title,
         prospectId: prospect._id,
-        industry: prospect.industry,
+        // industry: prospect.industry,
       };
     });
     setPrsopectList(updatedProspectList);
