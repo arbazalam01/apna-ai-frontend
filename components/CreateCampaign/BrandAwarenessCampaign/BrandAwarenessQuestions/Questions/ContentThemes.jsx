@@ -33,17 +33,17 @@ export default function ContentThemes() {
   const [left, setLeft] = useState([]); // Available themes from the API
   const [right, setRight] = useState([]); // Selected themes
 
-  const Industry = getValues("industryThemes");
+  const Segment = getValues("selectsegments");
 
   // Fetch themes from API
   const { data, isLoading, refetch } = useQuery({
-    queryKey: ["AiThemes", Industry],
+    queryKey: ["AiThemes",Segment],
     queryFn: () =>
       api.post("/calendar/getThemes", {
-        industries: Industry, // The selected industries
+        segment: Segment, // The selected industries
         companyId,
       }),
-    enabled: !!Industry, // Ensure industryData is available before fetching
+    enabled: !!Segment, // Ensure industryData is available before fetching
     
   });
 
