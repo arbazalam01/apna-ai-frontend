@@ -34,16 +34,7 @@ const AppLayout = () => {
           Sign Up
         </Link>
       </Text>
-      <Text
-        style={{
-          fontSize: "18px",
-          fontWeight: "400",
-          textAlign: "center",
-          marginBottom: "20px",
-        }}
-      >
-        copyright shaiping inc .
-      </Text>
+      
       {/* <FooterComponent /> */}
     </Layout>
   );
