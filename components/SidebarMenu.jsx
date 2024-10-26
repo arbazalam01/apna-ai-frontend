@@ -260,7 +260,6 @@ const SidebarMenu = () => {
 
       default:
         navigate(`/${companyId}/company-details`);
-
         break;
     }
   };
