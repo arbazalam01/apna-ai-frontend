@@ -7,7 +7,7 @@ const InsightHeader = () => {
   return (
     <Grid container bgcolor={"#fff"} alignItems="center">
       <Grid item xs={6} bgcolor={"transparent"}>
-        <Typography variant="Heading-head">Segment Insights</Typography>
+        <Typography variant="Heading-head">User Segmentation</Typography>
       </Grid>
     </Grid>
   );

@@ -423,10 +423,11 @@ const SidebarMenu = () => {
         <List sx={{ padding: open ? "5px 5px" : "5px 0px"}}>
           {[
             "Overview",
+            "Insights",
             "Reports",
             "Campaigns",
             "Creator",
-            "Insights",
+            
           ].map((label, index) => (
             <ListItem
               key={index}
