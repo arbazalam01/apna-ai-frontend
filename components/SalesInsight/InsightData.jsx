@@ -5,6 +5,7 @@ import useCompanyId from "@hooks/useCompanyId";
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import axios from 'axios';
+import { Typography } from '@mui/material';
 
 // API call function
 const fetchUserSegments = async (companyId) => {
@@ -60,7 +61,7 @@ const CSVDropdown = ({ name, data }) => {
 
   return (
     <Card
-      className="mt-6 mb-6 shadow-lg"
+      className="m-8 shadow-lg"
       style={{ boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)' }}
     >
       <CardHeader className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
@@ -116,6 +117,9 @@ const InsightData = () => {
       className="w-full shadow-md max-w-2xl pt-6 pb-6"
       style={{ width: '73%' }}
     >
+      <Typography variant="AvgHeading">
+        Your User Segments
+      </Typography>
       {data.map((segmentData, index) => (
         <CSVDropdown key={index} name={segmentData.name} data={segmentData} />
       ))}

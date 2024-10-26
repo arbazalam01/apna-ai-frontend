@@ -152,7 +152,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <MUITheme>
           <RouterProvider router={router} />
         </MUITheme>
-        <ReactQueryDevtools />
+        {/* <ReactQueryDevtools /> */}
       </QueryClientProvider>
     </GoogleOAuthProvider>
   </React.StrictMode>
