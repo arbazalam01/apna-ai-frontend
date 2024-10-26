@@ -113,7 +113,7 @@ const ProspectTable = () => {
     }
     setIsLoading(false);
     openNotificationWithIcon("success");
-   // setTabValue("preview&export");
+   setTabValue("preview&export");
   };
   return (
     <>
