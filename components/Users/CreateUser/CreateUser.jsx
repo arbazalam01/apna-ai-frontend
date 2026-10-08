@@ -69,7 +69,7 @@ const CreateUser = ({ open, onClose }) => {
               mt: 4,
             }}
           >
-            <Grid container item xs={8}>
+            <Grid container size={8}>
               <Typography
                 id="title"
                 component="h5"
@@ -84,7 +84,7 @@ const CreateUser = ({ open, onClose }) => {
               </Typography>
             </Grid>
 
-            <Grid container item xs={4}>
+            <Grid container size={4}>
               <Button
                 type="submit"
                 variant="contained"

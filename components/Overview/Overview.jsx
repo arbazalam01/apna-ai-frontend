@@ -10,11 +10,19 @@ export default function Overview() {
 
   return (
     <>
-      <Grid container height={"calc(100vh - 80px)"}>
-        <Grid item lg={6} borderRight={"1px solid #D2D2D2"}>
+      <Grid container sx={{
+        height: "calc(100vh - 80px)"
+      }}>
+        <Grid
+          sx={{
+            borderRight: "1px solid #D2D2D2"
+          }}
+          size={{
+            lg: 6
+          }}>
           <Report /> {/* <Recommend/> */}
         </Grid>
-        <Grid item xs={4.2}>
+        <Grid size={4.2}>
           {" "}
           <Campaign />{" "}
         </Grid>

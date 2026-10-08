@@ -27,10 +27,14 @@ const MainSEODrawer = ({ title }) => {
     <>
       <Grid>
         <Box>
-          <Grid container columnSpacing={2} p={3}>
+          <Grid container columnSpacing={2} sx={{
+            p: 3
+          }}>
             {companyTopSEO?.map((core, index) => (
-              <Grid item key={index}>
-                <Typography mb={2}>
+              <Grid key={index}>
+                <Typography sx={{
+                  mb: 2
+                }}>
                   <Chip
                     label={core}
                     size="medium"

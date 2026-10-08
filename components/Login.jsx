@@ -199,19 +199,23 @@ const Login = () => {
               <Typography variant="body1" sx={{ m: 2, align: "center" }}>
                 Enter the 6-digit OTP sent to your email
               </Typography>
-              <Grid container spacing={1} justifyContent="center">
+              <Grid container spacing={1} sx={{
+                justifyContent: "center"
+              }}>
                 {otpDigits.map((digit, index) => (
-                  <Grid item key={index} xs={2}>
+                  <Grid key={index} size={2}>
                     <TextField
                       inputRef={(el) => (otpInputsRef.current[index] = el)}
-                      inputProps={{
-                        maxLength: 1,
-                        style: { textAlign: "center", fontSize: "1.5rem" },
-                      }}
                       value={digit}
                       onChange={(e) => handleOtpChange(index, e)}
                       onKeyDown={(e) => handleKeyDown(index, e)}
                       autoFocus={index === 0}
+                      slotProps={{
+                        htmlInput: {
+                          maxLength: 1,
+                          style: { textAlign: "center", fontSize: "1.5rem" },
+                        }
+                      }}
                     />
                   </Grid>
                 ))}
@@ -229,7 +233,7 @@ const Login = () => {
               >
                 Log In
               </Button>
-              <Grid item sx={{ marginTop: "0.5rem" }}>
+              <Grid sx={{ marginTop: "0.5rem" }}>
                 <Link
                   component="button"
                   variant="body2"

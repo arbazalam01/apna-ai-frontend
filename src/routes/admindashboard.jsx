@@ -39,7 +39,12 @@ export default function AdminDashboard() {
 
   if (isPending)
     return (
-      <Grid p={8} container alignContent={"center"}>
+      <Grid
+        container
+        sx={{
+          p: 8,
+          alignContent: "center"
+        }}>
         <Skeleton active />
         <Skeleton active />
         <Skeleton active />
@@ -93,11 +98,12 @@ export default function AdminDashboard() {
       name: customer.companyName,
       names: (
         <Grid
-          display={"flex"}
-          alignContent={"center"}
-          alignItems={"center"}
-          gap={1.5}
-        >
+          sx={{
+            display: "flex",
+            alignContent: "center",
+            alignItems: "center",
+            gap: 1.5
+          }}>
           {scrapingStatus} {customer.companyName}
         </Grid>
       ),

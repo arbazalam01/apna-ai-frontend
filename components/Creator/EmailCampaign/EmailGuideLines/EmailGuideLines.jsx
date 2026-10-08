@@ -86,14 +86,15 @@ const EmailGuideLines = () => {
       <Grid
         container
         spacing={2}
-        alignItems="center"
-        sx={{ p: "2rem 3rem 1rem 3rem" }}
-      >
+        sx={{
+          alignItems: "center",
+          p: "2rem 3rem 1rem 3rem"
+        }}>
         <Grid container>
-          <Grid xs={2}>
+          <Grid size={2}>
             <Typography style={guidelineTheme}>OBJECTIVES</Typography>
           </Grid>
-          <Grid xs={7}>
+          <Grid size={7}>
             <Controller
               name="objectives"
               control={control}
@@ -125,11 +126,13 @@ const EmailGuideLines = () => {
         </Grid>
 
         {selectedObjective === "Product Engagement" && (
-          <Grid container mt={1}>
-            <Grid xs={2}>
+          <Grid container sx={{
+            mt: 1
+          }}>
+            <Grid size={2}>
               <Typography style={guidelineTheme}>PRODUCT</Typography>
             </Grid>
-            <Grid xs={7}>
+            <Grid size={7}>
               <Controller
                 name="product"
                 control={control}
@@ -159,11 +162,13 @@ const EmailGuideLines = () => {
 
         {selectedObjective === "Event Led" && (
           <>
-            <Grid container mt={1}>
-              <Grid xs={2}>
+            <Grid container sx={{
+              mt: 1
+            }}>
+              <Grid size={2}>
                 <Typography style={guidelineTheme}>DATE</Typography>
               </Grid>
-              <Grid xs={7}>
+              <Grid size={7}>
                 <Controller
                   name="date"
                   control={control}
@@ -184,11 +189,13 @@ const EmailGuideLines = () => {
                 />
               </Grid>
             </Grid>
-            <Grid container mt={1}>
-              <Grid xs={2}>
+            <Grid container sx={{
+              mt: 1
+            }}>
+              <Grid size={2}>
                 <Typography style={guidelineTheme}>EVENT NAME</Typography>
               </Grid>
-              <Grid xs={7}>
+              <Grid size={7}>
                 <Controller
                   name="eventName"
                   control={control}
@@ -206,11 +213,13 @@ const EmailGuideLines = () => {
                 />
               </Grid>
             </Grid>
-            <Grid container mt={1}>
-              <Grid xs={2}>
+            <Grid container sx={{
+              mt: 1
+            }}>
+              <Grid size={2}>
                 <Typography style={guidelineTheme}>EVENT THEME</Typography>
               </Grid>
-              <Grid xs={7}>
+              <Grid size={7}>
                 <Controller
                   name="eventTheme"
                   control={control}
@@ -231,11 +240,13 @@ const EmailGuideLines = () => {
           </>
         )}
 
-        <Grid container mt={1}>
-          <Grid xs={2}>
+        <Grid container sx={{
+          mt: 1
+        }}>
+          <Grid size={2}>
             <Typography style={guidelineTheme}>NUMBER OF EMAILS</Typography>
           </Grid>
-          <Grid xs={7}>
+          <Grid size={7}>
             <Controller
               name="numberOfEmails"
               control={control}
@@ -255,9 +266,15 @@ const EmailGuideLines = () => {
 
       <Divider />
 
-      <Grid container p={"1rem 1rem 2rem 1.8rem"}>
-        <Grid xs={1} mr={4}>
-          <Typography style={guidelineTheme} mb={1}>
+      <Grid container sx={{
+        p: "1rem 1rem 2rem 1.8rem"
+      }}>
+        <Grid sx={{
+          mr: 4
+        }} size={1}>
+          <Typography style={guidelineTheme} sx={{
+            mb: 1
+          }}>
             Word Count
           </Typography>
           <Controller
@@ -268,8 +285,10 @@ const EmailGuideLines = () => {
             )}
           />
         </Grid>
-        <Grid xs={5}>
-          <Typography style={guidelineTheme} mb={1}>
+        <Grid size={5}>
+          <Typography style={guidelineTheme} sx={{
+            mb: 1
+          }}>
             Additional Instructions
           </Typography>
 

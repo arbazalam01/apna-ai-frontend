@@ -33,7 +33,7 @@ const MarketPosition = ({ tableData }) => {
       <Row style={{ padding: "10px 30px" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.CorePurposeFields.map((columnItem, index) => (
                 <TableContent key={index} item={columnItem} />
               ))}
@@ -56,7 +56,7 @@ const MarketPosition = ({ tableData }) => {
       <Row style={{ padding: "10px 30px" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.PositioningFields.map((columnItem, index) => (
                 <TableContent key={index} item={columnItem} />
               ))}
@@ -79,7 +79,7 @@ const MarketPosition = ({ tableData }) => {
       <Row style={{ padding: "10px 30px" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.KeyDifferentiatorsFields.map(
                 (columnItem, index) => (
                   <TableContent key={index} item={columnItem} />
@@ -104,7 +104,7 @@ const MarketPosition = ({ tableData }) => {
       <Row style={{ padding: "10px 30px" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.SWOTAnalysisFields.map((columnItem, index) => (
                 <TableContent key={index} item={columnItem} />
               ))}

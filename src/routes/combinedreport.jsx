@@ -5,14 +5,13 @@ import MainCombinedReportComp from "../../components/CombinedReport/MainCombined
 
 const Combinedreport = () => {
   return (
-<Grid>
-    
-    <Grid item xs={12} >
-      <MainCombinedReportComp/>
-    </Grid>
-</Grid>
+    <Grid>
 
-)
+      <Grid size={12}>
+        <MainCombinedReportComp/>
+      </Grid>
+    </Grid>
+  );
 }
 
 

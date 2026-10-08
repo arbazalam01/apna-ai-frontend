@@ -23,10 +23,11 @@ const MainBlogDrawer = ({ title }) => {
 
   return (
     <>
-   
 
-      <Grid container columnSpacing={2} p={3} >
-        <Grid item xs={23}>
+      <Grid container columnSpacing={2} sx={{
+        p: 3
+      }} >
+        <Grid size={23}>
 
         
             <BlogComp />

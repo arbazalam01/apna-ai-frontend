@@ -55,10 +55,12 @@ const Contents = ({ handleQuestion }) => {
       container
      spacing={2}
   
-      justifyContent={"space-between"}
+      sx={{
+        justifyContent: "space-between"
+      }}
   
     >
-      <Grid item xs={12}>
+      <Grid size={12}>
         {/* <Typography variant="caption2">Content Formats</Typography>
         <br /> */}
         <Typography variant="AvgHeading">
@@ -109,7 +111,6 @@ const Contents = ({ handleQuestion }) => {
   
       </Grid>
 
-     
     </Grid>
   );
 };

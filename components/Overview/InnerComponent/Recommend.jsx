@@ -19,12 +19,26 @@ const Recommend = () => {
       {id:4,name:"Create a Persona", url:"/personas"},
     ];
   return (
-    <Grid container pt={3}>
-      <Grid item xs={12} display={"flex"} justifyContent={"space-between"} alignItems={"center"} px={4}>
+    <Grid container sx={{
+      pt: 3
+    }}>
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: 4
+        }}
+        size={12}>
         <Typography variant="MainHeading">Recommended Next Steps</Typography>
         
       </Grid>
-      <Grid item xs={12} px={4} mb={1}>
+      <Grid
+        sx={{
+          px: 4,
+          mb: 1
+        }}
+        size={12}>
         <Typography sx={{ fontSize: "0.9rem" }}>
         Based on your recent activity, here’s some ideas for you:
         </Typography>
@@ -34,9 +48,21 @@ const Recommend = () => {
         <>
           {items.map((item, index) => (
             <React.Fragment key={item.id}>
-              <Grid container  alignItems="center" borderBottom={"1px solid #E5E5E5"} py={0.7} px={3}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  borderBottom: "1px solid #E5E5E5",
+                  py: 0.7,
+                  px: 3
+                }}>
               
-                <Grid item xs={10} display="flex" justifyContent="space-between">
+                <Grid
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between"
+                  }}
+                  size={10}>
                   <Typography variant="body1">{item?.name}</Typography>
                   {/* <Typography variant="smallGreyHeading" fontSize={"0.7rem"}>COMPETITOR</Typography> */}
                 </Grid>
@@ -50,7 +76,11 @@ const Recommend = () => {
                     <ArrowForwardIosIcon fontSize="small" />
                   </IconButton>
                 </Grid> */}
-                <Grid item xs={1.7} textAlign={"right"}>
+                <Grid
+                  sx={{
+                    textAlign: "right"
+                  }}
+                  size={1.7}>
             <IconButton
                       edge="end"
                       aria-label="go"
@@ -68,17 +98,15 @@ const Recommend = () => {
         </>
       ) : (
         <Grid
-          item
           container
-          justifyContent="center"
           sx={{
+            justifyContent: "center",
             justifyContent: "center",
             color: "#d2d2d2",
             fontWeight: "400",
             fontSize: "1.5rem",
-            mt: 10,
-          }}
-        >
+            mt: 10
+          }}>
           No Personas created
         </Grid>
       )}

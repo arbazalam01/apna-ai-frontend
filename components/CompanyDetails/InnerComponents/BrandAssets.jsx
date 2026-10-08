@@ -78,23 +78,47 @@ const BrandAssets = ({ assets }) => {
  
 
   return (
-    <Grid container justifyContent="space-between" alignItems="center" pb={2} borderRadius="15px"> 
-      <Grid item xs={12} p={"0.5rem 1.5rem"} borderRadius="15px">
+    <Grid
+      container
+      sx={{
+        justifyContent: "space-between",
+        alignItems: "center",
+        pb: 2,
+        borderRadius: "15px"
+      }}>
+      <Grid
+        sx={{
+          p: "0.5rem 1.5rem",
+          borderRadius: "15px"
+        }}
+        size={12}>
         <Typography variant="AvgHeading">Brand Assets</Typography>
       </Grid>
-      <Grid item xs={12} mb={2} p={"0rem 1.5rem"}>
+      <Grid
+        sx={{
+          mb: 2,
+          p: "0rem 1.5rem"
+        }}
+        size={12}>
         <Typography variant="caption1">
         Sharing Brochures, Presentations, Marketing materials or other documents with us will help our AI create a richer knowledge base about your business and offerings. Please ensure the assets you add are current and relevant.
 
         </Typography>
       </Grid>
-      <Grid item xs={12} style={{maxHeight: "23rem",overflow: "auto",padding: " 0rem 1rem"}}>
+      <Grid
+        style={{maxHeight: "23rem",overflow: "auto",padding: " 0rem 1rem"}}
+        size={12}>
         {assets && assets.map((value, index) => {
           const formattedValue = value?.filename.replace(/_/g, " ");
           return (
             <Grid key={index} >
               <Grid container>
-                <Grid item xs={11} display="flex" alignItems="center">
+                <Grid
+                  sx={{
+                    display: "flex",
+                    alignItems: "center"
+                  }}
+                  size={11}>
                   <CheckCircleIcon style={{ color: "#90CE53" }} />
                   <Typography
                     style={{
@@ -106,7 +130,12 @@ const BrandAssets = ({ assets }) => {
                     {formattedValue}
                   </Typography>
                 </Grid>
-                <Grid item xs={1} display="flex" alignItems="center">
+                <Grid
+                  sx={{
+                    display: "flex",
+                    alignItems: "center"
+                  }}
+                  size={1}>
                  
                   <CompanyActions
                         handleDelete={() => handleDelete(value.file_id)} 
@@ -114,21 +143,25 @@ const BrandAssets = ({ assets }) => {
                       />
                 </Grid>
                  </Grid>
-               {index !== assets?.length - 1 && (
-                <Divider
-                  textAlign="center"
-                  sx={{
-                    borderColor: "#eeeeee",
-                    margin: "1rem 0.5rem",
-                    width: "90%",
-                  }}
-                />
-              )}
+              {index !== assets?.length - 1 && (
+               <Divider
+                 textAlign="center"
+                 sx={{
+                   borderColor: "#eeeeee",
+                   margin: "1rem 0.5rem",
+                   width: "90%",
+                 }}
+               />
+             )}
             </Grid>
           );
         })}
       </Grid>
-      <Grid item mt={1} p={"0.5rem 1.5rem"}>
+      <Grid
+        sx={{
+          mt: 1,
+          p: "0.5rem 1.5rem"
+        }}>
         <Upload {...props} maxCount={5}
       multiple>
           <Button variant="button2">Add Assets</Button>

@@ -17,8 +17,15 @@ const Name = ({ companyAbout, topTrends }) => {
     <>
       <Grid container>
 
-          <Grid item xs={12} container direction="column">
-            <Grid width={"100%"} borderBottom={"1px solid #0000001f"} pl={4} pb={1} pr={1}>
+          <Grid container direction="column" size={12}>
+            <Grid
+              sx={{
+                width: "100%",
+                borderBottom: "1px solid #0000001f",
+                pl: 4,
+                pb: 1,
+                pr: 1
+              }}>
               <Grid>
 
                 {companyAbout?.about?.companyLogo ? (
@@ -40,7 +47,10 @@ const Name = ({ companyAbout, topTrends }) => {
                 </Typography>
               </Grid> */}
               
-              <Grid item mb={1}>
+              <Grid
+                sx={{
+                  mb: 1
+                }}>
                 <Typography variant="caption" >
                   {companyAbout?.summary}
                 </Typography>
@@ -48,22 +58,26 @@ const Name = ({ companyAbout, topTrends }) => {
             </Grid>
             {/*  */}
             <Grid
-              item
               container
               direction="column"
-              pl={4}
-              pt={1}
-              pb={1}
-              borderBottom={"1px solid #0000001f"}
-            >
-              <Grid item container mt={0.7}>
-                <Grid item xs={1.5}>
+              sx={{
+                pl: 4,
+                pt: 1,
+                pb: 1,
+                borderBottom: "1px solid #0000001f"
+              }}>
+              <Grid
+                container
+                sx={{
+                  mt: 0.7
+                }}>
+                <Grid size={1.5}>
                   <IconWorld size={22} />
                 </Grid>
-                <Grid item xs={2.5}>
+                <Grid size={2.5}>
                   <Typography variant="caption">Website</Typography>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid size={8}>
                 <Typography variant="caption">
   {companyAbout?.websiteUrl ? (
     companyAbout.websiteUrl.startsWith("https://") ? (
@@ -79,16 +93,20 @@ const Name = ({ companyAbout, topTrends }) => {
 </Typography>
                 </Grid>
               </Grid>
-              <Grid item container mt={1}>
+              <Grid
+                container
+                sx={{
+                  mt: 1
+                }}>
                 {/* {companyAbout.about.map((item, index) => (  */}
                 <>
-                  <Grid item xs={1.5}>
+                  <Grid size={1.5}>
                     <IconBrandLinkedin size={22} color="#0A66C2" />
                   </Grid>
-                  <Grid item xs={2.5}>
+                  <Grid size={2.5}>
                     <Typography variant="caption">LinkedIn</Typography>
                   </Grid>
-                  <Grid item xs={8}>
+                  <Grid size={8}>
                       <a href={companyAbout?.about?.linkedin?.handle} target="_blank" style={{color: "#3b3bb6"}}>
                     <Typography variant="caption">
                       <span className={Styles.followers}>
@@ -111,7 +129,12 @@ const Name = ({ companyAbout, topTrends }) => {
             </Grid>
             {/*  */}
 
-            <Grid item  pl={4} pt={1} pr={2}>
+            <Grid
+              sx={{
+                pl: 4,
+                pt: 1,
+                pr: 2
+              }}>
               <Typography variant="caption8">
                 Trending Industry Themes
               </Typography>

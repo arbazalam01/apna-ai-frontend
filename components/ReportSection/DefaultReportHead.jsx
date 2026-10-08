@@ -81,12 +81,12 @@ const DefaultReportHead = ({ handleChange, section }) => {
   return (
     <Grid container>
       <Grid
-        item
-        xs={2}
-        display={"flex"}
-        justifyContent={"center"}
-        borderRight={"1px solid #E5E5E5"}
-      >
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          borderRight: "1px solid #E5E5E5"
+        }}
+        size={2}>
         <ToggleButtonGroup
           value={currCompanyId}
           onChange={handleAlignment}
@@ -109,7 +109,11 @@ const DefaultReportHead = ({ handleChange, section }) => {
           ))}
         </ToggleButtonGroup>
       </Grid>
-      <Grid item xs={10} pt={0.5}>
+      <Grid
+        sx={{
+          pt: 0.5
+        }}
+        size={10}>
         <Box
           sx={{
             flexGrow: 1,

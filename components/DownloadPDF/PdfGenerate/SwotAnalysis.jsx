@@ -34,7 +34,7 @@ const SwotAnalysis = ({ tableData }) => {
       <Row style={{ padding: "10px 30px", backgroundColor: "#e8e8f2" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.StrengthsFields.map((columnItem, index) => (
                 <TableContent
                   key={index}
@@ -61,7 +61,7 @@ const SwotAnalysis = ({ tableData }) => {
       <Row style={{ padding: "10px 30px", backgroundColor: "#f2efe9" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.WeaknessFields.map((columnItem, index) => (
                 <TableContent
                   key={index}
@@ -88,7 +88,7 @@ const SwotAnalysis = ({ tableData }) => {
       <Row style={{ padding: "10px 30px", backgroundColor: "#e0e3da" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.OpportunitiesFields.map((columnItem, index) => (
                 <TableContent
                   key={index}
@@ -114,7 +114,7 @@ const SwotAnalysis = ({ tableData }) => {
       <Row style={{ padding: "10px 30px", backgroundColor: "#f2e9ed" }}>
         {tableData.map((item, index) => (
           <Col span={6} key={index}>
-            <Space direction="vertical" size={20}>
+            <Space orientation="vertical" size={20}>
               {item.columnData.ThreatsFields.map((columnItem, index) => (
                 <TableContent
                   key={index}

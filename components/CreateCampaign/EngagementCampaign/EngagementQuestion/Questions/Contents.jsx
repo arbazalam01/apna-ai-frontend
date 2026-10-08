@@ -45,12 +45,13 @@ const Contents = ({ handleQuestion }) => {
   return (
     <Grid
       container
-      minHeight={"75vh"}
       spacing={2}
-      justifyContent={"space-between"}
-      mb={10}
-    >
-      <Grid item xs={12}>
+      sx={{
+        minHeight: "75vh",
+        justifyContent: "space-between",
+        mb: 10
+      }}>
+      <Grid size={12}>
         <Typography variant="caption2">Content Formats</Typography>
         <br />
         <Typography variant="AvgHeading">
@@ -138,12 +139,12 @@ const Contents = ({ handleQuestion }) => {
 
       {/* Buttons */}
       <Grid
-        item
-        xs={12}
-        display={"flex"}
-        justifyContent={"start"}
-        alignItems={"end"}
-      >
+        sx={{
+          display: "flex",
+          justifyContent: "start",
+          alignItems: "end"
+        }}
+        size={12}>
         <Button variant="button2" onClick={() => handleQuestion("back")}>
           Go Back
         </Button>

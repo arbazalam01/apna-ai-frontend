@@ -180,7 +180,12 @@ const CreateCalendar = ({ open, onClose }) => {
                 // width: "60rem",
               }}
             >
-              <Grid container item xs={7} pl={3}>
+              <Grid
+                container
+                sx={{
+                  pl: 3
+                }}
+                size={7}>
                 <Typography variant="Heading">
                   Creating New Content Calendar
                 </Typography>
@@ -188,15 +193,19 @@ const CreateCalendar = ({ open, onClose }) => {
 
               <Grid
                 container
-                item
-                xs={5}
-                pr={4}
-                display={"flex"}
-                justifyContent={"end"}
-                alignItems={"center"}
-              >
+                sx={{
+                  pr: 4,
+                  display: "flex",
+                  justifyContent: "end",
+                  alignItems: "center"
+                }}
+                size={5}>
                 {loading  ? (
-                  <Box marginTop={"0.5rem"} marginRight={"1.5rem"}>
+                  <Box
+                    sx={{
+                      marginTop: "0.5rem",
+                      marginRight: "1.5rem"
+                    }}>
                     <CircularProgress size={"1.8rem"} />
                   </Box>
                 ) : (
@@ -232,15 +241,21 @@ const CreateCalendar = ({ open, onClose }) => {
             </Grid>
             <Divider />
 
-            <Box pl={5} pt={2}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">
                   Select the Date Range
                 </Typography>
               </FormLabel>
 
-              <Grid container mb={8}>
-                <Grid item xs={5}>
+              <Grid container sx={{
+                mb: 8
+              }}>
+                <Grid size={5}>
                   <FormLabel component="legend" sx={{ marginBottom: 1 }}>
                     <Typography variant="smallGreyHeading">
                       STARTING DATE
@@ -266,7 +281,7 @@ const CreateCalendar = ({ open, onClose }) => {
                     }}
                   />
                 </Grid>
-                <Grid item xs={5}>
+                <Grid size={5}>
                   <FormLabel component="legend" sx={{ marginBottom: 1 }}>
                     <Typography variant="smallGreyHeading">
                       ENDING DATE
@@ -295,7 +310,12 @@ const CreateCalendar = ({ open, onClose }) => {
             </Box>
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pr={8} pt={1}>
+            <Box
+              sx={{
+                pl: 5,
+                pr: 8,
+                pt: 1
+              }}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">
                   Set the content's Objective for this month
@@ -311,7 +331,7 @@ const CreateCalendar = ({ open, onClose }) => {
             <Divider sx={borderMargin} />
 
             {/* Platform Included */}
-            <Grid item xs={12} sx={{ paddingLeft: 5 }}>
+            <Grid sx={{ paddingLeft: 5 }} size={12}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">
                   Select the type of Content you want to include in Campaign
@@ -354,7 +374,9 @@ const CreateCalendar = ({ open, onClose }) => {
               </FormGroup>
             </Grid>
             <Divider sx={borderMargin} />
-            <Box pl={5}>
+            <Box sx={{
+              pl: 5
+            }}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">
                   Select the Products and/or Services that you want to focus on
@@ -362,7 +384,7 @@ const CreateCalendar = ({ open, onClose }) => {
               </FormLabel>
               {/* Products */}
               <Grid container sx={{ marginTop: 1 }}>
-                <Grid item xs={4}>
+                <Grid size={4}>
                   <FormLabel component="legend">
                     <Typography variant="smallGreyHeading">PRODUCTS</Typography>
                   </FormLabel>
@@ -398,7 +420,7 @@ const CreateCalendar = ({ open, onClose }) => {
                     ))}
                   </FormGroup>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid size={4}>
                   <FormLabel component="legend">
                     <Typography variant="smallGreyHeading">SERVICES</Typography>
                   </FormLabel>
@@ -437,7 +459,11 @@ const CreateCalendar = ({ open, onClose }) => {
               </Grid>
             </Box>
             <Divider sx={borderMargin} />
-            <Box pl={5} pr={3}>
+            <Box
+              sx={{
+                pl: 5,
+                pr: 3
+              }}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">
                   Select your Target Personas and Attributes, and Top Target
@@ -459,7 +485,12 @@ const CreateCalendar = ({ open, onClose }) => {
                 }}
               >
                 {/* Target Personas */}
-                <Grid item xs={12} p={"0rem 1rem"} width={"20rem"}>
+                <Grid
+                  sx={{
+                    p: "0rem 1rem",
+                    width: "20rem"
+                  }}
+                  size={12}>
                   <FormLabel component="legend">
                     <Typography variant="smallGreyHeading">
                       TARGET PERSONAS
@@ -525,7 +556,11 @@ const CreateCalendar = ({ open, onClose }) => {
                 </Grid> */}
                 <Divider sx={{ width: "100%", margin: "1.5rem 0rem" }} />
                 {/* persona attribute */}
-                <Grid item xs={12} p={"0rem 1rem"}>
+                <Grid
+                  sx={{
+                    p: "0rem 1rem"
+                  }}
+                  size={12}>
                   <FormLabel component="legend">
                     <Typography variant="smallGreyHeading">
                       PERSONA ATTRIBUTE
@@ -537,11 +572,13 @@ const CreateCalendar = ({ open, onClose }) => {
                     margin="normal"
                     // sx={{ backgroundColor: "#F2F2F2" }}
                   >
-                    <Grid container alignItems={"center"}>
-                      <Grid item xs={2.5}>
+                    <Grid container sx={{
+                      alignItems: "center"
+                    }}>
+                      <Grid size={2.5}>
                         <Typography>Motivations : </Typography>
                       </Grid>
-                      <Grid item xs={9.5}>
+                      <Grid size={9.5}>
                         <Controller
                           name="Motivation"
                           control={control}
@@ -558,11 +595,16 @@ const CreateCalendar = ({ open, onClose }) => {
                         />
                       </Grid>
                     </Grid>
-                    <Grid container mt={2} alignItems={"center"}>
-                      <Grid item xs={2.5}>
+                    <Grid
+                      container
+                      sx={{
+                        mt: 2,
+                        alignItems: "center"
+                      }}>
+                      <Grid size={2.5}>
                         <Typography>Pain Points : </Typography>
                       </Grid>
-                      <Grid item xs={9.5}>
+                      <Grid size={9.5}>
                         <Controller
                           name="PainPoints"
                           control={control}
@@ -579,11 +621,16 @@ const CreateCalendar = ({ open, onClose }) => {
                         />
                       </Grid>
                     </Grid>
-                    <Grid container mt={2} alignItems={"center"}>
-                      <Grid item xs={2.5}>
+                    <Grid
+                      container
+                      sx={{
+                        mt: 2,
+                        alignItems: "center"
+                      }}>
+                      <Grid size={2.5}>
                         <Typography>KPIs : </Typography>
                       </Grid>
-                      <Grid item xs={9.5}>
+                      <Grid size={9.5}>
                         <Controller
                           name="KPI"
                           control={control}
@@ -605,13 +652,14 @@ const CreateCalendar = ({ open, onClose }) => {
                 <Divider sx={{ width: "100%", margin: "1.5rem 0rem" }} />
 
                 {/* Target Themes */}
-                <Grid item xs={12} sx={{ paddingLeft: 2 }}>
+                <Grid sx={{ paddingLeft: 2 }} size={12}>
                   {selectedPersona == null ? (
                     <Typography
                       variant="smallGreyHeading1"
-                      display="flex"
-                      alignItems="center"
-                    >
+                      sx={{
+                        display: "flex",
+                        alignItems: "center"
+                      }}>
                       <IconInfoCircle style={{ marginRight: "10px" }} />
                       Select a Persona to see Top Themes in its Industry
                     </Typography>
@@ -658,7 +706,11 @@ const CreateCalendar = ({ open, onClose }) => {
             </Box>
             <Divider sx={borderMargin} />
 
-            <Box paddingX={5} mb={4}>
+            <Box
+              sx={{
+                paddingX: 5,
+                mb: 4
+              }}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">
                   Mention any special instructions to include in the prompt

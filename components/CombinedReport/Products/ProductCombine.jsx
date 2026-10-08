@@ -22,7 +22,12 @@ const ProductCombine = ({ companyData }) => {
     <>
       <Grid container sx={12} columnSpacing={2}>
         {/* PRODUCTS */}
-        <Grid container alignItems="center" p="0rem 3rem" >
+        <Grid
+          container
+          sx={{
+            alignItems: "center",
+            p: "0rem 3rem"
+          }}>
           {open.products ? (
             <IconChevronDown onClick={() => handleOpen("products")} />
           ) : (
@@ -34,7 +39,7 @@ const ProductCombine = ({ companyData }) => {
           </Typography>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {open.products &&
             companyData?.company?.products?.map((value) => {
               return (
@@ -49,7 +54,7 @@ const ProductCombine = ({ companyData }) => {
             })}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {open.products &&
             companyData?.competitors[0]?.products?.map((value) => {
               return (
@@ -65,7 +70,7 @@ const ProductCombine = ({ companyData }) => {
             })}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {open.products &&
             companyData?.competitors[1]?.products?.map((value) => {
               return (
@@ -83,7 +88,14 @@ const ProductCombine = ({ companyData }) => {
 
 
         {/* SERVICES */}
-        <Grid container alignItems="center" p="0rem 3rem" mt={2} mb={2}>
+        <Grid
+          container
+          sx={{
+            alignItems: "center",
+            p: "0rem 3rem",
+            mt: 2,
+            mb: 2
+          }}>
           {open.services ? (
             <IconChevronDown onClick={() => handleOpen("services")} />
           ) : (
@@ -95,7 +107,7 @@ const ProductCombine = ({ companyData }) => {
           </Typography>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {open.services &&
             companyData?.company?.services?.map((value) => {
               return (
@@ -110,7 +122,7 @@ const ProductCombine = ({ companyData }) => {
             })}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {open.services &&
             companyData?.competitors[0]?.services?.map((value) => {
               return (
@@ -126,7 +138,7 @@ const ProductCombine = ({ companyData }) => {
             })}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {open.services &&
             companyData?.competitors[1]?.services?.map((value) => {
               return (

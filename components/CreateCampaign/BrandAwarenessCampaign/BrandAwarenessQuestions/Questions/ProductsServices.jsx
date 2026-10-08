@@ -38,10 +38,12 @@ const ProductsServices = ({ handleQuestion, industryData }) => {
       container
 
       spacing={2}
-      justifyContent={"space-between"}
+      sx={{
+        justifyContent: "space-between"
+      }}
 
     >
-      <Grid item xs={12}>
+      <Grid size={12}>
         {/* <Typography variant="caption2">Target Product</Typography>
         <br /> */}
         <Typography variant="AvgHeading">
@@ -49,7 +51,11 @@ const ProductsServices = ({ handleQuestion, industryData }) => {
         </Typography>
 
         {/* Products */}
-        <Grid display={"flex"} gap={4}>
+        <Grid
+          sx={{
+            display: "flex",
+            gap: 4
+          }}>
 
         <FormGroup style={{ margin: "0.5rem 0rem", width: "350px" }}>
           <FormLabel component="legend" sx={{ mb: 1 }}>
@@ -146,7 +152,6 @@ const ProductsServices = ({ handleQuestion, industryData }) => {
         </Grid>
       </Grid>
 
-     
     </Grid>
   );
 };

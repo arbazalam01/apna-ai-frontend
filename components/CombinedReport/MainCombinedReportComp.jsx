@@ -42,9 +42,11 @@ const MainCombinedReportComp = () => {
 
   return (
     <>
-      <Grid pl={0.2}>
+      <Grid sx={{
+        pl: 0.2
+      }}>
         <StickyGrid container p={"1rem 2rem 1rem 2rem"}>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <Typography sx={test}>YOUR COMPANY </Typography>
             <Typography sx={companies}>{companyData?.company?.name}</Typography>
           </Grid>
@@ -52,7 +54,9 @@ const MainCombinedReportComp = () => {
           {companyData?.competitors.map((value) => {
             return (
               <>
-                <Grid xs={4} pl={1}>
+                <Grid sx={{
+                  pl: 1
+                }} size={4}>
                   <Typography sx={test}>COMPETITION </Typography>
                   <Typography sx={companies}>{value?.name}</Typography>
                 </Grid>
@@ -62,8 +66,13 @@ const MainCombinedReportComp = () => {
         </StickyGrid>
         {/* <Divider /> */}
 
-        <Grid container p={"1rem 2rem 1rem 2rem"} minHeight={"80vh"}>
-          <Grid item xs={12}>
+        <Grid
+          container
+          sx={{
+            p: "1rem 2rem 1rem 2rem",
+            minHeight: "80vh"
+          }}>
+          <Grid size={12}>
             <AllCombineComp companyData={companyData} />
           </Grid>
         </Grid>

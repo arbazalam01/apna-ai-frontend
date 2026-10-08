@@ -7,28 +7,31 @@ const ProductServicesComponent = ({title,description}) => {
   return (
     <>
 
-<Grid item>
-        {/* <PaperComp> */}
-          <Grid item p={"0rem 1rem 0.8rem 0rem"}>
+      <Grid>
+              {/* <PaperComp> */}
+                <Grid
+                  sx={{
+                    p: "0rem 1rem 0.8rem 0rem"
+                  }}>
 
-          <Typography
-            variant="MainHeading"
-            
-            sx={{fontSize:"1.05rem", lineHeight: "0rem" }}
-            >
-            {title}
-          </Typography>
+                <Typography
+                  variant="MainHeading"
+                  
+                  sx={{fontSize:"1.05rem", lineHeight: "0rem" }}
+                  >
+                  {title}
+                </Typography>
+                  </Grid>
+                <Grid size={12}>
+                {description?.map((item, index) => (
+                  <Grid key={index}>
+                <Typography  variant="personaValue" >
+                {description ? `•  ${item}` : item}
+                    </Typography>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
-          <Grid item xs={12} >
-          {description?.map((item, index) => (
-            <Grid item key={index} >
-          <Typography  variant="personaValue" >
-          {description ? `•  ${item}` : item}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
     </>
   );
 };

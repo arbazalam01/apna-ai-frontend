@@ -24,14 +24,24 @@ const MainAboutDrawer = ({ title }) => {
 
   return (
     <>
-  
 
       <Grid >
         <Grid container>
-          <Grid item xs={3.5} borderRight={"1px solid #0000001f"} height={"calc(100vh - 14.7vh)"} pt={3}>
+          <Grid
+            sx={{
+              borderRight: "1px solid #0000001f",
+              height: "calc(100vh - 14.7vh)",
+              pt: 3
+            }}
+            size={3.5}>
             <Name companyAbout={companyAbout} topTrends={topTrends} />
           </Grid>
-          <Grid item xs={8} pl={4} pt={3}>
+          <Grid
+            sx={{
+              pl: 4,
+              pt: 3
+            }}
+            size={8}>
             <Description companyAbout={companyAbout} />
             <Vision companyAbout={companyAbout} />
           </Grid>

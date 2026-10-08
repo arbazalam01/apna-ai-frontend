@@ -24,10 +24,15 @@ const Positioning = () => {
         Positioning
         {/* <h5>Positioning</h5> */}
       </Typography>
-      <Grid container direction="column" mt={1}>
+      <Grid container direction="column" sx={{
+        mt: 1
+      }}>
 
 
-          <Grid item mb={1}>
+          <Grid
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">
               <Item
                 title={"Core Purpose"}
@@ -38,7 +43,10 @@ const Positioning = () => {
             </Typography>
           </Grid>
 
-          <Grid item mb={1}>
+          <Grid
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">
               <Item
                 title={"Positioning"}
@@ -49,7 +57,10 @@ const Positioning = () => {
             </Typography>
           </Grid>
 
-          <Grid item mb={1}>
+          <Grid
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">
               <Item
                 title={"Key Differentiator"}
@@ -60,7 +71,10 @@ const Positioning = () => {
             </Typography>
           </Grid>
 
-          <Grid item mb={1}>
+          <Grid
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">
             <Item
                 title={"Brand Personality"}

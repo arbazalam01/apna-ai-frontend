@@ -79,11 +79,12 @@ const UploadProspects = () => {
   return (
     <>
       <Box
-        justifyContent={"center"}
-        alignItems={"center"}
-        sx={{ padding: 3 }}
-        mt={2}
-      >
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          mt: 2,
+          padding: 3
+        }}>
         <Content
           style={{
             borderWidth: "2px",

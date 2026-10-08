@@ -56,7 +56,7 @@ dotCurrentSize:12
         },
       }}
     >
-      <Steps progressDot current={quesnumber} direction="vertical" items={data.map((item) => ({
+      <Steps progressDot current={quesnumber} orientation="vertical" items={data.map((item) => ({
           title: <div style={dataCSS.title}>{item.title}</div>,
           description: <div style={dataCSS.description}>{item.description}</div>,
         }))}

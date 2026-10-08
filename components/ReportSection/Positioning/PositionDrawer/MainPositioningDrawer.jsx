@@ -55,10 +55,11 @@ const MainPositioningDrawer = ({ title }) => {
         <Box>
           <Grid
             container
-            alignItems={"center"}
-            p={"1rem 0rem 0rem 1.5rem"}
             onClick={handlePurposeOpen}
-          >
+            sx={{
+              alignItems: "center",
+              p: "1rem 0rem 0rem 1.5rem"
+            }}>
             {open.purpose ? <IconChevronDown /> : <IconChevronRight />}
             &nbsp;&nbsp;&nbsp;
             {companyPosition?.corepurpose && (
@@ -69,10 +70,16 @@ const MainPositioningDrawer = ({ title }) => {
           </Grid>
           {open.purpose && (
             <>
-              <Grid container columnSpacing={2} p={"0rem 2rem 1rem 2rem"}>
+              <Grid container columnSpacing={2} sx={{
+                p: "0rem 2rem 1rem 2rem"
+              }}>
                 {companyPosition?.corepurpose?.map((core, index, array) => {
                   return (
-                    <Grid item xs={4} mt={2}>
+                    <Grid
+                      sx={{
+                        mt: 2
+                      }}
+                      size={4}>
                       <Component
                         name={core.name}
                         description={core.description}
@@ -90,10 +97,11 @@ const MainPositioningDrawer = ({ title }) => {
         <Box>
           <Grid
             container
-            alignItems={"center"}
-            p={"0rem 0rem 0rem 1.5rem"}
             onClick={handlePositioningOpen}
-          >
+            sx={{
+              alignItems: "center",
+              p: "0rem 0rem 0rem 1.5rem"
+            }}>
             {open.positioning ? <IconChevronDown /> : <IconChevronRight />}
             &nbsp;&nbsp;&nbsp;
             {companyPosition?.positioning && (
@@ -104,10 +112,16 @@ const MainPositioningDrawer = ({ title }) => {
           </Grid>
 
           {open.positioning && (
-            <Grid container columnSpacing={2} p={"0rem 2rem 2rem 2rem"}>
+            <Grid container columnSpacing={2} sx={{
+              p: "0rem 2rem 2rem 2rem"
+            }}>
               {companyPosition?.positioning?.map((position, index, array) => {
                 return (
-                  <Grid item xs={4} mt={2}>
+                  <Grid
+                    sx={{
+                      mt: 2
+                    }}
+                    size={4}>
                     <Component
                       name={position.name}
                       description={position.description}
@@ -124,10 +138,11 @@ const MainPositioningDrawer = ({ title }) => {
         <Box>
           <Grid
             container
-            alignItems={"center"}
-            p={"0rem 0rem 0rem 1.5rem"}
             onClick={handleDifferentiatorOpen}
-          >
+            sx={{
+              alignItems: "center",
+              p: "0rem 0rem 0rem 1.5rem"
+            }}>
             {open.differentiators ? <IconChevronDown /> : <IconChevronRight />}
             &nbsp;&nbsp;&nbsp;
             {companyPosition?.keydifferentiators && (
@@ -138,11 +153,17 @@ const MainPositioningDrawer = ({ title }) => {
           </Grid>
 
           {open.differentiators && (
-            <Grid container columnSpacing={2} p={"0rem 2rem 2rem 2rem"}>
+            <Grid container columnSpacing={2} sx={{
+              p: "0rem 2rem 2rem 2rem"
+            }}>
               {companyPosition?.keydifferentiators?.map(
                 (diferentiator, index, array) => {
                   return (
-                    <Grid item xs={4} mt={2}>
+                    <Grid
+                      sx={{
+                        mt: 2
+                      }}
+                      size={4}>
                       <Component
                         name={diferentiator.name}
                         description={diferentiator.description}
@@ -159,10 +180,11 @@ const MainPositioningDrawer = ({ title }) => {
         <Box>
           <Grid
             container
-            alignItems={"center"}
-            p={"0rem 0rem 0rem 1.5rem"}
             onClick={handleBrandOpen}
-          >
+            sx={{
+              alignItems: "center",
+              p: "0rem 0rem 0rem 1.5rem"
+            }}>
             {open.brand ? <IconChevronDown /> : <IconChevronRight />}
             &nbsp;&nbsp;&nbsp;
             {companyPosition?.brandpersonality && (
@@ -173,10 +195,16 @@ const MainPositioningDrawer = ({ title }) => {
           </Grid>
 
           {open.brand && (
-            <Grid container columnSpacing={2} p={"0rem 2rem 2rem 2rem"}>
+            <Grid container columnSpacing={2} sx={{
+              p: "0rem 2rem 2rem 2rem"
+            }}>
               {companyPosition?.brandpersonality?.map((brand, index, array) => {
                 return (
-                  <Grid item xs={4} mt={2}>
+                  <Grid
+                    sx={{
+                      mt: 2
+                    }}
+                    size={4}>
                     <Component
                       name={brand.name}
                       description={brand.description}

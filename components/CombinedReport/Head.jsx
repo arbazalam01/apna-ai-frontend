@@ -38,15 +38,20 @@ const Head = () => {
     <>
       <Grid
         container
-        // pt={5}
-        // pb={5}
-        bgcolor={"#fff"}
-
-
-        alignItems="center"
-      >
-        <Grid item xs={9.6} bgcolor={"transparent"}>
-          <Box display="flex" alignItems="center" >
+        sx={{
+          bgcolor: "#fff",
+          alignItems: "center"
+        }}>
+        <Grid
+          sx={{
+            bgcolor: "transparent"
+          }}
+          size={9.6}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center"
+            }}>
            
            
           <IconChevronLeft
@@ -72,9 +77,13 @@ const Head = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={2.4} justify={"center"}
-              alignItems={"center"}
-              textAlign={"end"} >
+        <Grid
+          justify={"center"}
+          sx={{
+            alignItems: "center",
+            textAlign: "end"
+          }}
+          size={2.4}>
           <Button
             variant="button1"
             onClick={handleDownload}

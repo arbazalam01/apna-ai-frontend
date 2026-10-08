@@ -7,7 +7,9 @@ const Competitor = () => {
   return (
     <Box>
       <Grid>
-        <Typography variant="caption8" lineHeight={"2.5rem"}>
+        <Typography variant="caption8" sx={{
+          lineHeight: "2.5rem"
+        }}>
           Tell us about your Competition
         </Typography>
       </Grid>

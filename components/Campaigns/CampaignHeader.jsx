@@ -23,40 +23,41 @@ const navigate = useNavigate();
         navigate(`/${companyId}/create-campaign`);
       };
   return (
-
-        <Grid
-          container
-          sx={{
-
-
-            // justifyContent: "space-between",
-            alignItems: "center",
-
-            // paddingY: 3.3,
+    <Grid
+      container
+      sx={{
 
 
+        // justifyContent: "space-between",
+        alignItems: "center",
 
-          }}
+        // paddingY: 3.3,
+
+
+
+      }}
+    >
+      <Grid size={8}>
+        <Typography variant="Heading-head">Campaigns</Typography>
+      </Grid>
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "right"
+        }}
+        size={4}>
+        <Tooltip title="Create Campaign" placement={"left"} zIndex={10000}>
+        <Button
+          variant="button1"
+          onClick={handleNavigate}
+        //   startIcon={<AddIcon />}
         >
-          <Grid item xs={8}>
-            <Typography variant="Heading-head">Campaigns</Typography>
-          </Grid>
-          <Grid item xs={4} display={"flex"} justifyContent="right" >
-            <Tooltip title="Create Campaign" placement={"left"} zIndex={10000}>
-            <Button
-              variant="button1"
-              onClick={handleNavigate}
-            //   startIcon={<AddIcon />}
-            >
 <img src={create} alt="create" height={15}  />
-            </Button></Tooltip>
-          </Grid>
-          {/* <CreateCalendarNew open={isModalOpen} onClose={handleCloseModal} /> */}
-        </Grid>
-
-
-
-)
+        </Button></Tooltip>
+      </Grid>
+      {/* <CreateCalendarNew open={isModalOpen} onClose={handleCloseModal} /> */}
+    </Grid>
+  );
 }
 
 export default CampaignHeader

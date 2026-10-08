@@ -68,7 +68,7 @@ const ForgotPassword = () => {
             }}
           >
             <Grid container>
-              <Grid item xs component="h4" variant="h4">
+              <Grid component="h4" variant="h4" size="grow">
                 <IconButton
                   type="submit"
                   sx={{ alignSelf: "flex-end" }}

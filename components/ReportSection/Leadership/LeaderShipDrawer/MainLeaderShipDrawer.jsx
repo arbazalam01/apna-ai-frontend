@@ -30,24 +30,40 @@ const MainIndustriesDrawer = ({ title }) => {
 
   return (
     <>
-     
+
       <Grid >
 
       <Box>
         <>
-        <Grid container columnSpacing={2} p={3}>
-            <Grid container  p={"0rem 2rem 1rem 2rem"}>
-              <Grid item xs={2} mt={2}>
+        <Grid container columnSpacing={2} sx={{
+          p: 3
+        }}>
+            <Grid container  sx={{
+              p: "0rem 2rem 1rem 2rem"
+            }}>
+              <Grid
+                sx={{
+                  mt: 2
+                }}
+                size={2}>
               <Typography variant="h6" sx={{ fontSize:"0.9rem", fontWeight: "500", color:"grey" }}>
                   NAME
                 </Typography>
               </Grid>
-              <Grid item xs={4} mt={2}>
+              <Grid
+                sx={{
+                  mt: 2
+                }}
+                size={4}>
               <Typography variant="h6" sx={{ fontSize:"0.9rem", fontWeight: "500", color:"grey" }}>
                   DESIGNATION
                 </Typography>
               </Grid>
-              <Grid item xs={6} mt={2}>
+              <Grid
+                sx={{
+                  mt: 2
+                }}
+                size={6}>
               <Typography variant="h6" sx={{ fontSize:"0.9rem", fontWeight: "500", color:"grey" }}>
                   LINKEDIN PROFILE
                 </Typography>
@@ -56,29 +72,32 @@ const MainIndustriesDrawer = ({ title }) => {
             {/* <Divider sx={{ my: 2 }} /> */}
 
             {companyLeaderShip?.map((core, index, array) => {
-              return (<>
-                <Grid container p={"0rem 1rem 1rem 2rem"}>
-                  <Grid item xs={2} >
-                  <Typography variant="h6" sx={{ fontSize:"0.92rem", fontWeight: "500", }}>
-                      {core.name}
-                    </Typography>
+              return (
+                <>
+                  <Grid container sx={{
+                    p: "0rem 1rem 1rem 2rem"
+                  }}>
+                    <Grid size={2}>
+                    <Typography variant="h6" sx={{ fontSize:"0.92rem", fontWeight: "500", }}>
+                        {core.name}
+                      </Typography>
+                    </Grid>
+                    <Grid size={4}>
+                    <Typography variant="h6" sx={{ fontSize:"0.9rem", fontWeight: "300" }}>
+                        {core.designation}
+                      </Typography>
+                    </Grid>
+                    <Grid size={5.5}>
+                    <Typography variant="h6" sx={{ fontSize:"0.8rem", fontWeight: "400",color:"grey",backgroundColor:"#e6e6e6", padding:"0.5rem 1rem",borderRadius:"0.41rem",display:"flex",alignItems:"center" }}>
+                        {/* <IconCopy size={15}/> */}
+                        <IconBrandLinkedin size={25} stroke={"blue"} color="white" fill="blue"/>
+                         &nbsp; {core.linkedin}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={4} >
-                  <Typography variant="h6" sx={{ fontSize:"0.9rem", fontWeight: "300" }}>
-                      {core.designation}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={5.5} >
-                  <Typography variant="h6" sx={{ fontSize:"0.8rem", fontWeight: "400",color:"grey",backgroundColor:"#e6e6e6", padding:"0.5rem 1rem",borderRadius:"0.41rem",display:"flex",alignItems:"center" }}>
-                      {/* <IconCopy size={15}/> */}
-                      <IconBrandLinkedin size={25} stroke={"blue"} color="white" fill="blue"/>
-                       &nbsp; {core.linkedin}
-                    </Typography>
-                  </Grid>
-                </Grid>
                   <Divider />
 
-              </>
+                </>
               );
             })}
           </Grid>

@@ -87,22 +87,36 @@ const NewPdfGenerate = () => {
   return (
     <Box>
       <FirstPage companyData={company} ceo={ceo} />
-      <Box bgcolor="#252840">
-        <Box mx={4} py={5}>
+      <Box sx={{
+        bgcolor: "#252840"
+      }}>
+        <Box
+          sx={{
+            mx: 4,
+            py: 5
+          }}>
           <Title style={{ margin: 0, color: "white" }}>
             Top Industry Trends
           </Title>
-          <Grid container spacing={2} my={4} >
+          <Grid container spacing={2} sx={{
+            my: 4
+          }} >
           {industryTrends.map((item, index) => (
-        <Grid item xs={3} key={index} >
+        <Grid key={index} size={3}>
           <TableContent item={item} textColor="white" />
         </Grid>
       ))}
           </Grid>
         </Box>
       </Box>
-      <Box bgcolor="#252840">
-        <Box mx={4} py={5}>
+      <Box sx={{
+        bgcolor: "#252840"
+      }}>
+        <Box
+          sx={{
+            mx: 4,
+            py: 5
+          }}>
           <Title style={{ margin: 0, color: "white" }}>
             Products And Services
           </Title>
@@ -117,8 +131,14 @@ const NewPdfGenerate = () => {
           />
         </Box>
       </Box>
-      <Box bgcolor="#e8e8f2">
-        <Box mx={4} py={5}>
+      <Box sx={{
+        bgcolor: "#e8e8f2"
+      }}>
+        <Box
+          sx={{
+            mx: 4,
+            py: 5
+          }}>
           <Title style={{ margin: 0 }}>Industries Served</Title>
           <Industries
             company={company?.industries}
@@ -126,8 +146,14 @@ const NewPdfGenerate = () => {
           />
         </Box>
       </Box>
-      <Box bgcolor="#252840">
-        <Box mx={4} py={5}>
+      <Box sx={{
+        bgcolor: "#252840"
+      }}>
+        <Box
+          sx={{
+            mx: 4,
+            py: 5
+          }}>
           <Title style={{ margin: 0, color: "white" }}>Top Clients</Title>
           <TopClients
             company={company?.topclients}
@@ -135,8 +161,14 @@ const NewPdfGenerate = () => {
           />
         </Box>
       </Box>
-      <Box bgcolor="#e8e8f2">
-        <Box mx={4} py={5}>
+      <Box sx={{
+        bgcolor: "#e8e8f2"
+      }}>
+        <Box
+          sx={{
+            mx: 4,
+            py: 5
+          }}>
           <Title style={{ margin: 0 }}>Market Positioning</Title>
           <CompanyHeader color="black" />
           <NewMarketPosition
@@ -146,7 +178,11 @@ const NewPdfGenerate = () => {
         </Box>
       </Box>
       <Box>
-        <Box mx={4} py={5}>
+        <Box
+          sx={{
+            mx: 4,
+            py: 5
+          }}>
           <Title style={{ margin: 0 }}>SWOT Analysis</Title>
           <CompanyHeader color="black" />
         </Box>

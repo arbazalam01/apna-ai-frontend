@@ -5,45 +5,62 @@ const BlogAnalysis = ({companyData}) => {
   return (
     <>
 
-    <Grid container sx={12} columnSpacing={2} mb={2} >
-    <Grid item xs={4}>
-          {companyData?.company?.blogs?.titles?.map((core, index) => (
-            <Grid item key={index} mb={1.5} >
-         
-            <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
-              {core.title}
-            </Typography>
+      <Grid
+        container
+        columnSpacing={2}
+        sx={[{
+          mb: 2
+        }, 12]}>
+      <Grid size={4}>
+            {companyData?.company?.blogs?.titles?.map((core, index) => (
+              <Grid
+                key={index}
+                sx={{
+                  mb: 1.5
+                }}>
            
+              <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
+                {core.title}
+              </Typography>
+             
+            </Grid>
+            ))}
           </Grid>
-          ))}
-        </Grid>
 
-        <Grid item xs={4}>
-          {companyData?.competitors[0]?.blogs?.titles?.map((core, index) => (
-             <Grid item key={index} mb={1.5} >
-         
-             <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
-               {core.title}
-             </Typography>
-            
-           </Grid>
-          ))}
-        </Grid>
-       
-        <Grid item xs={4}>
-          {companyData?.competitors[1]?.blogs?.titles?.map((core, index) => (
-            <Grid item key={index} mb={1.5} >
-         
-            <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
-              {core.title}
-            </Typography>
+          <Grid size={4}>
+            {companyData?.competitors[0]?.blogs?.titles?.map((core, index) => (
+               <Grid
+                 key={index}
+                 sx={{
+                   mb: 1.5
+                 }}>
            
+               <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
+                 {core.title}
+               </Typography>
+              
+             </Grid>
+            ))}
           </Grid>
-          ))}
-        </Grid>
-        
-    </Grid>
-  </>
+         
+          <Grid size={4}>
+            {companyData?.competitors[1]?.blogs?.titles?.map((core, index) => (
+              <Grid
+                key={index}
+                sx={{
+                  mb: 1.5
+                }}>
+           
+              <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
+                {core.title}
+              </Typography>
+             
+            </Grid>
+            ))}
+          </Grid>
+          
+      </Grid>
+    </>
   );
 };
 

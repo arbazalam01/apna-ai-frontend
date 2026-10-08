@@ -42,11 +42,12 @@ const MainProductDrawer = ({ title }) => {
         <Box>
           <Grid
             container
-            alignItems={"center"}
-            p={"1rem 0rem 0rem 1.5rem"}
-            sx={{ cursor: "pointer" }}
             onClick={handleProductsOpen}
-          >
+            sx={{
+              alignItems: "center",
+              p: "1rem 0rem 0rem 1.5rem",
+              cursor: "pointer"
+            }}>
             {open.products ? (
               <IconChevronDown />
             ) : (
@@ -59,11 +60,17 @@ const MainProductDrawer = ({ title }) => {
           </Grid>
           {open.products && (
             <>
-              <Grid container columnSpacing={2} p={"0rem 2rem 1rem 2rem"}>
+              <Grid container columnSpacing={2} sx={{
+                p: "0rem 2rem 1rem 2rem"
+              }}>
                 {companyAbout?.products.map((product, index, array) => {
                   console.log("PRODUCT", product);
                   return (
-                    <Grid item xs={4} mt={2}>
+                    <Grid
+                      sx={{
+                        mt: 2
+                      }}
+                      size={4}>
                       <Component
                         name={product?.name}
                         description={product?.description}
@@ -78,7 +85,14 @@ const MainProductDrawer = ({ title }) => {
         <Divider sx={{ my: 2 }} />
 
         <Box>
-          <Grid container alignItems={"center"} p={"0rem 0rem 0rem 1.5rem"} sx={{ cursor: "pointer" }} onClick={handleServicesOpen}>
+          <Grid
+            container
+            onClick={handleServicesOpen}
+            sx={{
+              alignItems: "center",
+              p: "0rem 0rem 0rem 1.5rem",
+              cursor: "pointer"
+            }}>
             {open.services ? (
               <IconChevronDown />
             ) : (
@@ -91,10 +105,16 @@ const MainProductDrawer = ({ title }) => {
           </Grid>
 
           {open.services && (
-            <Grid container columnSpacing={2} p={"0rem 2rem 2rem 2rem"}>
+            <Grid container columnSpacing={2} sx={{
+              p: "0rem 2rem 2rem 2rem"
+            }}>
               {companyAbout?.services.map((services, index, array) => {
                 return (
-                  <Grid item xs={4} mt={2}>
+                  <Grid
+                    sx={{
+                      mt: 2
+                    }}
+                    size={4}>
                     <Component
                       name={services?.name}
                       description={services?.description}

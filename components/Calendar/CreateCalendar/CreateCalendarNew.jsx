@@ -87,37 +87,48 @@ const CreateCalendar = ({ open, onClose }) => {
               mb: 1,
             }}
           >
-            <Grid container item xs={7} pl={5}>
+            <Grid container size={7} sx={{ pl: 5 }}>
               <Typography variant="Heading">Create New Campaign</Typography>
             </Grid>
           </Grid>
           <Divider /> */}
 
-          <Grid pl={5} pt={10} xs={12}>
+          <Grid
+            sx={{
+              pl: 5,
+              pt: 10
+            }}
+            size={12}>
             <FormLabel component="legend">
               <Typography variant="MainHeading">
                 What is the Campaign’s Objective?{" "}
               </Typography>
             </FormLabel>
-            <Grid mt={2} container gap={2}>
+            <Grid
+              container
+              sx={{
+                mt: 2,
+                gap: 2
+              }}>
               {data.map((item, index) => (
                 <Grid
-                  p={2.5}
-                  item
-                  xs={3.5}
+                  key={index}
+                  onClick={() => handleNavigate(item)}
                   sx={{
+                    p: 2.5,
+
                     backgroundColor:
                       selectedObj?.name === item.name ? "#f0ffff" : "white",
+
                     borderRadius: 2,
                     border: "1px solid #D9D9D9",
                     cursor: "pointer",
+
                     "&:hover": {
                       backgroundColor: "#f6fffe", // Change background color on hover
-                    },
+                    }
                   }}
-                  key={index}
-                  onClick={() => handleNavigate(item)}
-                >
+                  size={3.5}>
                   <Typography variant="caption6-1">{item.name}</Typography>
                   <br />
                   <Typography variant="caption1-1">
@@ -127,12 +138,18 @@ const CreateCalendar = ({ open, onClose }) => {
               ))}
             </Grid>
 
-            <Grid container pt={10}>
+            <Grid container sx={{
+              pt: 10
+            }}>
               <Button variant="button2" onClick={onClose}>
                 Cancel
               </Button>
               {loading && (
-                <Box marginTop={"0.5rem"} marginRight={"1.5rem"}>
+                <Box
+                  sx={{
+                    marginTop: "0.5rem",
+                    marginRight: "1.5rem"
+                  }}>
                   <CircularProgress size={"1.8rem"} />
                 </Box>
               )}

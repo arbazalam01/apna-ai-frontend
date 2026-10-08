@@ -11,11 +11,10 @@ const CreatorsPage = () => {
     <Layout
       className="layout"
     >
-    
 
       <Content>
         <Grid container>
-          <Grid item xs={12} sx={{ backgroundColor: "#FFFFFF" }}>
+          <Grid sx={{ backgroundColor: "#FFFFFF" }} size={12}>
             <EmailCampaign />
           </Grid>
         </Grid>

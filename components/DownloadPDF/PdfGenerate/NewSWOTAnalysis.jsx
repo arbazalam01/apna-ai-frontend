@@ -47,12 +47,18 @@ export default Index;
 
 const Item = ({ company, competitors, bgColor }) => {
   return (
-    <Box bgcolor={bgColor}>
-      <Box mx={4}>
+    <Box sx={{
+      bgcolor: bgColor
+    }}>
+      <Box sx={{
+        mx: 4
+      }}>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
+          <Grid size={4}>
             {company?.map((item, index) => (
-              <Box my={4}>
+              <Box sx={{
+                my: 4
+              }}>
                 <TableContent key={index} item={item} 
                 // isBlur={index > 1}
                  />
@@ -60,9 +66,11 @@ const Item = ({ company, competitors, bgColor }) => {
             ))}
           </Grid>
           {competitors?.map((competitor, index) => (
-            <Grid item xs={4} key={index}>
+            <Grid key={index} size={4}>
               {competitor?.map((item, index) => (
-                <Box my={4}>
+                <Box sx={{
+                  my: 4
+                }}>
                   <TableContent key={index} item={item} 
                   // isBlur={index > 1}
                    />
@@ -78,8 +86,14 @@ const Item = ({ company, competitors, bgColor }) => {
 
 const TitleBox = ({ title, bgColor }) => {
   return (
-    <Box bgcolor={bgColor}>
-      <Box mx={4} py={3}>
+    <Box sx={{
+      bgcolor: bgColor
+    }}>
+      <Box
+        sx={{
+          mx: 4,
+          py: 3
+        }}>
         <Title level={3} style={{ margin: 0 }}>
           {title}
         </Title>

@@ -51,23 +51,25 @@ const ThoughtLeadershipCampaign = ({
   return (
     <>
       <FormProvider {...methods}>
-        <Grid container p={2}>
+        <Grid container sx={{
+          p: 2
+        }}>
           {/* Question-1 */}
           {leadershipQues.first && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Duration handleQuestion={handleQuestion} />
             </Grid>
           )}
 
           {/* Question-2 */}
           {leadershipQues.second && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Contents handleQuestion={handleQuestion} />
             </Grid>
           )}
           {/* Question-3 */}
           {leadershipQues.third && (
-            <Grid item xs={12}>
+            <Grid size={12}>
                <IndustryTheme
                 handleQuestion={handleQuestion}
                 industryData={industryData.data[0]}
@@ -87,7 +89,7 @@ const ThoughtLeadershipCampaign = ({
 
           {/* Question-5 */}
           {leadershipQues.fifth && (
-            <Grid item xs={12}>
+            <Grid size={12}>
                <ProductsServices
               handleQuestion={handleQuestion}
               industryData={industryData.data[0]}
@@ -97,7 +99,7 @@ const ThoughtLeadershipCampaign = ({
 
           {/* Question-6 */}
           {leadershipQues.sixth && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <StrengthPositioning
                 handleQuestion={handleQuestion}
                 industryData={industryData.data[0]}
@@ -107,14 +109,14 @@ const ThoughtLeadershipCampaign = ({
 
           {/* Quesrtion-7 */}
           {leadershipQues.seventh && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Review handleQuestion={handleQuestion} Objective={Objective} />
             </Grid>
           )}
 
           {/* Question-8 */}
           {leadershipQues.eighth && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Loader />
             </Grid>
           )}

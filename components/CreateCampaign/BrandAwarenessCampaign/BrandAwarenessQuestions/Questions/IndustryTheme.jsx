@@ -32,7 +32,7 @@ const IndustryTheme = () => {
         setError(null);
         
         const response = await fetch(
-          `http://localhost:3000/usersegments/getUserSegments/${companyId}`,
+          `${import.meta.env.VITE_USER_SEGMENTS_API}/usersegments/getUserSegments/${companyId}`,
           {
             method: 'GET',
             headers: {
@@ -67,7 +67,12 @@ const IndustryTheme = () => {
 
   if (loading) {
     return (
-      <Box display="flex" justifyContent="center" p={4}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          p: 4
+        }}>
         <CircularProgress />
       </Box>
     );
@@ -75,7 +80,9 @@ const IndustryTheme = () => {
 
   if (error) {
     return (
-      <Box p={2}>
+      <Box sx={{
+        p: 2
+      }}>
         <Alert severity="error">
           Please try again later
         </Alert>

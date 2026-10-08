@@ -23,70 +23,70 @@ const DefaultReport = () => {
   console.log("value", section);
   return (
     <>
-    <Grid sx={{ maxHeight:"calc(100vh - 4rem)",overflow:"auto"}}>
+      <Grid sx={{ maxHeight:"calc(100vh - 4rem)",overflow:"auto"}}>
 
-      <DefaultReportHead handleChange={handleChange} section={section} />
-      <Divider sx={{ my: 0 }} />
-      {section === "About" && (
-        <Grid item xs={12}>
-          <MainAboutDrawer />
-        </Grid>
-      )}
-      {section === "Products & Services" && (
-          <Grid item xs={12}>
-          <MainProductDrawer />
-        </Grid>
-      )}
-      {
-        section === "SEO" && (
-          <Grid item xs={12}>
-            <MainSEODrawer />
+        <DefaultReportHead handleChange={handleChange} section={section} />
+        <Divider sx={{ my: 0 }} />
+        {section === "About" && (
+          <Grid size={12}>
+            <MainAboutDrawer />
           </Grid>
-        )
-      }
-      {
-        section === "Target Audience" && (
-          <Grid item xs={12}>
-            <MainIndustriesDrawer />
+        )}
+        {section === "Products & Services" && (
+            <Grid size={12}>
+            <MainProductDrawer />
           </Grid>
-        )
-      }
-      {
-        section === "Top Clients" && (
-          <Grid item xs={12}>
-            <MainClientsDrawer />
-          </Grid>
-        )
-      }
-      {
-        section === "Leadership" && (
-          <Grid item xs={12}>
-            <MainLeadershipDrawer />
-          </Grid>
-        )
-      }
-      {
-        section === "Blog Activity" && (
-          <Grid item xs={12}>
-            <MainBlogDrawer />
-          </Grid>
-        )
-      }
-      {
-        section === "Positioning" && (
-          <Grid item xs={12}>
-            <MainPositioningDrawer />
-          </Grid>
-        )
-      }
-      {
-        section === "SWOT" && (
-          <Grid item xs={12}>
-            <MainSWOTDrawer />
-          </Grid>
-        )
-      }
-    </Grid>
+        )}
+        {
+          section === "SEO" && (
+            <Grid size={12}>
+              <MainSEODrawer />
+            </Grid>
+          )
+        }
+        {
+          section === "Target Audience" && (
+            <Grid size={12}>
+              <MainIndustriesDrawer />
+            </Grid>
+          )
+        }
+        {
+          section === "Top Clients" && (
+            <Grid size={12}>
+              <MainClientsDrawer />
+            </Grid>
+          )
+        }
+        {
+          section === "Leadership" && (
+            <Grid size={12}>
+              <MainLeadershipDrawer />
+            </Grid>
+          )
+        }
+        {
+          section === "Blog Activity" && (
+            <Grid size={12}>
+              <MainBlogDrawer />
+            </Grid>
+          )
+        }
+        {
+          section === "Positioning" && (
+            <Grid size={12}>
+              <MainPositioningDrawer />
+            </Grid>
+          )
+        }
+        {
+          section === "SWOT" && (
+            <Grid size={12}>
+              <MainSWOTDrawer />
+            </Grid>
+          )
+        }
+      </Grid>
 
     </>
   );

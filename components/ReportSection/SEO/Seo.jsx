@@ -17,16 +17,21 @@ const SEO = () => {
       <Typography variant="MainHeading">
         Top SEO Keywords
       </Typography>
-      <Grid container direction="column" mt={1} >
+      <Grid container direction="column" sx={{
+        mt: 1
+      }} >
         {companyTopSeo?.slice(0,6).map((item,index,array) => (
-          <Grid item mb={1}>
+          <Grid
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">{item.slice(0,29)}{item.length>29 && " ..."}</Typography><br/>
             {index !== array.length - 1 && <Divider />}
 
           </Grid>
         ))}
 
-        <Grid item>
+        <Grid>
           <Typography variant="caption">
           {companyTopSeo?.length>6 && <Typography variant="caption">{companyTopSeo.length-6}+ more</Typography>}
           </Typography>

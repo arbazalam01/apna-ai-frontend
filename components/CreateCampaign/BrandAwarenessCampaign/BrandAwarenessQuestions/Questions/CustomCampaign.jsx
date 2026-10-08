@@ -13,9 +13,15 @@ const CustomCampaign = ({ handleQuestion }) => {
   });
 
   return (
-    <Grid container spacing={2} justifyContent={"space-between"}>
+    <Grid container spacing={2} sx={{
+      justifyContent: "space-between"
+    }}>
       {/* CUSTOM CAMPAIGN FROM SCRATCH */}
-      <Grid item xs={12} mb={2.5}>
+      <Grid
+        sx={{
+          mb: 2.5
+        }}
+        size={12}>
         {/* <Typography variant="caption2">Content Formats</Typography>
         <br /> */}
         <Typography variant="AvgHeading">

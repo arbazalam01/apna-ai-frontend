@@ -9,14 +9,17 @@ const Component = ({ name, description }) => {
   };
 
   return (
-    <Grid item>
-      <Grid item p={"0rem 1rem 0.8rem 0rem"}>
+    <Grid>
+      <Grid
+        sx={{
+          p: "0rem 1rem 0.8rem 0rem"
+        }}>
         <Typography variant="MainHeading" sx={{ fontSize: "1.05rem", lineHeight: "0rem" }}>
           {name}
         </Typography>
       </Grid>
-      <Grid item xs={12}>
-        <Grid item>
+      <Grid size={12}>
+        <Grid>
           <Typography variant="combinedDesc" sx={{cursor: 'pointer'}} onClick={handleShowMoreClick}>
             {showFullText ? description : description.slice(0, 250)}
             {description.length > 250 && (

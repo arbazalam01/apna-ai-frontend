@@ -97,7 +97,7 @@ const BrandAwarenessStepper = ({ quesnumber, customCampaign }) => {
       <Steps
         progressDot
         current={quesnumber}
-        direction="vertical"
+        orientation="vertical"
         items={data.map((item) => ({
           title: <div style={dataCSS.title}>{item?.title}</div>,
           description: <div style={dataCSS.description}>{item?.description}</div>,

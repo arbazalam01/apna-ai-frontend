@@ -5,8 +5,17 @@ import Typography from "@mui/material/Typography";
 const InsightHeader = () => {
 
   return (
-    <Grid container bgcolor={"#fff"} alignItems="center">
-      <Grid item xs={6} bgcolor={"transparent"}>
+    <Grid
+      container
+      sx={{
+        bgcolor: "#fff",
+        alignItems: "center"
+      }}>
+      <Grid
+        sx={{
+          bgcolor: "transparent"
+        }}
+        size={6}>
         <Typography variant="Heading-head">User Segmentation</Typography>
       </Grid>
     </Grid>

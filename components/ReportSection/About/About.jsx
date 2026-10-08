@@ -21,18 +21,25 @@ const About = () => {
   return (
     <Grid container>
       {/* Title  */}
-      <Grid item>
+      <Grid>
         <Typography variant="MainHeading">About</Typography>
       </Grid>
 
       {/* Company Name and description  */}
       <Grid
-        item
         container
-        maxHeight={140}
-        sx={{ textOverflow: "ellipsis", overflow: "hidden" }}
-      >
-        <Grid item xs={6} container direction="column" mt={1}>
+        sx={{
+          maxHeight: 140,
+          textOverflow: "ellipsis",
+          overflow: "hidden"
+        }}>
+        <Grid
+          container
+          direction="column"
+          sx={{
+            mt: 1
+          }}
+          size={6}>
           <Grid>
           {companyAbout?.about?.companyLogo ? (
           <img
@@ -47,17 +54,17 @@ const About = () => {
           <Avatar size={64} style={{marginBottom: "10px"}} icon={<UserOutlined />} />
         )}
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography variant="caption">{companyAbout?.name}</Typography>
           </Grid>
-          <Grid className={Styles.company_sector} item>
+          <Grid className={Styles.company_sector}>
             <Typography variant="caption">
               {companyAbout?.industries[0]}
             </Typography>
           </Grid>
         </Grid>
-        <Grid item xs={6} container direction="column">
-          <Grid item>
+        <Grid container direction="column" size={6}>
+          <Grid>
             <Typography
               variant="MainHeading"
               style={{ fontSize: "1rem", fontWeight: 600 }}
@@ -65,7 +72,7 @@ const About = () => {
               Company Description
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography
               variant="caption"
               sx={{ textOverflow: "ellipsis", overflow: "scroll" }}
@@ -81,14 +88,14 @@ const About = () => {
       </Grid>
 
       {/* Company Social Media Links */}
-      <Grid item container direction="column">
+      <Grid container direction="column">
         <Divider sx={{ margin: "0.5rem 0rem 0.75rem 0rem" }} />
 
-        <Grid item container>
-          <Grid item xs={1}>
+        <Grid container>
+          <Grid size={1}>
             <IconWorld size={22} />
           </Grid>
-          <Grid item xs={10}>
+          <Grid size={10}>
           <Typography variant="caption">
   {companyAbout?.websiteUrl ? (
     companyAbout.websiteUrl.startsWith("https://") ? (
@@ -106,11 +113,15 @@ const About = () => {
           </Grid>
         </Grid>
 
-        <Grid item container mt={1}>
-          <Grid item xs={1}>
+        <Grid
+          container
+          sx={{
+            mt: 1
+          }}>
+          <Grid size={1}>
             <IconBrandLinkedin size={22} color="#0A66C2" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid size={3}>
             <Typography variant="caption">
               <span className={Styles.followers}>
                 {companyAbout?.about?.linkedin?.followers}
@@ -118,22 +129,26 @@ const About = () => {
               followers
             </Typography>
           </Grid>
-          <Grid item xs={8} alignItems={"center"}>
+          <Grid
+            sx={{
+              alignItems: "center"
+            }}
+            size={8}>
             <Typography variant="caption1" style={{fontSize:"0.78rem"}}>
             <a href={companyAbout?.about?.linkedin?.handle} target="_blank" style={{color: "#3b3bb6"}}>
               {companyAbout?.about?.linkedin?.handle}
             </a>
             </Typography>
           </Grid>
-          <Grid item xs={1}>
+          <Grid size={1}>
             {/* <IconBrandInstagram size={22} color="#C13584" />{" "} */}
           </Grid>
-          <Grid item xs={3}>
+          <Grid size={3}>
             <Typography variant="caption">
               {/* <span className={Styles.followers}>309</span> followers */}
             </Typography>
           </Grid>
-          <Grid item xs={8}>
+          <Grid size={8}>
             <Typography className={Styles.icon_url}>
               {/* https://www.instagram.com/everocorporation/ */}
             </Typography>

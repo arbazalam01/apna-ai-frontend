@@ -84,23 +84,24 @@ const SideComponent = ({ selectedCalendarData }) => {
     <>
       <Grid
         container
-        xs={8}
         style={{ boxShadow: "0px 0px 3px 0px #c2c0c0", borderRadius: "15px" }}
+        size={8}
       >
         <Grid
-          item
-          xs={10.5}
-          alignItems={"center"}
-          p={3}
-          borderRight={"1px solid #e9e9e9"}
-        >
+          sx={{
+            alignItems: "center",
+            p: 3,
+            borderRight: "1px solid #e9e9e9"
+          }}
+          size={10.5}>
           <Grid
-            display={"flex"}
-            gap={1}
-            textAlign={"center"}
-            alignItems={"center"}
-            mb={1}
-          >
+            sx={{
+              display: "flex",
+              gap: 1,
+              textAlign: "center",
+              alignItems: "center",
+              mb: 1
+            }}>
             {platformIcon}
             <Typography variant="caption2" style={{ fontWeight: "600" }}>
               {selectedCalendarData?.platform}
@@ -108,7 +109,9 @@ const SideComponent = ({ selectedCalendarData }) => {
           </Grid>
           <Grid>
             
-              <Grid mb={1}>
+              <Grid sx={{
+                mb: 1
+              }}>
                 <Typography variant="campaignTitle">
                   {selectedCalendarData?.Title}
                 </Typography>
@@ -129,12 +132,22 @@ const SideComponent = ({ selectedCalendarData }) => {
             )}
           </Grid>
         </Grid>
-        <Grid container item xs={1.5} justifyContent={"center"} pt={2.5}>
+        <Grid
+          container
+          sx={{
+            justifyContent: "center",
+            pt: 2.5
+          }}
+          size={1.5}>
           <Grid>
-            <Grid mb={1}>
+            <Grid sx={{
+              mb: 1
+            }}>
               <IoCopyOutline style={iconTheme} />
             </Grid>
-            <Grid mb={1}>
+            <Grid sx={{
+              mb: 1
+            }}>
               <FiEdit style={iconTheme} />
             </Grid>
             <Grid>

@@ -12,7 +12,7 @@ const TableContent = ({
   textSize='1rem'
 }) => {
   return (
-    <Space direction="vertical" size={1}>
+    <Space orientation="vertical" size={1}>
       {item && typeof item === "string" ? (
         <Text style={{ color: textColor  }} className={isBlur && "blurry-text"}>
           {item}

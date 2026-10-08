@@ -47,58 +47,72 @@ const SWOT = () => {
 
   return (
     <Box>
-    <Typography variant="MainHeading">
-      SWOT
-      {/* <h5>Positioning</h5> */}
-    </Typography>
-    <Grid container direction="column" mt={1}>
+      <Typography variant="MainHeading">
+        SWOT
+        {/* <h5>Positioning</h5> */}
+      </Typography>
+      <Grid container direction="column" sx={{
+        mt: 1
+      }}>
 
 
-        <Grid item mb={1}>
-          <Typography variant="caption">
+          <Grid
+            sx={{
+              mb: 1
+            }}>
+            <Typography variant="caption">
+              <Item
+                title={"Strengths"}
+                description={<span className={Styles.items}>{companySwotAnalysis?.strengths?.length} Items</span>}
+                // dsctext="Items"
+              />
+              <Divider />
+            </Typography>
+          </Grid>
+
+          <Grid
+            sx={{
+              mb: 1
+            }}>
+            <Typography variant="caption">
+              <Item
+                title={"Weaknesses"}
+                description={<span className={Styles.items}>{companySwotAnalysis?.weaknesses?.length} Items</span>}
+                // dsctext="Items"
+              />
+              <Divider />
+            </Typography>
+          </Grid>
+
+          <Grid
+            sx={{
+              mb: 1
+            }}>
+            <Typography variant="caption">
+              <Item
+                title={"Opportunities"}
+                description={<span className={Styles.items}>{companySwotAnalysis?.opportunities?.length} Items</span>}
+                // dsctext="Items"
+              />
+              {/* <Divider /> */}
+            </Typography>
+          </Grid>
+
+          <Grid
+            sx={{
+              mb: 1
+            }}>
+            <Typography variant="caption">
             <Item
-              title={"Strengths"}
-              description={<span className={Styles.items}>{companySwotAnalysis?.strengths?.length} Items</span>}
-              // dsctext="Items"
-            />
-            <Divider />
-          </Typography>
-        </Grid>
-
-        <Grid item mb={1}>
-          <Typography variant="caption">
-            <Item
-              title={"Weaknesses"}
-              description={<span className={Styles.items}>{companySwotAnalysis?.weaknesses?.length} Items</span>}
-              // dsctext="Items"
-            />
-            <Divider />
-          </Typography>
-        </Grid>
-
-        <Grid item mb={1}>
-          <Typography variant="caption">
-            <Item
-              title={"Opportunities"}
-              description={<span className={Styles.items}>{companySwotAnalysis?.opportunities?.length} Items</span>}
-              // dsctext="Items"
-            />
-            {/* <Divider /> */}
-          </Typography>
-        </Grid>
-
-        <Grid item mb={1}>
-          <Typography variant="caption">
-          <Item
-              title={"Threats"}
-              description={<span className={Styles.items}>{companySwotAnalysis?.threats?.length} Items</span>}
-              // dsctext=""
-            />
-            {/* <Divider /> */}
-          </Typography>
-        </Grid>
-    </Grid>
-  </Box>
+                title={"Threats"}
+                description={<span className={Styles.items}>{companySwotAnalysis?.threats?.length} Items</span>}
+                // dsctext=""
+              />
+              {/* <Divider /> */}
+            </Typography>
+          </Grid>
+      </Grid>
+    </Box>
   );
 };
 

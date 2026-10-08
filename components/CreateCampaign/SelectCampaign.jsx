@@ -67,31 +67,42 @@ const SelectCampaign = ({selectedObj, setSelectedObj}) => {
       <div >
        
 
-        <Grid px={5} pt={2} xs={12}>
+        <Grid
+          sx={{
+            px: 5,
+            pt: 2
+          }}
+          size={12}>
           <FormLabel component="legend">
             <Typography variant="MainHeading">
             What kind of a Campaign do you want to create?
             </Typography>
           </FormLabel>
-          <Grid mt={2} container gap={2}>
+          <Grid
+            container
+            sx={{
+              mt: 2,
+              gap: 2
+            }}>
             {data.map((item, index) => (
               <Grid
-                p={2.5}
-                item
-                xs={3.5}
+                key={index}
+                onClick={() => handleNavigate(item)}
                 sx={{
+                  p: 2.5,
+
                   backgroundColor:
                     selectedObj?.name === item.name ? "#f0ffff" : "white",
+
                   borderRadius: 2,
                   border: "1px solid #D9D9D9",
                   cursor: "pointer",
+
                   "&:hover": {
                     backgroundColor: "#f6fffe", // Change background color on hover
-                  },
+                  }
                 }}
-                key={index}
-                onClick={() => handleNavigate(item)}
-              >
+                size={3.5}>
                 <Typography variant="caption6-1">{item.name}</Typography>
                 <br />
                 <Typography variant="caption1-1">{item.description}</Typography>

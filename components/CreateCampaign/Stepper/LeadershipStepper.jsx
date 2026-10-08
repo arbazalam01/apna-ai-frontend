@@ -61,7 +61,7 @@ const LeadershipStepper = ({ quesnumber }) => {
       <Steps
         progressDot
         current={quesnumber}
-        direction="vertical"
+        orientation="vertical"
         items={data.map((item) => ({
           title: <div style={dataCSS.title}>{item.title}</div>,
           description: (

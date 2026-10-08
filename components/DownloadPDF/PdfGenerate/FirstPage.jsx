@@ -38,11 +38,19 @@ const Index = ({ companyData, ceo }) => {
   const date = new Date();
   const formattedDate = formatDate(date);
   return (
-    <Box bgcolor="#252840">
-      <Box textAlign="center" pt={4}>
+    <Box sx={{
+      bgcolor: "#252840"
+    }}>
+      <Box
+        sx={{
+          textAlign: "center",
+          pt: 4
+        }}>
         <div className="demo-logo">
         </div>
-        <Box mt={4}>
+        <Box sx={{
+          mt: 4
+        }}>
           <Title level={3} style={{ margin: 0, color: "white" }}>
             Report Created For: {ceo}, {name}
           </Title>

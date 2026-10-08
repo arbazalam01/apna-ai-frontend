@@ -155,12 +155,14 @@ const CreateCompany = ({ competitorsField, AddSection, DeleteSection }) => {
   return (
     <Grid
       container
-      minHeight={"88vh"}
-      // spacing={2}
-      justifyContent={"space-between"}
-      // mb={10}
-    >
-      <Grid item p={2}>
+      sx={{
+        minHeight: "88vh",
+        justifyContent: "space-between"
+      }}>
+      <Grid
+        sx={{
+          p: 2
+        }}>
         <Grid container>
           <Typography variant="Heading-head">
             Create your Company’s Profile
@@ -185,7 +187,9 @@ const CreateCompany = ({ competitorsField, AddSection, DeleteSection }) => {
         )}
 
         {step === 2 && (
-          <Box mb={10}>
+          <Box sx={{
+            mb: 10
+          }}>
             <Grid>
               <Competitor nextStep={nextStep} />
             </Grid>
@@ -226,11 +230,12 @@ const CreateCompany = ({ competitorsField, AddSection, DeleteSection }) => {
               <BrandAssets nextStep={nextStep} />
             </Grid>
             <Box
-              justifyContent={"center"}
-              alignItems={"center"}
-              sx={{ padding: 3 }}
-              mt={2}
-            >
+              sx={{
+                justifyContent: "center",
+                alignItems: "center",
+                mt: 2,
+                padding: 3
+              }}>
               <Content
                 style={{
                   borderWidth: "2px",
@@ -312,14 +317,14 @@ const CreateCompany = ({ competitorsField, AddSection, DeleteSection }) => {
         )}
       </Grid>
       <Grid
-        item
-        xs={12}
-        display={"flex"}
-        justifyContent={"start"}
-        alignItems={"end"}
-        pl={2}
-        mb={10}
-      >
+        sx={{
+          display: "flex",
+          justifyContent: "start",
+          alignItems: "end",
+          pl: 2,
+          mb: 10
+        }}
+        size={12}>
         {step > 0 && (
           <Button
             variant="button2"
@@ -382,9 +387,15 @@ const SectionInput = ({
   isDelete = false,
 }) => {
   return (
-    <Box mt={2}>
+    <Box sx={{
+      mt: 2
+    }}>
       <Grid container>
-        <Grid item xs={12} mb={2}>
+        <Grid
+          sx={{
+            mb: 2
+          }}
+          size={12}>
           <Controller
             name={`${name}.name`}
             control={control}
@@ -399,7 +410,11 @@ const SectionInput = ({
             )}
           />
         </Grid>
-        <Grid item xs={12} mb={2}>
+        <Grid
+          sx={{
+            mb: 2
+          }}
+          size={12}>
           <Controller
             name={`${name}.websiteUrl`}
             control={control}
@@ -447,7 +462,11 @@ const SectionInput = ({
           />
         </Grid> */}
         {isDelete && (
-          <Grid item xs={12} md={2}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 2
+            }}>
             <IconButton aria-label="delete" onClick={() => handleDelete(index)}>
               <DeleteIcon />
             </IconButton>

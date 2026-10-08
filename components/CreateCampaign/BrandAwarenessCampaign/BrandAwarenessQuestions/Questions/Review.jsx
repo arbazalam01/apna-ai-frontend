@@ -91,12 +91,14 @@ const Review = ({ handleQuestion, Objective }) => {
       container
 
       spacing={2}
-      justifyContent={"space-between"}
+      sx={{
+        justifyContent: "space-between"
+      }}
 
     >
       {loading === false && (
         <>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Typography variant="caption2">Review</Typography>
             <br />
             <Typography variant="AvgHeading">
@@ -104,11 +106,16 @@ const Review = ({ handleQuestion, Objective }) => {
             </Typography>
 
             <Box>
-              <Grid container alignItems={"center"} pt={2}>
-                <Grid item xs={2}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  pt: 2
+                }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Duration </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">
                     {Values?.startDate
                       ? dayjs(Values?.startDate).format("DD MMMM YYYY")
@@ -123,22 +130,29 @@ const Review = ({ handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container alignItems={"center"} pt={2}>
-                <Grid item xs={2}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  pt: 2
+                }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Objective</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">{Objective}</Typography>
                 </Grid>
               </Grid>
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Target Products </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.product && review?.product?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>
@@ -150,11 +164,13 @@ const Review = ({ handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Target Services </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.service && review?.service?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>
@@ -166,11 +182,18 @@ const Review = ({ handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2} alignItems={"start"} justifyContent={"start"}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid
+                  sx={{
+                    alignItems: "start",
+                    justifyContent: "start"
+                  }}
+                  size={2}>
                   <Typography variant="caption7">Types of Content</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.content_format && review?.content_format?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>
@@ -182,11 +205,18 @@ const Review = ({ handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2} alignItems={"start"} justifyContent={"start"}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid
+                  sx={{
+                    alignItems: "start",
+                    justifyContent: "start"
+                  }}
+                  size={2}>
                   <Typography variant="caption7">Strengths</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.strength && review?.strength?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>
@@ -198,11 +228,18 @@ const Review = ({ handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2} alignItems={"start"} justifyContent={"start"}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid
+                  sx={{
+                    alignItems: "start",
+                    justifyContent: "start"
+                  }}
+                  size={2}>
                   <Typography variant="caption7">Positioning</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.positioning && review?.positioning?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>
@@ -214,11 +251,18 @@ const Review = ({ handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2} alignItems={"start"} justifyContent={"start"}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid
+                  sx={{
+                    alignItems: "start",
+                    justifyContent: "start"
+                  }}
+                  size={2}>
                   <Typography variant="caption7">Key Differentiator</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.keyDifferentiator && review?.keyDifferentiator?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>
@@ -229,12 +273,16 @@ const Review = ({ handleQuestion, Objective }) => {
               </Grid>
             </Box>
 
-            <Box mb={4}>
-              <Grid container pt={2}>
-                <Grid item xs={2}>
+            <Box sx={{
+              mb: 4
+            }}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Industry Themes</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.industryThemes   && review?.industryThemes?.map((item, index) => (
                     <div key={index}>
                       <Typography variant="caption2">{item}</Typography>

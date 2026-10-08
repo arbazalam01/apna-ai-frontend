@@ -105,8 +105,17 @@ const CalendarPage = () => {
   return (
     <>
       <Grid container>
-        <Grid item xs={3.1} height={"auto"} overflow="auto">
-          <Grid height={"91vh"} sx={{ borderRight: "1px solid #d9d9d9" }}>
+        <Grid
+          sx={{
+            height: "auto",
+            overflow: "auto"
+          }}
+          size={3.1}>
+          <Grid
+            sx={{
+              height: "91vh",
+              borderRight: "1px solid #d9d9d9"
+            }}>
             <Campaigns
               setCurrentDate={setCurrentDate}
               handleOpenSummary={handleOpenSummary}
@@ -115,18 +124,17 @@ const CalendarPage = () => {
           </Grid>
           {/* <PersonaTable data={tableData} onRowClick={handleRowClick} /> */}
         </Grid>
-        <Grid item xs={8.9}>
+        <Grid size={8.9}>
           <Grid container sx={{ borderBottom: "1px solid #d9d9d9" }}>
             <Grid
               // p={2}
               container
-              pl={2}
-              alignItems={"center"}
-              textAlign={"center"}
-              // height={70}
-              item
-              xs={9}
-            >
+              sx={{
+                pl: 2,
+                alignItems: "center",
+                textAlign: "center"
+              }}
+              size={9}>
                {CalendarData && CalendarData.length > 0 ? (
                         <Typography sx={campaignTheme}>
                         Campaign for Brand Awareness
@@ -139,14 +147,14 @@ const CalendarPage = () => {
           
             </Grid>
             <Grid
-              item
-              xs={3}
-              alignItems={"center"}
-              textAlign={"right"}
-              height={70}
-              display={"flex"}
-              justifyContent={"flex-end"}
-            >
+              sx={{
+                alignItems: "center",
+                textAlign: "right",
+                height: 70,
+                display: "flex",
+                justifyContent: "flex-end"
+              }}
+              size={3}>
               {isSummaryOpen == true ? (
                 <Button
                   variant="button2"
@@ -191,7 +199,12 @@ const CalendarPage = () => {
                   setCurrentDate={setCurrentDate}
                 />
               </Grid>*/}
-              <Grid item xs={12} maxHeight={"82vh"} overflow="auto">
+              <Grid
+                sx={{
+                  maxHeight: "82vh",
+                  overflow: "auto"
+                }}
+                size={12}>
                 <ContentCalendar
                   // handlePrevMonth={handlePrevMonth}
                   // handleNextMonth={handleNextMonth}

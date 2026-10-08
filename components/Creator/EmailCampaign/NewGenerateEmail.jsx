@@ -54,7 +54,9 @@ const NewGenerateEmail = () => {
   };
 
   return (
-    <Box pt={2}>
+    <Box sx={{
+      pt: 2
+    }}>
       <div
         style={{
           display: "flex",

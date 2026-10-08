@@ -170,7 +170,9 @@ const App = () => {
             <Typography variant="campaignDate">{entry?.date}</Typography>{" "}
             {/* Display the full date as a header */}
             {entry?.platforms.map((platformData, platformIndex) => (
-              <Grid mb={1.8} key={platformIndex}>
+              <Grid key={platformIndex} sx={{
+                mb: 1.8
+              }}>
                 <SideComponent selectedCalendarData={platformData} />
               </Grid>
             ))}

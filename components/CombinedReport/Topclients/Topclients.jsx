@@ -7,13 +7,21 @@ const Topclients = ({companyData}) => {
 
 
   return (
+    <>
 
-<>
-
-      <Grid container sx={12} columnSpacing={2} mb={2} >
-      <Grid item xs={4}>
+      <Grid
+        container
+        columnSpacing={2}
+        sx={[{
+          mb: 2
+        }, 12]}>
+      <Grid size={4}>
           {companyData?.company?.topclients?.map((core, index) => (
-             <Grid item key={index} mb={1.5} >
+             <Grid
+               key={index}
+               sx={{
+                 mb: 1.5
+               }}>
          
              <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
                {core}
@@ -23,9 +31,13 @@ const Topclients = ({companyData}) => {
           ))}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {companyData?.competitors[0]?.topclients?.map((core, index) => (
-            <Grid item key={index} mb={1.5} >
+            <Grid
+              key={index}
+              sx={{
+                mb: 1.5
+              }}>
          
             <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
               {core}
@@ -35,9 +47,13 @@ const Topclients = ({companyData}) => {
           ))}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {companyData?.competitors[1]?.topclients?.map((core, index) => (
-            <Grid item key={index} mb={1.5} >
+            <Grid
+              key={index}
+              sx={{
+                mb: 1.5
+              }}>
          
             <Typography variant="caption" sx={{fontSize:"0.9rem"}} >
               {core}
@@ -49,7 +65,7 @@ const Topclients = ({companyData}) => {
           
       </Grid>
     </>
-)
+  );
 }
 
 export default Topclients

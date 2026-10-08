@@ -58,15 +58,17 @@ const Report = () => {
   };
 
   return (
-    <Grid container pt={2}>
+    <Grid container sx={{
+      pt: 2
+    }}>
       <Grid
-        item
-        xs={12}
-        display={"flex"}
-        justifyContent={"space-between"}
-        alignItems={"center"}
-        px={2}
-      >
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: 2
+        }}
+        size={12}>
         <Typography variant="MainHeading">Report</Typography>
         <span>
           <Typography variant="MainHeading" style={{ color: "#90CE53" }}>
@@ -74,7 +76,12 @@ const Report = () => {
           </Typography>
         </span>
       </Grid>
-      <Grid item xs={12} px={2} mb={1}>
+      <Grid
+        sx={{
+          px: 2,
+          mb: 1
+        }}
+        size={12}>
         <Typography sx={{ fontSize: "0.9rem" }}>
           We have put together a detailed analysis of your company and your
           competitors, based on information collected from online sources and
@@ -88,18 +95,19 @@ const Report = () => {
             <React.Fragment key={item.id}>
               <Grid
                 container
-                alignItems="center"
-                borderBottom={"1px solid #E5E5E5"}
-                py={0.7}
-                px={2}
-              >
+                sx={{
+                  alignItems: "center",
+                  borderBottom: "1px solid #E5E5E5",
+                  py: 0.7,
+                  px: 2
+                }}>
                 <Grid
-                  item
-                  xs={10}
-                  display="flex"
-                  alignItems={"center"}
-                  gap={1.5}
-                >
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1.5
+                  }}
+                  size={10}>
                   {" "}
                   {item.name === "Summarized Report" ? (
                     isScraped == 2 ? (
@@ -127,7 +135,11 @@ const Report = () => {
                   <Typography variant="body1">{item?.name}</Typography>
                 </Grid>
 
-                <Grid item xs={1.7} textAlign={"right"}>
+                <Grid
+                  sx={{
+                    textAlign: "right"
+                  }}
+                  size={1.7}>
                   <IconButton
                     edge="end"
                     aria-label="go"
@@ -146,17 +158,15 @@ const Report = () => {
         </>
       ) : (
         <Grid
-          item
           container
-          justifyContent="center"
           sx={{
+            justifyContent: "center",
             justifyContent: "center",
             color: "#d2d2d2",
             fontWeight: "400",
             fontSize: "1.5rem",
-            mt: 10,
-          }}
-        >
+            mt: 10
+          }}>
           No Personas created
         </Grid>
       )}

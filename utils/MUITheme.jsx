@@ -239,7 +239,6 @@ const theme = createTheme({
             fontWeight: "600",
           },
         },
-        ,
         {
           props: { variant: "smallGreyHeading" },
           style: {

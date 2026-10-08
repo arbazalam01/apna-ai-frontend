@@ -139,14 +139,15 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
   return (
     <Grid
       container
-      minHeight={"75vh"}
       spacing={2}
-      justifyContent={"space-between"}
-      mb={10}
-    >
+      sx={{
+        minHeight: "75vh",
+        justifyContent: "space-between",
+        mb: 10
+      }}>
       {loading == false && (
         <>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Typography variant="caption2">Review</Typography>
             <br />
             <Typography variant="AvgHeading">
@@ -154,11 +155,16 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
             </Typography>
 
             <Box>
-              <Grid container alignItems={"center"} pt={2}>
-                <Grid item xs={2}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  pt: 2
+                }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Duration </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">
                     {Values?.startDate.format("DD MMMM YYYY")} -{" "}
                     {Values?.endDate.format("DD MMMM YYYY")}
@@ -168,44 +174,66 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container alignItems={"center"} pt={2}>
-                <Grid item xs={2}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  pt: 2
+                }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Objective</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">{Objective}</Typography>
                 </Grid>
               </Grid>
             </Box>
 
             <Box>
-              <Grid container alignItems={"center"} pt={2}>
-                <Grid item xs={2}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  pt: 2
+                }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Target Product </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">{review?.product}</Typography>
                 </Grid>
               </Grid>
             </Box>
 
             <Box>
-              <Grid container alignItems={"center"} pt={2}>
-                <Grid item xs={2}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  pt: 2
+                }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Target Service </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">{review?.service}</Typography>
                 </Grid>
               </Grid>
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2} alignItems={"start"} justifyContent={"start"}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid
+                  sx={{
+                    alignItems: "start",
+                    justifyContent: "start"
+                  }}
+                  size={2}>
                   <Typography variant="caption7">Types of Content</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.content_format && review?.content_format.map((item) => (
                     <>
                       <Typography variant="caption2">{item}</Typography>
@@ -217,11 +245,13 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Industry Themes</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {review?.industryThemes && review?.industryThemes?.map((item) => (
                     <>
                       <Typography variant="caption2">{item}</Typography>
@@ -235,11 +265,13 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
             </Box>
 
             <Box>
-              <Grid container pt={2}>
-                <Grid item xs={2}>
+              <Grid container sx={{
+                pt: 2
+              }}>
+                <Grid size={2}>
                   <Typography variant="caption7">Target Personas</Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
 
                        
                 {personas && personas.map((item) => (
@@ -248,8 +280,16 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
           <br />
 
           {PainPoints[item._id] && PainPoints[item._id].length > 0 && (
-            <Grid pl={4} mb={1}>
-              <Grid mt={0.5} mb={0.7}>
+            <Grid
+              sx={{
+                pl: 4,
+                mb: 1
+              }}>
+              <Grid
+                sx={{
+                  mt: 0.5,
+                  mb: 0.7
+                }}>
                 <Typography variant="smallGreyHeading2">
                   PAIN POINTS
                 </Typography>
@@ -258,7 +298,9 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
                 <Typography
                   key={index}
                   variant="body2"
-                  lineHeight={"1.3rem"}
+                  sx={{
+                    lineHeight: "1.3rem"
+                  }}
                 >
                   {painpoint}
                 </Typography>
@@ -267,8 +309,16 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
           )}
 
           {Motivations[item._id] && Motivations[item._id].length > 0 && (
-            <Grid pl={4} mb={1}>
-              <Grid mt={0.5} mb={0.7}>
+            <Grid
+              sx={{
+                pl: 4,
+                mb: 1
+              }}>
+              <Grid
+                sx={{
+                  mt: 0.5,
+                  mb: 0.7
+                }}>
                 <Typography variant="smallGreyHeading2">
                   MOTIVATIONS
                 </Typography>
@@ -277,7 +327,9 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
                 <Typography
                   key={index}
                   variant="body2"
-                  lineHeight={"1.3rem"}
+                  sx={{
+                    lineHeight: "1.3rem"
+                  }}
                 >
                   {motivation}
                 </Typography>
@@ -286,8 +338,16 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
           )}
 
           {KPIs[item._id] && KPIs[item._id].length > 0 && (
-            <Grid pl={4} mb={1}>
-              <Grid mt={0.5} mb={0.7}>
+            <Grid
+              sx={{
+                pl: 4,
+                mb: 1
+              }}>
+              <Grid
+                sx={{
+                  mt: 0.5,
+                  mb: 0.7
+                }}>
                 <Typography variant="smallGreyHeading2">
                   KPIs
                 </Typography>
@@ -296,7 +356,9 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
                 <Typography
                   key={index}
                   variant="body2"
-                  lineHeight={"1.3rem"}
+                  sx={{
+                    lineHeight: "1.3rem"
+                  }}
                 >
                   {kpi}
                 </Typography>
@@ -312,12 +374,12 @@ const Review = ({ industryData, handleQuestion, Objective }) => {
           </Grid>
 
           <Grid
-            item
-            xs={12}
-            display={"flex"}
-            justifyContent={"start"}
-            alignItems={"end"}
-          >
+            sx={{
+              display: "flex",
+              justifyContent: "start",
+              alignItems: "end"
+            }}
+            size={12}>
             <Button variant="button2" onClick={() => handleQuestion("back")}>
               Go Back
             </Button>

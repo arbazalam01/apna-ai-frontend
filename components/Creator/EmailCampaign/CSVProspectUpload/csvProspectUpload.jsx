@@ -47,8 +47,14 @@ export default function CSVProspectUpload() {
             mb: 1,
           }}
         >
-          <Grid container item xs={12} pb={3} borderBottom={"1px solid #0000001f"}>
-            <Grid container item xs={9}>
+          <Grid
+            container
+            sx={{
+              pb: 3,
+              borderBottom: "1px solid #0000001f"
+            }}
+            size={12}>
+            <Grid container size={9}>
               <Typography
                 variant="MainHeading"
                 sx={{
@@ -63,12 +69,12 @@ export default function CSVProspectUpload() {
             </Grid>
             <Grid
               container
-              item
-              xs={3}
-              justifyItems={"end"}
-              sx={{ alignItems: "end" }}
-              gap={2}
-            >
+              sx={{
+                justifyItems: "end",
+                gap: 2,
+                alignItems: "end"
+              }}
+              size={3}>
               <Button type="submit" variant="button1">
                 Import
               </Button>
@@ -84,7 +90,11 @@ export default function CSVProspectUpload() {
           spacing={3}
           sx={{ padding: "1.2rem", textTransform: "none" }}
         >
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Box
               sx={{
                 border: "1px solid", // Adjust border color and width as necessary
@@ -140,7 +150,11 @@ export default function CSVProspectUpload() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <Box
               sx={{
                 border: "1px solid", // Adjust border color and width as necessary

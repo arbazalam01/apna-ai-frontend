@@ -24,8 +24,11 @@ const Component = ({ name, description = [] }) => {
 
   return (
     <>
-      <Grid item>
-        <Grid item mb={0.5}>
+      <Grid>
+        <Grid
+          sx={{
+            mb: 0.5
+          }}>
           <Typography
             variant="h6"
             sx={{ fontSize: "1.1rem", lineHeight: "1.5rem" }}
@@ -33,7 +36,7 @@ const Component = ({ name, description = [] }) => {
             {name}
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <div
             ref={textRef}
             style={{
@@ -43,10 +46,10 @@ const Component = ({ name, description = [] }) => {
           >
             {description.map((item, index) => (
               <Grid container key={index} sx={{ cursor: "pointer" }}   onClick={handleShowMoreClick}>
-                <Grid item xs={0.5} container sx={{ cursor: "pointer" }}>
+                <Grid container sx={{ cursor: "pointer" }} size={0.5}>
                   <Typography variant="caption">-</Typography>
                 </Grid>
-                <Grid item xs={11}>
+                <Grid size={11}>
                   <Typography variant="caption">
                     {item}
                   </Typography>

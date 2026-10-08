@@ -96,7 +96,7 @@ const AllCombineComp = ({ companyData }) => {
     <>
       <Grid columnSpacing={2}>
         {/* About */}
-        <Grid item xs={12}>
+        <Grid size={12}>
           <StickyAbout
             onClick={() => handleOpen("about")}
             container

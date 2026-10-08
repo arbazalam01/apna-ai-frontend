@@ -36,15 +36,21 @@ const CustomContentThemes = () => {
   ];
 
   return (
-    <Grid container spacing={2} justifyContent={"space-between"}>
-      <Grid item container xs={12} ><Typography variant="AvgHeading" style={{fontSize:"1.4rem",lineHeight:"0.4rem"}}>
+    <Grid container spacing={2} sx={{
+      justifyContent: "space-between"
+    }}>
+      <Grid container size={12}><Typography variant="AvgHeading" style={{fontSize:"1.4rem",lineHeight:"0.4rem"}}>
           We've generated new themes based on your input.
         </Typography></Grid>
-      <Grid item container xs={12}   >
+      <Grid container size={12}>
         <Grid> <Typography variant="AvgHeading" style={{lineHeight:"1.7rem"}}>
           Choose upto 3 themes to build your campaign around.
         </Typography></Grid>
-        <Grid ml={6.5} alignContent={"center"}><AutoModeIcon
+        <Grid
+          sx={{
+            ml: 6.5,
+            alignContent: "center"
+          }}><AutoModeIcon
                   
                     style={{
                       fontSize: "1.5rem",
@@ -58,7 +64,7 @@ const CustomContentThemes = () => {
        
       </Grid>
       {/* ---------- */}
-      <Grid item xs={12} >
+      <Grid size={12}>
       <FormGroup style={{ marginTop: "0.5rem" }}>
           {Platforms.map((platform, idx) => (
             <FormControlLabel
@@ -94,8 +100,7 @@ const CustomContentThemes = () => {
           ))}
         </FormGroup>
       </Grid>
- 
-     
+
     </Grid>
   );
 };

@@ -72,9 +72,9 @@ const BlogComp = () => {
 
         {companyBlog?.blogs ? (
           <>
-            <Grid item container>
-              <Grid item xs={12} container direction="column">
-                <Grid item>
+            <Grid container>
+              <Grid container direction="column" size={12}>
+                <Grid>
                   <Typography className={Styles.blog_heading} variant="caption">
                     Last {companyBlog?.blogs?.titles.length} Blogs Breakdown
                   </Typography>
@@ -130,26 +130,39 @@ const BlogComp = () => {
               </Grid>
             </Grid>
 
-            <Grid item container >
-              <Grid item xs={12} mt={2}>
+            <Grid container>
+              <Grid
+                sx={{
+                  mt: 2
+                }}
+                size={12}>
                 <Divider />
                 <Typography className={Styles.blog_heading} variant="caption">
                 Details of Last {companyBlog?.blogs?.titles?.length} Blogs 
                 </Typography>
               </Grid>
 
-              <Grid item xs={12} container direction="column">
-                <Grid item mb={1}>
+              <Grid container direction="column" size={12}>
+                <Grid
+                  sx={{
+                    mb: 1
+                  }}>
                   <Typography variant="caption">POST TITLES</Typography>
                 </Grid>
                 <Box>
                   {companyBlog?.blogs?.titles.map((post, index) => (
-                    <><Grid container alignItems="start" key={index} mb={1}>
-                    <Grid item xs={0.4}>
+                    <><Grid
+                      container
+                      key={index}
+                      sx={{
+                        alignItems: "start",
+                        mb: 1
+                      }}>
+                    <Grid size={0.4}>
 
                     <SquareIcon blogtype={post?.blogtype?.toUpperCase()} />
                     </Grid>
-                    <Grid item xs={11.6}>
+                    <Grid size={11.6}>
                     <Typography variant="caption">{post?.title }</Typography>
                    </Grid>
                   </Grid>
@@ -161,7 +174,7 @@ const BlogComp = () => {
             </Grid>
           </>
         ) : (
-          <Grid item container>
+          <Grid container>
             <Typography sx={{ justifyContent: "center", color: "#d2d2d2", fontWeight: "500", fontSize: "1.5rem", mt: 10, ml: 5 }}>
               No Blogs Available
             </Typography>

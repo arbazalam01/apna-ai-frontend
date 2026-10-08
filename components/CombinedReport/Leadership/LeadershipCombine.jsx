@@ -26,10 +26,18 @@ const LeadershipCombine = ({ companyData }) => {
 
   return (
     <>
-      <Grid container columnSpacing={2} mb={2}>
-        <Grid item xs={4}>
+      <Grid container columnSpacing={2} sx={{
+        mb: 2
+      }}>
+        <Grid size={4}>
           {companyData?.company?.leadership?.slice(0, showFullText[0] ? undefined : 5).map((core, index) => (
-            <Grid item key={index} mb={1.5} sx={{ cursor: 'pointer' }} onClick={() => handleShowMoreClick(0)}>
+            <Grid
+              key={index}
+              onClick={() => handleShowMoreClick(0)}
+              sx={{
+                mb: 1.5,
+                cursor: 'pointer'
+              }}>
               <Typography variant="caption" sx={{ fontSize: "0.9rem" }}>
                 {core.name}
               </Typography>
@@ -48,9 +56,15 @@ const LeadershipCombine = ({ companyData }) => {
           )}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {companyData?.competitors[0]?.leadership?.slice(0, showFullText[1] ? undefined : 5).map((core, index) => (
-            <Grid item key={index} mb={1.5} sx={{ cursor: 'pointer' }} onClick={() => handleShowMoreClick(1)}>
+            <Grid
+              key={index}
+              onClick={() => handleShowMoreClick(1)}
+              sx={{
+                mb: 1.5,
+                cursor: 'pointer'
+              }}>
               <Typography variant="caption" sx={{ fontSize: "0.9rem" }}>
                 {core.name}
               </Typography>
@@ -69,9 +83,15 @@ const LeadershipCombine = ({ companyData }) => {
           )}
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid size={4}>
           {companyData?.competitors[1]?.leadership.slice(0, showFullText[2] ? undefined : 5).map((core, index) => (
-            <Grid item key={index} mb={1.5} sx={{ cursor: 'pointer' }} onClick={() => handleShowMoreClick(2)}>
+            <Grid
+              key={index}
+              onClick={() => handleShowMoreClick(2)}
+              sx={{
+                mb: 1.5,
+                cursor: 'pointer'
+              }}>
               <Typography variant="caption" sx={{ fontSize: "0.9rem" }}>
                 {core.name}
               </Typography>

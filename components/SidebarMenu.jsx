@@ -374,7 +374,7 @@ const SidebarMenu = () => {
               {selectedLabel && selectedLabel}
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid>
           
             <Button variant="button1" onClick={handleClickEmployee}>
               <img src={create} alt="logo" height={15} /> 

@@ -34,9 +34,15 @@ const MainCreateCompany = () => {
   return (
     <>
       <FormProvider {...methods}>
-        <Grid container height={"100vh"} justifyContent={"center"} alignItems={"center"}>
+        <Grid
+          container
+          sx={{
+            height: "100vh",
+            justifyContent: "center",
+            alignItems: "center"
+          }}>
         
-          <Grid item xs={8.5}>
+          <Grid size={8.5}>
             <CreateCompany
               competitorsField={competitorsField}
               AddSection={AddSection}

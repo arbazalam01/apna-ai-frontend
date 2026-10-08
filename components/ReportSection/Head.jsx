@@ -197,17 +197,17 @@ const summaryPayload={...payLoad,type:"summary"};
           // height: "5rem",
         }}
       > {contextHolder}
-        <Grid
-          item
-          xs={3}
-          // pr={0}
-          // justifyContent={isMobile ? "flex-start" : "flex-end"}
-        >
+        <Grid size={3}>
           <Typography variant="Heading-head"> Reports</Typography>
         </Grid>
         {isMobile && (
           <>
-            <Grid item xs={4.5} display={"flex"} justifyContent={"center"}>
+            <Grid
+              sx={{
+                display: "flex",
+                justifyContent: "center"
+              }}
+              size={4.5}>
               {reportUI === null || reportUI === "default" ? (
                 ""
               ) : (
@@ -235,14 +235,14 @@ const summaryPayload={...payLoad,type:"summary"};
               )}
             </Grid>
             <Grid
-              item
-              xs={4.5}
-              display={"flex"}
-              justifyContent={"end"}
-              alignItems={"center"}
-              textAlign={"end"}
-              gap={2}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "end",
+                alignItems: "center",
+                textAlign: "end",
+                gap: 2
+              }}
+              size={4.5}>
               <Tooltip
                 placement="left"
                 title={`Regenerate ${section}  Using AI`}

@@ -30,7 +30,7 @@ const CompanyDetails = () => {
 
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={12}>
         <CompanyData />
       </Grid>
     </Grid>

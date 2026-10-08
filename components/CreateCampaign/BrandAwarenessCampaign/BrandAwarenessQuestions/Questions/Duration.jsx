@@ -23,16 +23,22 @@ const Duration = ({ handleQuestion }) => {
   };
 
   return (
-    <Grid container spacing={2} justifyContent={"space-between"}>
-      <Grid item xs={12}>
+    <Grid container spacing={2} sx={{
+      justifyContent: "space-between"
+    }}>
+      <Grid size={12}>
         <Typography variant="AvgHeading">
           Set the starting date and duration of the campaign.
         </Typography>
 
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <Box pt={2} style={{ width: "40%" }}>
+          <Box style={{ width: "40%" }} sx={{
+            pt: 2
+          }}>
             {/* Start Date */}
-            <Grid mb={7}>
+            <Grid sx={{
+              mb: 7
+            }}>
               <Controller 
                 control={control}
                 name="startDate"
@@ -54,7 +60,9 @@ const Duration = ({ handleQuestion }) => {
             </Grid>
 
             {/* Duration Dropdown */}
-            <Grid mb={3}>
+            <Grid sx={{
+              mb: 3
+            }}>
               <FormControl fullWidth>
                 <InputLabel id="duration-label">Duration</InputLabel>
                 <Controller
@@ -83,7 +91,9 @@ const Duration = ({ handleQuestion }) => {
 
             {/* End Date (Conditional) */}
             {selectedDuration === "custom" && (
-              <Grid mb={3}>
+              <Grid sx={{
+                mb: 3
+              }}>
                 <Controller
                   control={control}
                   name="endDate"

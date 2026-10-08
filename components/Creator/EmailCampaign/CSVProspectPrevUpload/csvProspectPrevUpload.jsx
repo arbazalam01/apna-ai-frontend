@@ -8,7 +8,7 @@ import {
   TableContainer,
   TableRow,
 } from "@mui/material";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutlined";
 import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import {
   campaignDialogStore,
@@ -144,7 +144,7 @@ export default function CSVProspectPrevUpload() {
             paddingRight: "1rem", // Add padding to the right to separate buttons from the title
           }}
         >
-          <Grid container item xs={9}>
+          <Grid container size={9}>
             <Typography
               
               variant="MainHeading"
@@ -157,7 +157,13 @@ export default function CSVProspectPrevUpload() {
               Import Prospects from Previous Campaigns
             </Typography>
           </Grid>
-          <Grid container item xs={3} sx={{ alignItems: "end" }} gap={2}>
+          <Grid
+            container
+            sx={{
+              gap: 2,
+              alignItems: "end"
+            }}
+            size={3}>
             <Button
               onClick={handleImport}
               variant="button1"
@@ -209,9 +215,11 @@ export default function CSVProspectPrevUpload() {
                 >
                   <TableCell>
                     <Typography
-                      color="text.secondary"
                       component="h6"
                       variant="h6"
+                      sx={{
+                        color: "text.secondary"
+                      }}
                     >
                       {campaign.date}
                     </Typography>
@@ -222,48 +230,64 @@ export default function CSVProspectPrevUpload() {
 
                   <TableCell align="left" sx={cellStyle}>
                     <Typography
-                      color="text.primary"
                       component="h7"
                       variant="h6"
+                      sx={{
+                        color: "text.primary"
+                      }}
                     >
                       {campaign.prospects}
                     </Typography>
-                    <Typography color="text.secondary">Prospects</Typography>
+                    <Typography sx={{
+                      color: "text.secondary"
+                    }}>Prospects</Typography>
                   </TableCell>
                   <TableCell
                     sx={{ ...cellStyle, "&:last-child": { boxShadow: "none" } }}
                   >
                     <Grid container>
-                      <Grid container item xs={2}>
-                        <Typography color="text.secondary">THEME</Typography>
+                      <Grid container size={2}>
+                        <Typography sx={{
+                          color: "text.secondary"
+                        }}>THEME</Typography>
                       </Grid>
 
-                      <Grid container item xs={10}>
-                        <Typography color="text.primary">
+                      <Grid container size={10}>
+                        <Typography sx={{
+                          color: "text.primary"
+                        }}>
                           {campaign.theme}
                         </Typography>
                       </Grid>
                     </Grid>
 
                     <Grid container>
-                      <Grid container item xs={2}>
-                        <Typography color="text.secondary">PRODUCT</Typography>
+                      <Grid container size={2}>
+                        <Typography sx={{
+                          color: "text.secondary"
+                        }}>PRODUCT</Typography>
                       </Grid>
 
-                      <Grid container item xs={10}>
-                        <Typography color="text.primary">
+                      <Grid container size={10}>
+                        <Typography sx={{
+                          color: "text.primary"
+                        }}>
                           {campaign.product}
                         </Typography>
                       </Grid>
                     </Grid>
 
                     <Grid container>
-                      <Grid container item xs={2}>
-                        <Typography color="text.secondary">INDUSTRY</Typography>
+                      <Grid container size={2}>
+                        <Typography sx={{
+                          color: "text.secondary"
+                        }}>INDUSTRY</Typography>
                       </Grid>
 
-                      <Grid container item xs={10}>
-                        <Typography color="text.primary">
+                      <Grid container size={10}>
+                        <Typography sx={{
+                          color: "text.primary"
+                        }}>
                           {campaign.industry}
                         </Typography>
                       </Grid>

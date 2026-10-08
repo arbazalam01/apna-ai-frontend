@@ -59,14 +59,19 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
                 // width: "60rem",
               }}
             >
-              <Grid container item xs={11} pl={3}>
+              <Grid
+                container
+                sx={{
+                  pl: 3
+                }}
+                size={11}>
                 <Typography variant="Heading">
                   Campaign for&nbsp;
                   {viewDetails?.products}
                 </Typography>
               </Grid>
 
-              <Grid container item xs={1}>
+              <Grid container size={1}>
                 <IconX
                   size={30}
                   style={{ cursor: "pointer" }}
@@ -76,16 +81,26 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
             </Grid>
             <Divider />
 
-            <Box pl={5} pt={2}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
               <FormLabel component="legend">
                 <Typography variant="MainHeading">Campaign Details</Typography>
               </FormLabel>
 
-              <Grid container alignItems={"center"} mb={2} pt={2}>
-                <Grid item xs={2.5}>
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  mb: 2,
+                  pt: 2
+                }}>
+                <Grid size={2.5}>
                   <Typography variant="smallGreyHeading">DATES </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">
                     {startDate} - {endDate}
                   </Typography>
@@ -94,14 +109,23 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
             </Box>
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pt={2}>
-              <Grid container mb={2} pt={2}>
-                <Grid item xs={2.5}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
+              <Grid
+                container
+                sx={{
+                  mb: 2,
+                  pt: 2
+                }}>
+                <Grid size={2.5}>
                   <Typography variant="smallGreyHeading">
                     OBJECTIVES{" "}
                   </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   <Typography variant="caption2">
                     {
                       viewDetails?.contentObjectivesDistribution
@@ -134,12 +158,21 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
 
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pt={2}>
-              <Grid container mb={2} pt={2}>
-                <Grid item xs={2.5}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
+              <Grid
+                container
+                sx={{
+                  mb: 2,
+                  pt: 2
+                }}>
+                <Grid size={2.5}>
                   <Typography variant="smallGreyHeading">PRODUCTS </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {viewDetails?.products &&
                     viewDetails?.products.map((product, index) => {
                       return (
@@ -155,12 +188,21 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
 
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pt={2}>
-              <Grid container mb={2} pt={2}>
-                <Grid item xs={2.5}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
+              <Grid
+                container
+                sx={{
+                  mb: 2,
+                  pt: 2
+                }}>
+                <Grid size={2.5}>
                   <Typography variant="smallGreyHeading">SERVICES </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {viewDetails?.services &&
                     viewDetails?.services.map((service, index) => {
                       return (
@@ -178,14 +220,23 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
 
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pt={2}>
-              <Grid container mb={2} pt={2}>
-                <Grid item xs={2.5}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
+              <Grid
+                container
+                sx={{
+                  mb: 2,
+                  pt: 2
+                }}>
+                <Grid size={2.5}>
                   <Typography variant="smallGreyHeading">
                     TYPES OF CONTENT INCLUDED{" "}
                   </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {viewDetails?.platforms
                     ? viewDetails.platforms.map((item) => (
                         <>
@@ -208,8 +259,17 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
 
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pt={2}>
-              <Grid container mb={2} pt={2}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2
+              }}>
+              <Grid
+                container
+                sx={{
+                  mb: 2,
+                  pt: 2
+                }}>
                 <table
                   style={{ borderCollapse: "collapse", width: "100%" }}
                   className={Styles.viewCampaignTable}
@@ -268,14 +328,24 @@ const ViewCampaign = ({ open, onClose, viewDetails }) => {
 
             <Divider sx={borderMargin} />
 
-            <Box pl={5} pt={2} pb={15}>
-              <Grid container mb={2} pt={2}>
-                <Grid item xs={2.5}>
+            <Box
+              sx={{
+                pl: 5,
+                pt: 2,
+                pb: 15
+              }}>
+              <Grid
+                container
+                sx={{
+                  mb: 2,
+                  pt: 2
+                }}>
+                <Grid size={2.5}>
                   <Typography variant="smallGreyHeading">
                     SPECIAL INSTRUCTIONS
                   </Typography>
                 </Grid>
-                <Grid item xs={9.5}>
+                <Grid size={9.5}>
                   {viewDetails?.additionalInstructions ? (
                     <Typography variant="caption2">
                       {viewDetails?.additionalInstructions}

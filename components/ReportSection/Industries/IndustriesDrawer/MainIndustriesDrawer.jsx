@@ -29,15 +29,19 @@ const MainIndustriesDrawer = ({ title }) => {
 
   return (
     <>
-   
+
       <Grid  >
 
       <Box>
         
-            <Grid container columnSpacing={2} p={3}>
+            <Grid container columnSpacing={2} sx={{
+              p: 3
+            }}>
   {companyIndustries?.map((core, index) => (
-    <Grid item  key={index}>
-      <Typography mb={2}>
+    <Grid key={index}>
+      <Typography sx={{
+        mb: 2
+      }}>
         <Chip label={core} size="medium" variant="outlined" sx={{ fontSize:"0.9rem", fontWeight: "500",padding:"0rem 0.8rem" }} />
       </Typography>
 </Grid>

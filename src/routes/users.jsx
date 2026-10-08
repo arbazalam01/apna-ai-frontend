@@ -99,10 +99,10 @@ const UsersPage = () => {
               height: "5rem",
             }}
           >
-            <Grid item xs={8}>
+            <Grid size={8}>
             <Typography variant="Heading-head">User Management</Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid size={4}>
 
 
             <Button
@@ -119,11 +119,11 @@ const UsersPage = () => {
         </Grid>
 
         <Grid
-          pl={0.2}
-          pt={1}
-          pb={3}
-          //  sx={{ borderBottom: "1px solid #d9d9d9" }}
-        >
+          sx={{
+            pl: 0.2,
+            pt: 1,
+            pb: 3
+          }}>
           <Content>
             <UsersTable data={tableData} />
           </Content>

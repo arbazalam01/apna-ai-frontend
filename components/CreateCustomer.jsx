@@ -72,7 +72,7 @@ const CreateCustomer = ({ open, onClose }) => {
               paddingRight: "1rem", // Add padding to the right to separate buttons from the title
             }}
           >
-            <Grid container item xs={8}>
+            <Grid container size={8}>
               <Typography
                 id="title"
                 component="h5"
@@ -85,7 +85,7 @@ const CreateCustomer = ({ open, onClose }) => {
                 Create New Customer
               </Typography>
             </Grid>
-            <Grid container item xs={4} sx={{ alignItems: "center",gap:2 }} >
+            <Grid container sx={{ alignItems: "center",gap:2 }} size={4}>
               <Button
                 type="submit"
                 variant="button1"
@@ -112,7 +112,9 @@ const CreateCustomer = ({ open, onClose }) => {
 
             <Divider />
 
-            <Box mt={2}>
+            <Box sx={{
+              mt: 2
+            }}>
               <Typography variant="MainHeading">Competitor Info</Typography><br/>
               {competitorsField.map((field, index) => (
                 <SectionInput
@@ -151,9 +153,11 @@ const SectionInput = ({
   isDelete = false,
 }) => {
   return (
-    <Box mt={2}>
+    <Box sx={{
+      mt: 2
+    }}>
       <Grid container columnSpacing={3}>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <Controller
             name={`${name}.name`}
             control={control}
@@ -168,7 +172,7 @@ const SectionInput = ({
             )}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <Controller
             name={`${name}.websiteUrl`}
             control={control}
@@ -196,7 +200,11 @@ const SectionInput = ({
 
 
         {isDelete && (
-          <Grid item xs={12} md={2}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 2
+            }}>
             <IconButton aria-label="delete" onClick={() => handleDelete(index)}>
               <DeleteIcon />
             </IconButton>

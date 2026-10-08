@@ -25,18 +25,22 @@ const ProductsAndServices = () => {
   return (
     <Grid container>
       {/* Title  */}
-      <Grid item>
+      <Grid>
         <Typography variant="MainHeading">Products & Services</Typography>
       </Grid>
 
       {/* Company Name and description  */}
-      <Grid item container>
-        <Grid item xs={6} container direction="column">
-          <Grid item>
+      <Grid container>
+        <Grid container direction="column" size={6}>
+          <Grid>
             <Typography className={Styles.product_heading}>Products</Typography>
           </Grid>
           {companyProducts?.slice(0, 4).map((product, index,array) => (
-            <Grid item key={index} mb={1}>
+            <Grid
+              key={index}
+              sx={{
+                mb: 1
+              }}>
               <Typography variant="caption">{product?.name.slice(0,24)} {product?.name.length>24 && " ..."}</Typography>
               {index !== array?.length - 1 && <Divider />}
             </Grid>
@@ -44,12 +48,16 @@ const ProductsAndServices = () => {
             {companyProducts?.length>4 && <Typography variant="caption">{companyProducts?.length-4}+ more</Typography>}
 
         </Grid>
-        <Grid item xs={6} container direction="column">
-          <Grid item>
+        <Grid container direction="column" size={6}>
+          <Grid>
           <Typography className={Styles.product_heading}>Services</Typography>
           </Grid>
           {companyServices?.slice(0, 4).map((service, index, array) => (
-  <Grid item key={index} mb={1}>
+  <Grid
+    key={index}
+    sx={{
+      mb: 1
+    }}>
     <Typography variant="caption">{service?.name.slice(0,25)}{service?.name.length>25 && " ..."} </Typography>
     {index !== array?.length - 1 && <Divider />}
   </Grid>
@@ -57,7 +65,7 @@ const ProductsAndServices = () => {
 {companyServices?.length>4 && <Typography variant="caption">{companyServices?.length-4}+ more</Typography>}
 
 
-          <Grid item>
+          <Grid>
             <Typography variant="caption">
               {/* +5 more */}
             </Typography>

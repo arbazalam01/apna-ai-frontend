@@ -15,9 +15,15 @@ const Leadership = () => {
   return (
     <Box>
       <Typography variant="MainHeading">Leadership</Typography>
-      <Grid container direction="column" pt={1}>
+      <Grid container direction="column" sx={{
+        pt: 1
+      }}>
         {Leadership?.slice(0, 3).map((item, index, array) => (
-          <Grid item key={index} mb={1}>
+          <Grid
+            key={index}
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">
               <Item
                 title={item?.name}

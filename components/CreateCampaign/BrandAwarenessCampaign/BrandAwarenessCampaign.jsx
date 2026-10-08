@@ -199,7 +199,9 @@ const navigate=useNavigate();
   return (
     <Grid container>
       {loading ? (
-        <Grid container justifyContent="center">
+        <Grid container sx={{
+          justifyContent: "center"
+        }}>
         <Loader />
         </Grid>
       ) : (
@@ -226,23 +228,32 @@ themes: []
             <Grid container>
               {steps.map((step, index) => (
                 <Grid
-                  item
-                  xs={12}
                   key={index}
-                  p={2}
                   style={{
                     position: "relative",
                     display: index <= currentStep ? "block" : "none",
                     pointerEvents: index < currentStep ? "none" : "auto",
                     opacity: index < currentStep ? 0.5 : 1,
                   }}
-                >
+                  sx={{
+                    p: 2
+                  }}
+                  size={12}>
                   {step.component}
                 </Grid>
               ))}
 
-              <Grid item xs={12} mb={8}>
-                <Grid display="flex" gap={2} pl={2}>
+              <Grid
+                sx={{
+                  mb: 8
+                }}
+                size={12}>
+                <Grid
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    pl: 2
+                  }}>
                   {currentStep > 0 && (
                     <Button variant="button2" onClick={handlePrevious}>
                       Previous

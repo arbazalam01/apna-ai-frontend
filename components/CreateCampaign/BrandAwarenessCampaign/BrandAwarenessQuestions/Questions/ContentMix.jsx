@@ -26,8 +26,10 @@ const ContentMix = ({ handleQuestion }) => {
   
 
   return (
-    <Grid container spacing={2} justifyContent={"space-between"}>
-      <Grid item xs={12}>
+    <Grid container spacing={2} sx={{
+      justifyContent: "space-between"
+    }}>
+      <Grid size={12}>
         <Typography variant="AvgHeading">
           Based on your input, here is the recommended Content Mix{" "}
         </Typography>
@@ -39,7 +41,9 @@ const ContentMix = ({ handleQuestion }) => {
         <br />
 
         {/* Contents Type */}
-        <Grid container gap={3}>
+        <Grid container sx={{
+          gap: 3
+        }}>
           {themes && themes?.map((theme, themeIndex) => (
             <Box
               key={themeIndex}
@@ -53,16 +57,24 @@ const ContentMix = ({ handleQuestion }) => {
               <Typography variant="smallGreyHeading2">THEME</Typography>
               <br />
               <Typography variant="caption">{theme}</Typography>
-              <Grid container mt={2} spacing={0.7}>
+              <Grid container spacing={0.7} sx={{
+                mt: 2
+              }}>
                 {contentFormat && contentFormat?.map((item, formatIndex) => (
-                  <Grid item xs={12} key={formatIndex}>
-                    <Grid container alignItems="center">
-                      <Grid item xs={9}>
+                  <Grid key={formatIndex} size={12}>
+                    <Grid container sx={{
+                      alignItems: "center"
+                    }}>
+                      <Grid size={9}>
                         <Typography variant="smallGreyHeading2">
                           {item.toUpperCase()}
                         </Typography>
                       </Grid>
-                      <Grid item xs={3} textAlign={"right"}>
+                      <Grid
+                        sx={{
+                          textAlign: "right"
+                        }}
+                        size={3}>
 
                         <Controller
                           name={`content_mix[${themeIndex}].${item}`} // Path in the form state

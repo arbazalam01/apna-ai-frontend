@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-  Box,
-  TextField,
-  Button,
-  Typography,
-} from "@mui/material";
+import { List, ListItemText, Divider, Box, TextField, Button, Typography } from "@mui/material";
 import NewGenerateEmail from "../NewGenerateEmail";
 import { campaignId } from "@store/ProspectStore";
 import { useAtomValue } from "jotai";
 import api from "@utils/api";
 import { IconChevronRight } from "@tabler/icons-react";
+
+import ListItemButton from "@mui/material/ListItemButton";
 
 const PreviewEmailCampaign = () => {
   const [selectedProspect, setSelectedProspect] = useState(null);
@@ -57,41 +50,45 @@ const PreviewEmailCampaign = () => {
   }, [campaignId]);
 
   return (
-    <Box display="flex" sx={{ pt: 2 }}>
+    <Box
+      sx={{
+        display: "flex",
+        pt: 2
+      }}>
       <Divider />
-      <Box width="20%" bgcolor="background.paper">
+      <Box
+        sx={{
+          width: "20%",
+          bgcolor: "background.paper"
+        }}>
         <Typography
-          // variant="h6"
-          // p={1}
-          // ml={}
           sx={{
+            color: "text.secondary",
             backgroundColor: "#F2F2F2",
             fontSize: "0.9rem",
             fontWeight: "600",
-            padding: "0.8rem 1.5rem",
-          }}
-          color="text.secondary"
-        >
+            padding: "0.8rem 1.5rem"
+          }}>
           PROSPECT NAME
         </Typography>
         <Divider sx={{ height: "0px", margin: "0px", padding: "0px" }} />
         <List>
           {prospects.map((prospect, index) => (
             <>
-              <Box key={prospect} pr={2}>
-                <ListItem
+              <Box key={prospect} sx={{
+                pr: 2
+              }}>
+                <ListItemButton
                   p={0}
                   m={0}
-                  button
                   selected={selectedProspect === prospect}
-                  onClick={(event) => handleListItemClick(event, prospect)}
-                >
+                  onClick={(event) => handleListItemClick(event, prospect)}>
                   <ListItemText
                     primary={prospect["Name"]}
                     secondary={`${prospect["Title"]}, ${prospect["Company"]}`}
                   />
                   <IconChevronRight fontSize={"large"} />
-                </ListItem>
+                </ListItemButton>
               </Box>
               <Divider />
             </>
@@ -115,18 +112,19 @@ const PreviewEmailCampaign = () => {
       </Box>
 
       <Divider orientation="vertical" flexItem />
-      <Box width="80%">
+      <Box sx={{
+        width: "80%"
+      }}>
         <Typography
           component="div"
-          p={1}
-          color="text.secondary"
           sx={{
+            p: 1,
+            color: "text.secondary",
             backgroundColor: "#F2F2F2",
             fontSize: "0.9rem",
             fontWeight: "600",
-            padding: "0.8rem 2rem",
-          }}
-        >
+            padding: "0.8rem 2rem"
+          }}>
           EMAIL SUBJECT & BODY
         </Typography>
         <Divider />
@@ -136,22 +134,26 @@ const PreviewEmailCampaign = () => {
             variant="standard"
             label="Email Subject"
             margin="normal"
-            InputProps={{
-              disableUnderline: true,
-            }}
             value={emailTemplates.subject}
+            slotProps={{
+              input: {
+                disableUnderline: true,
+              }
+            }}
           />
           <TextField
             fullWidth
             variant="standard"
             label="Email Body"
             margin="normal"
-            InputProps={{
-              disableUnderline: true,
-            }}
             multiline
             rows={10}
             value={emailTemplates.body}
+            slotProps={{
+              input: {
+                disableUnderline: true,
+              }
+            }}
           />
         </Box>
       </Box>

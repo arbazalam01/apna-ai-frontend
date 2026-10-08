@@ -48,24 +48,26 @@ const EngagementCampaign = ({
   return (
     <>
       <FormProvider {...methods}>
-        <Grid container p={2}>
+        <Grid container sx={{
+          p: 2
+        }}>
           {/* Question-1 */}
           {engagementQues.first && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Duration handleQuestion={handleQuestion} />
             </Grid>
           )}
 
           {/* Question-2 */}
           {engagementQues.second && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Contents handleQuestion={handleQuestion} />
             </Grid>
           )}
 
           {/* Question-3 */}
           {engagementQues.third && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <ProductsServices
                 handleQuestion={handleQuestion}
                 industryData={industryData.data[0]}
@@ -75,7 +77,7 @@ const EngagementCampaign = ({
 
           {/* Question-4 */}
           {engagementQues.fourth && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Personas
                 handleQuestion={handleQuestion}
                 industryData={industryData.persona}
@@ -85,7 +87,7 @@ const EngagementCampaign = ({
 
           {/* Question-5 */}
           {engagementQues.fifth && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <IndustryTheme
                 handleQuestion={handleQuestion}
                 industryData={industryData.data[0]}
@@ -95,7 +97,7 @@ const EngagementCampaign = ({
 
           {/* Quesrtion-6 */}
           {engagementQues.sixth && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Review
                 handleQuestion={handleQuestion}
                 Objective={Objective}
@@ -106,7 +108,7 @@ const EngagementCampaign = ({
 
           {/* Question-7 */}
           {engagementQues.seventh && (
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Loader />
             </Grid>
           )}

@@ -23,8 +23,14 @@ const Name = ({companyAbout,topTrends}) => {
     <>
       <PaperComp>
         <Grid container>
-          <Grid item container>
-            <Grid item xs={12} container direction="column" mt={1}>
+          <Grid container>
+            <Grid
+              container
+              direction="column"
+              sx={{
+                mt: 1
+              }}
+              size={12}>
               <Grid>
                 <Grid>
                   <img
@@ -35,12 +41,15 @@ const Name = ({companyAbout,topTrends}) => {
                     style={{ border: "1px solid #D9D9D9", borderRadius: "50%" }}
                   />
                 </Grid>
-                <Grid item>
+                <Grid>
                   <Typography className={Styles.company_name}>
                     {companyAbout.name}
                   </Typography>
                 </Grid>
-                <Grid item mb={2}>
+                <Grid
+                  sx={{
+                    mb: 2
+                  }}>
                   <Typography className={Styles.company_sector}>
                   {companyAbout?.industries[0]}
                   </Typography>

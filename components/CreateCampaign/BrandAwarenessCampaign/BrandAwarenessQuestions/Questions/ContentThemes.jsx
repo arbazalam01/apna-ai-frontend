@@ -107,8 +107,10 @@ export default function ContentThemes() {
                   checked={checked.indexOf(value) !== -1}
                   tabIndex={-1}
                   disableRipple
-                  inputProps={{
-                    "aria-labelledby": labelId,
+                  slotProps={{
+                    input: {
+                      "aria-labelledby": labelId,
+                    }
                   }}
                 />
               </ListItemIcon>
@@ -121,14 +123,24 @@ export default function ContentThemes() {
   );
 
   return (
-    <Grid container spacing={2} justifyContent="center" alignItems="center">
-      <Grid item container xs={12}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        justifyContent: "center",
+        alignItems: "center"
+      }}>
+      <Grid container size={12}>
         <Grid>
           <Typography variant="AvgHeading">
             Choose up to 3 segments to build your campaign around.
           </Typography>
         </Grid>
-        <Grid ml={6.5} alignContent={"center"}>
+        <Grid
+          sx={{
+            ml: 6.5,
+            alignContent: "center"
+          }}>
           <AutoModeIcon
             onClick={regenerateApiResponse} // Trigger refetch on click
             style={{
@@ -144,10 +156,12 @@ export default function ContentThemes() {
       ) : (
         <>
           {/* Left List (Available Themes from API) */}
-          <Grid item>{customList(left, "left")}</Grid>
+          <Grid>{customList(left, "left")}</Grid>
 
-          <Grid item>
-            <Grid container direction="column" alignItems="center">
+          <Grid>
+            <Grid container direction="column" sx={{
+              alignItems: "center"
+            }}>
               <Button
                 sx={{ my: 0.5 }}
                 variant="button4"
@@ -172,7 +186,7 @@ export default function ContentThemes() {
           </Grid>
 
           {/* Right List (Selected Themes) */}
-          <Grid item>{customList(right, "right")}</Grid>
+          <Grid>{customList(right, "right")}</Grid>
         </>
       )}
       {/* Hidden input to register selected themes with react-hook-form */}

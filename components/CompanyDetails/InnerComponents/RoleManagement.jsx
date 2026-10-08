@@ -12,14 +12,15 @@ const RoleManagement = () => {
     <>
       <Grid
         container
-        justifyContent="space-between"
-        alignItems="center"
         onClick={handleRole}
-      >
-        <Grid item>
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
+        <Grid>
           <Typography variant="AvgHeading">Role Management</Typography>
         </Grid>
-        <Grid item>
+        <Grid>
           <IconChevronRight />
         </Grid>
       </Grid>

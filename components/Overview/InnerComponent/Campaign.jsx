@@ -138,17 +138,28 @@ const Campaign = () => {
       {campaigns.length === 0 ? (
         <Grid
           container
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          borderBottom={"1px solid #d9d9d9"}
-        >
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            borderBottom: "1px solid #d9d9d9"
+          }}>
           <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
         </Grid>
       ) : (
         campaigns.map((val, index) => (
-          <Grid key={index} container px={4} pb={2}>
-            <Grid item xs={11} bgcolor={"transparent"}>
+          <Grid
+            key={index}
+            container
+            sx={{
+              px: 4,
+              pb: 2
+            }}>
+            <Grid
+              sx={{
+                bgcolor: "transparent"
+              }}
+              size={11}>
               <Typography
                 sx={{
                   color:
@@ -166,13 +177,13 @@ const Campaign = () => {
               </Typography>
             </Grid>
             <Grid
-              item
-              xs={1}
-              display={"flex"}
-              alignItems="center"
-              justifyContent="center"
-              bgcolor={"transparent"}
-            >
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                bgcolor: "transparent"
+              }}
+              size={1}>
               <IconButton
                 edge="end"
                 aria-label="go"
@@ -188,20 +199,23 @@ const Campaign = () => {
   );
 
   return (
-    <Grid container pt={2} sx={{ maxHeight: "90vh" }}>
+    <Grid
+      container
+      sx={{
+        pt: 2,
+        maxHeight: "90vh"
+      }}>
       <Grid
-        item
-        xs={12}
         sx={{ position: "sticky", top: 0, backgroundColor: "white", zIndex: 1 }}
-      >
+        size={12}>
         <Grid
-          item
-          xs={12}
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          px={2}
-        >
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            px: 2
+          }}
+          size={12}>
           <Typography variant="MainHeading">Campaigns</Typography>
           <span style={calendarStyle}>
             <Typography variant="MainHeading" style={{ color: "#F787BB" }}>
@@ -210,7 +224,12 @@ const Campaign = () => {
             <AppsOutlinedIcon sx={{ fontSize: "2rem", marginLeft: "0.3rem" }} />
           </span>
         </Grid>
-        <Grid item xs={12} px={2} mb={1}>
+        <Grid
+          sx={{
+            px: 2,
+            mb: 1
+          }}
+          size={12}>
           <Typography sx={{ fontSize: "0.9rem" }}>
             Create impactful, targeted campaigns in minutes with AI assistance.
             <br />
@@ -227,16 +246,16 @@ const Campaign = () => {
         {/* Upcoming Section */}
         <Grid
           container
-          p={2}
-          alignItems={"center"}
-          height={60}
           sx={{
+            p: 2,
+            alignItems: "center",
+            height: 60,
+
             ...(openSections.upcoming && {
               borderBottom: "1px solid #d9d9d9",
               mb: 1,
-            }),
-          }}
-        >
+            })
+          }}>
           {openSections.upcoming ? (
             <IconChevronDown
               size={"1.5rem"}
@@ -270,10 +289,11 @@ const Campaign = () => {
           ) : (
             <Grid
               container
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
             </Grid>
           )
@@ -281,16 +301,16 @@ const Campaign = () => {
         {/* Ongoing Section */}
         <Grid
           container
-          p={2}
-          alignItems={"center"}
-          height={60}
           sx={{
+            p: 2,
+            alignItems: "center",
+            height: 60,
             borderTop: "1px solid #d9d9d9",
+
             ...(openSections.ongoing
               ? { borderBottom: "1px solid #d9d9d9", mb: 1 }
-              : {}),
-          }}
-        >
+              : {})
+          }}>
           {openSections.ongoing ? (
             <IconChevronDown
               size={"1.5rem"}
@@ -323,10 +343,11 @@ const Campaign = () => {
           ) : (
             <Grid
               container
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
             </Grid>
           )
@@ -334,14 +355,13 @@ const Campaign = () => {
         {/* Finished Section */}
         <Grid
           container
-          p={2}
-          height={60}
           sx={{
+            p: 2,
+            height: 60,
             borderTop: "1px solid #d9d9d9",
             borderBottom: "1px solid #d9d9d9",
-            mb: 1,
-          }}
-        >
+            mb: 1
+          }}>
           {openSections.finished ? (
             <IconChevronDown
               size={"1.5rem"}
@@ -370,17 +390,23 @@ const Campaign = () => {
         </Grid>
         {openSections.finished ? (
           finished.length > 0 ? (
-            <Grid container mb={2} borderBottom={"1px solid #d9d9d9"}>
+            <Grid
+              container
+              sx={{
+                mb: 2,
+                borderBottom: "1px solid #d9d9d9"
+              }}>
               {renderCampaigns(finished)}
             </Grid>
           ) : (
             <Grid
               container
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              borderBottom={"1px solid #d9d9d9"}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                borderBottom: "1px solid #d9d9d9"
+              }}>
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
             </Grid>
           )

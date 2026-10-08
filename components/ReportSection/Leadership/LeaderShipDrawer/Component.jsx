@@ -7,22 +7,25 @@ const Component = ({name,description}) => {
   return (
     <>
 
-<Grid item>
-        <PaperComp>
-          <Grid item p={"1rem 1rem 0rem 0rem"}>
+      <Grid>
+              <PaperComp>
+                <Grid
+                  sx={{
+                    p: "1rem 1rem 0rem 0rem"
+                  }}>
 
-          <Typography
-            variant="MainHeading"
-            
-            sx={{fontSize:"1.1rem", lineHeight: "1.7rem" }}
-            >
-            {name}
-          </Typography>
+                <Typography
+                  variant="MainHeading"
+                  
+                  sx={{fontSize:"1.1rem", lineHeight: "1.7rem" }}
+                  >
+                  {name}
+                </Typography>
+                  </Grid>
+                <br />
+                <Typography variant="caption" sx={{fontSize:"0.9rem"}}>{description}</Typography>
+              </PaperComp>
             </Grid>
-          <br />
-          <Typography variant="caption" sx={{fontSize:"0.9rem"}}>{description}</Typography>
-        </PaperComp>
-      </Grid>
     </>
   );
 };

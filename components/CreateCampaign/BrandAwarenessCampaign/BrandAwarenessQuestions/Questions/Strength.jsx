@@ -42,10 +42,12 @@ const Strength = ({ handleQuestion, industryData }) => {
       container
      
       spacing={2}
-      justifyContent={"space-between"}
+      sx={{
+        justifyContent: "space-between"
+      }}
 
     >
-      <Grid item xs={12}>
+      <Grid size={12}>
         {/* <Typography variant="caption2" lineHeight={2}>
           Strength and Positioning
         </Typography>
@@ -101,7 +103,6 @@ const Strength = ({ handleQuestion, industryData }) => {
      
       </Grid>
 
-     
     </Grid>
   );
 };

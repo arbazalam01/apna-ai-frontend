@@ -10,14 +10,20 @@ const UserManagement = () => {
   };
   return (
     <>
-<Grid container justifyContent="space-between" alignItems="center" onClick={handleUser}>
-        <Grid item >
-          <Typography variant="AvgHeading">User Management</Typography>
-        </Grid>
-        <Grid item >
-          <IconChevronRight />
-        </Grid>
-      </Grid>
+      <Grid
+        container
+        onClick={handleUser}
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
+              <Grid>
+                <Typography variant="AvgHeading">User Management</Typography>
+              </Grid>
+              <Grid>
+                <IconChevronRight />
+              </Grid>
+            </Grid>
     </>
   );
 };

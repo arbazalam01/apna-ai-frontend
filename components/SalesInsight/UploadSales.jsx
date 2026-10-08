@@ -30,7 +30,7 @@ const UploadSales = () => {
       formData.append("file", currFile);
       formData.append("companyId", companyId);
 
-      await api.post("http://localhost:3000/usersegments/createUserSegment", formData, {
+      await api.post(`${import.meta.env.VITE_USER_SEGMENTS_API}/usersegments/createUserSegment`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -52,7 +52,14 @@ const UploadSales = () => {
 
   return (
     <div className="w-2xl mx-4 p-2 bg-white">
-      <Box justifyContent="center" alignItems="center" sm={{ padding: 3 }} mt={2} width="70%">
+      <Box
+        sm={{ padding: 3 }}
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          mt: 2,
+          width: "70%"
+        }}>
         <div
           style={{
             borderWidth: "2px",

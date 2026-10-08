@@ -22,37 +22,37 @@ const CreateCampaignHeader = () => {
     }
   return (
     <Grid
-    zIndex={10}
-    container
-    sx={{
+      container
+      sx={{
+        zIndex: 10,
+        flexDirection: "row",
+        justifyContent: "space-between",
 
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
-
-      // paddingY: 3.3,
-
-
-    }}
-  >
-    <Box display="flex" alignItems="center">
-      {/* <Typography
-          sx={{ fontSize: "1.6rem", fontWeight: "500",cursor:"pointer" }}
-          onClick={handlenavigate}
-        >
-          Target Persona
-        </Typography>
-        &nbsp; */}
-      <IconChevronLeft
-        onClick={handleNavigate}
-        size={35}
-        style={backArrow}
-      />
-      &nbsp;
-      <Typography variant="Heading-head">New Campaign</Typography>
-    </Box>
-  </Grid>
-  )
+        // paddingY: 3.3,
+        alignItems: "center"
+      }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center"
+        }}>
+        {/* <Typography
+            sx={{ fontSize: "1.6rem", fontWeight: "500",cursor:"pointer" }}
+            onClick={handlenavigate}
+          >
+            Target Persona
+          </Typography>
+          &nbsp; */}
+        <IconChevronLeft
+          onClick={handleNavigate}
+          size={35}
+          style={backArrow}
+        />
+        &nbsp;
+        <Typography variant="Heading-head">New Campaign</Typography>
+      </Box>
+    </Grid>
+  );
 }
 
 export default CreateCampaignHeader

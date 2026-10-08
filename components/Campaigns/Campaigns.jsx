@@ -185,15 +185,21 @@ const Campaigns = ({
       <Grid
         key={index}
         container
-        p={"1rem"}
         className={Styles.campaign_container}
         onClick={() =>
           handleCampaignSelected(val)
         }
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
+        sx={{
+          p: "1rem"
+        }}
       >
-        <Grid item xs={11} bgcolor={"transparent"}>
+        <Grid
+          sx={{
+            bgcolor: "transparent"
+          }}
+          size={11}>
           <Typography
             sx={{
               color:
@@ -211,13 +217,13 @@ const Campaigns = ({
           </Typography>
         </Grid>
         <Grid
-          item
-          xs={1}
           container
-          alignItems="center"
-          justifyContent="center"
-          bgcolor={"transparent"}
-        >
+          sx={{
+            alignItems: "center",
+            justifyContent: "center",
+            bgcolor: "transparent"
+          }}
+          size={1}>
           {hoveredIndex === index && (
             <CampaignActions
               handleCampaignView={handleCampaignView}
@@ -240,11 +246,12 @@ const Campaigns = ({
       >
         <Grid
           container
-          pl={2}
-          alignItems={"center"}
-          height={70}
-          sx={{ borderBottom: "1px solid #d9d9d9" }}
-        >
+          sx={{
+            pl: 2,
+            alignItems: "center",
+            height: 70,
+            borderBottom: "1px solid #d9d9d9"
+          }}>
           {openOngoing.upcoming ? (
             <IconChevronDown
               size={"1.7rem"}
@@ -271,10 +278,11 @@ const Campaigns = ({
           ) : (
             <Grid
               container
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
             </Grid>
           )
@@ -282,11 +290,12 @@ const Campaigns = ({
 
         <Grid
           container
-          pl={2}
-          alignItems={"center"}
-          height={70}
-          sx={{ borderBottom: "1px solid #d9d9d9" }}
-        >
+          sx={{
+            pl: 2,
+            alignItems: "center",
+            height: 70,
+            borderBottom: "1px solid #d9d9d9"
+          }}>
           {openOngoing.ongoing ? (
             <IconChevronDown
               size={"1.7rem"}
@@ -313,10 +322,11 @@ const Campaigns = ({
           ) : (
             <Grid
               container
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
             </Grid>
           )
@@ -324,10 +334,11 @@ const Campaigns = ({
 
         <Grid
           container
-          p={2}
-          height={70}
-          sx={{ borderBottom: "1px solid #d9d9d9" }}
-        >
+          sx={{
+            p: 2,
+            height: 70,
+            borderBottom: "1px solid #d9d9d9"
+          }}>
           {openOngoing.finished ? (
             <IconChevronDown
               size={"1.7rem"}
@@ -354,10 +365,11 @@ const Campaigns = ({
           ) : (
             <Grid
               container
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
             </Grid>
           )

@@ -10,7 +10,7 @@ import { Typography } from '@mui/material';
 // API call function
 const fetchUserSegments = async (companyId) => {
   const { data } = await axios.get(
-    `http://localhost:3000/usersegments/getUserSegments/${companyId}`
+    `${import.meta.env.VITE_USER_SEGMENTS_API}/usersegments/getUserSegments/${companyId}`
   );
   return data;
 };

@@ -50,19 +50,23 @@ const Persona = () => {
   }));
 
   return (
-    <Grid container pt={2} sx={{ maxHeight: "90vh" }}>
+    <Grid
+      container
+      sx={{
+        pt: 2,
+        maxHeight: "90vh"
+      }}>
       <Grid
-        item
-        xs={12}
         sx={{ position: "sticky", top: 0, backgroundColor: "white", zIndex: 1 }}
-      >
+        size={12}>
         <Grid
           container
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          px={2}
-        >
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            px: 2
+          }}>
           <Typography variant="MainHeading">Target Personas</Typography>
           <span style={personaStyle}>
             <Typography variant="MainHeading" style={{ color: "#FFBA4D" }}>
@@ -73,7 +77,12 @@ const Persona = () => {
             />
           </span>
         </Grid>
-        <Grid item xs={12} px={2} mb={1}>
+        <Grid
+          sx={{
+            px: 2,
+            mb: 1
+          }}
+          size={12}>
           <Typography sx={{ fontSize: "0.9rem" }}>
             Create Personas to help our AI visualize your target customer, so
             you can build campaigns tailored for their preferences.<br/> You have
@@ -82,27 +91,24 @@ const Persona = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sx={{ maxHeight: "calc(90vh - 160px)", overflowY: "auto" }}
-      >
+      <Grid sx={{ maxHeight: "calc(90vh - 160px)", overflowY: "auto" }} size={12}>
         {items.length > 0 ? (
           items.map((item, index) => (
             <Grid
               container
-              py={1}
-              px={2}
-              borderBottom={"1px solid #E5E5E5"}
               key={item.id}
-            >
+              sx={{
+                py: 1,
+                px: 2,
+                borderBottom: "1px solid #E5E5E5"
+              }}>
               <Grid
-                item
-                xs={10.7}
-                display="flex"
-                alignItems={"center"}
-                gap={1.5}
-              >
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1.5
+                }}
+                size={10.7}>
                 <img
                   src={item?.avatar}
                   height={35}
@@ -110,11 +116,18 @@ const Persona = () => {
                   style={{ borderRadius: "50%", objectFit: "cover" }}
                   alt="avatar"
                 />
-                <Typography variant="body1" fontSize={"0.9rem"}>
+                <Typography variant="body1" sx={{
+                  fontSize: "0.9rem"
+                }}>
                   {item?.name}
                 </Typography>
               </Grid>
-              <Grid item xs={1} textAlign={"right"} alignContent={"center"}>
+              <Grid
+                sx={{
+                  textAlign: "right",
+                  alignContent: "center"
+                }}
+                size={1}>
                 <IconButton
                   edge="end"
                   aria-label="go"
@@ -130,7 +143,12 @@ const Persona = () => {
             </Grid>
           ))
         ) : (
-          <Grid container justifyContent="center" pt={5}>
+          <Grid
+            container
+            sx={{
+              justifyContent: "center",
+              pt: 5
+            }}>
             <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
           </Grid>
         )}

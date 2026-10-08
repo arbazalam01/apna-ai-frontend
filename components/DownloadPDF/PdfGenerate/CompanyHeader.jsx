@@ -31,23 +31,25 @@ const Index = ({ color = "white" }) => {
   console.log(company);
 
   return (
-    <Box mt={2}>
+    <Box sx={{
+      mt: 2
+    }}>
       <Grid container>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <Text style={{ color: color }}>YOUR COMPANY</Text>
         </Grid>
-        <Grid item>
+        <Grid>
           <Text style={{ color: color }}>COMPETITION</Text>
         </Grid>
       </Grid>
       <Grid container>
-        <Grid item xs={4}>
+        <Grid size={4}>
           <Title level={2} style={{ color: color }}>
             {company.name}
           </Title>
         </Grid>
         {competitors.map((competitor, index) => (
-          <Grid item xs={4} key={index}>
+          <Grid key={index} size={4}>
             <Title level={2} style={{ color: color }}>
               {competitor.name}
             </Title>

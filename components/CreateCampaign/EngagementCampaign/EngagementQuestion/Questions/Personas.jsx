@@ -23,7 +23,7 @@ const Personas = ({ handleQuestion, industryData }) => {
   const renderQuestion = () => {
     if (currentQuestion === 1) {
       return (
-        <Grid item xs={12}>
+        <Grid size={12}>
           <PersonasQuestion1
             handleQuestion={handleQuestion}
             industryData={industryData}
@@ -33,7 +33,7 @@ const Personas = ({ handleQuestion, industryData }) => {
       );
     } else {
       return (
-        <Grid item xs={12}>
+        <Grid size={12}>
           <PersonaAttributes
             persona={currPersonaData}
             goBack={goBack}
@@ -51,11 +51,12 @@ const Personas = ({ handleQuestion, industryData }) => {
   return (
     <Grid
       container
-      minHeight={"75vh"}
       spacing={2}
-      justifyContent={"space-between"}
-      mb={10}
-    >
+      sx={{
+        minHeight: "75vh",
+        justifyContent: "space-between",
+        mb: 10
+      }}>
       {renderQuestion()}
     </Grid>
   );

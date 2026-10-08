@@ -110,26 +110,27 @@ console.log("selectedObj industryData", industryData);
             {/* BRAND AWARENESS */}
             {selectedObj.name === "Brand Awareness" && (
               <>
-                <Grid xs={3}>
+                <Grid size={3}>
                   <Grid
-                    zIndex={13}
-                    height={"100vh"}
-                    borderRight={"1px solid #D2D2D2"}
-                    bgcolor={"transparent"}
                     sx={{
+                      zIndex: 13,
+                      height: "100vh",
+                      borderRight: "1px solid #D2D2D2",
+                      bgcolor: "transparent",
                       position: "fixed",
-
                       paddingX: 2.4,
                       paddingY: 2.5,
-
-                      width: "17rem",
-                    }}
-                  >
+                      width: "17rem"
+                    }}>
                     
                     <BrandAwarenessStepper quesnumber={quesnumber} customCampaign={customCampaign} setCustomCampaign={setCustomCampaign} />
                   </Grid>
                 </Grid>
-                <Grid item xs={9} pt={1}>
+                <Grid
+                  sx={{
+                    pt: 1
+                  }}
+                  size={9}>
                   <BrandAwarenessCampaign
                     selectedObj={selectedObj.name}
                     brandAwarenessQues={brandAwarenessQues}
@@ -146,25 +147,26 @@ console.log("selectedObj industryData", industryData);
             {/* PRODUCT AWARENESS */}
             {selectedObj.name === "Product Awareness" && (
               <>
-                <Grid xs={3}>
+                <Grid size={3}>
                   <Grid
-                    zIndex={13}
-                    height={"100vh"}
-                    borderRight={"1px solid #D2D2D2"}
-                    bgcolor={"transparent"}
                     sx={{
+                      zIndex: 13,
+                      height: "100vh",
+                      borderRight: "1px solid #D2D2D2",
+                      bgcolor: "transparent",
                       position: "fixed",
-
                       paddingX: 2.4,
                       paddingY: 2.3,
-
-                      width: "17rem",
-                    }}
-                  >
+                      width: "17rem"
+                    }}>
                     <ProductAwarenessStepper quesnumber={quesnumber} />
                   </Grid>
                 </Grid>
-                <Grid item xs={9} pt={1}>
+                <Grid
+                  sx={{
+                    pt: 1
+                  }}
+                  size={9}>
                   <ProductAwarenessCampaign
                     selectedObj={selectedObj.name}
                     productAwarenessQues={productAwarenessQues}
@@ -179,25 +181,26 @@ console.log("selectedObj industryData", industryData);
             {/* ENGAGEMENT */}
             {selectedObj.name === "Product Engagement" && (
               <>
-                <Grid xs={3}>
+                <Grid size={3}>
                   <Grid
-                    zIndex={13}
-                    height={"100vh"}
-                    borderRight={"1px solid #D2D2D2"}
-                    bgcolor={"transparent"}
                     sx={{
+                      zIndex: 13,
+                      height: "100vh",
+                      borderRight: "1px solid #D2D2D2",
+                      bgcolor: "transparent",
                       position: "fixed",
-
                       paddingX: 2.4,
                       paddingY: 2.3,
-
-                      width: "17rem",
-                    }}
-                  >
+                      width: "17rem"
+                    }}>
                     <EngagementStepper quesnumber={quesnumber} />
                   </Grid>
                 </Grid>
-                <Grid item xs={9} pt={1}>
+                <Grid
+                  sx={{
+                    pt: 1
+                  }}
+                  size={9}>
                   <EngagementCampaign
                     selectedObj={selectedObj.name}
                     engagementQues={engagementQues}
@@ -212,25 +215,26 @@ console.log("selectedObj industryData", industryData);
             {/* THOUGHT LEADERSHIP */}
             {selectedObj.name === "Thought Leadership" && (
               <>
-                <Grid xs={3}>
+                <Grid size={3}>
                   <Grid
-                    zIndex={13}
-                    height={"100vh"}
-                    borderRight={"1px solid #D2D2D2"}
-                    bgcolor={"transparent"}
                     sx={{
+                      zIndex: 13,
+                      height: "100vh",
+                      borderRight: "1px solid #D2D2D2",
+                      bgcolor: "transparent",
                       position: "fixed",
-
                       paddingX: 2.4,
                       paddingY: 2.3,
-
-                      width: "17rem",
-                    }}
-                  >
+                      width: "17rem"
+                    }}>
                     <LeadershipStepper quesnumber={quesnumber} />
                   </Grid>
                 </Grid>
-                <Grid item xs={9} pt={1}>
+                <Grid
+                  sx={{
+                    pt: 1
+                  }}
+                  size={9}>
                   <ThoughtLeadershipCampaign
                     selectedObj={selectedObj}
                     leadershipQues={leadershipQues}

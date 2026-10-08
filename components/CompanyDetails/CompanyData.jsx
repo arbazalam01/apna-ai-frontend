@@ -83,10 +83,26 @@ const CompanyData = () => {
   return (
     <>
       {contextHolder}
-      <Grid container pt={2} pb={2} pl={2}>
+      <Grid
+        container
+        sx={{
+          pt: 2,
+          pb: 2,
+          pl: 2
+        }}>
         {/* YOUR COMPANY */}
-        <Grid lg={4} mr={2}>
-          <Grid item lg={12} mb={2}>
+        <Grid sx={{
+          mr: 2
+        }} size={{
+          lg: 4
+        }}>
+          <Grid
+            sx={{
+              mb: 2
+            }}
+            size={{
+              lg: 12
+            }}>
             <Paper sx={PaperHeight}>
               <YourCompany
                 companyData={companyData}
@@ -94,7 +110,7 @@ const CompanyData = () => {
               />
             </Paper>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Paper sx={PaperHeight}>
               <Competitors companyData={companyData} />
             </Paper>

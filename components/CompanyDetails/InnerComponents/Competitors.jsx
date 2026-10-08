@@ -6,8 +6,17 @@ import { IconPlus } from "@tabler/icons-react";
 
 const Competitors = ({ companyData }) => {
   return (
-    <Grid container justifyContent="space-between" alignItems="center" pb={2}>
-      <Grid item mb={1}>
+    <Grid
+      container
+      sx={{
+        justifyContent: "space-between",
+        alignItems: "center",
+        pb: 2
+      }}>
+      <Grid
+        sx={{
+          mb: 1
+        }}>
         <Typography variant="AvgHeading">Competitors</Typography>
       </Grid>
       {companyData.competitors.map((value) => {
@@ -16,19 +25,19 @@ const Competitors = ({ companyData }) => {
             <Grid container  key={value._id} 
             // sx={{borderBottom: "1px solid #EBEBEB"}}
             >
-              <Grid item xs={3.3}>
+              <Grid size={3.3}>
                 <Typography variant="smallGreyHeading">Name</Typography>
               </Grid>
-              <Grid item xs={8.7}>
+              <Grid size={8.7}>
                 <Typography variant="caption1">{value.name}</Typography>
               </Grid>
               <Grid container>
-                <Grid item xs={3.3}>
+                <Grid size={3.3}>
                   <Typography variant="smallGreyHeading">
                     Website URL
                   </Typography>
                 </Grid>
-                <Grid item xs={8.7}>
+                <Grid size={8.7}>
                   <Typography variant="caption1">{value.websiteUrl}</Typography>
                 </Grid>
               </Grid>
@@ -37,7 +46,10 @@ const Competitors = ({ companyData }) => {
           </>
         );
       })}
-      <Grid item mt={2}>
+      <Grid
+        sx={{
+          mt: 2
+        }}>
       
         <Button variant="button2" >
         Request Edit

@@ -73,15 +73,15 @@ const BlogActivity = () => {
   return (
     <>
       <Grid container>
-        <Grid item>
+        <Grid>
           <Typography variant="MainHeading">Blog Activity</Typography>
         </Grid>
 
         {companyBlog?.blogs ? (
           <>
-            <Grid item container>
-              <Grid item xs={12} container direction="column">
-                <Grid item>
+            <Grid container>
+              <Grid container direction="column" size={12}>
+                <Grid>
                   <Typography className={Styles.blog_heading} variant="caption">
                     Blog Posts Breakdown
                   </Typography>
@@ -137,26 +137,35 @@ const BlogActivity = () => {
               </Grid>
             </Grid>
 
-            <Grid item container>
-              <Grid item xs={12} mt={2}>
+            <Grid container>
+              <Grid
+                sx={{
+                  mt: 2
+                }}
+                size={12}>
                 <Divider />
                 <Typography className={Styles.blog_heading} variant="caption">
                   Details of Last {companyBlog?.blogs?.titles?.length} Blogs 
                 </Typography>
               </Grid>
 
-              <Grid item xs={12} container direction="column">
-                <Grid item mb={1}>
+              <Grid container direction="column" size={12}>
+                <Grid
+                  sx={{
+                    mb: 1
+                  }}>
                   <Typography variant="caption">POST TITLES</Typography>
                 </Grid>
                 <Box>
                   {companyBlog?.blogs?.titles.slice(0, 6).map((post, index) => (
-                    <Grid container key={index} pb={1}>
-                      <Grid item xs={1}>
+                    <Grid container key={index} sx={{
+                      pb: 1
+                    }}>
+                      <Grid size={1}>
 
                       <SquareIcon blogtype={post?.blogtype?.toUpperCase()} />
                       </Grid>
-                      <Grid item xs={11}>
+                      <Grid size={11}>
                       <Typography variant="caption">{post?.title.slice(0, 40)}{post?.title?.length > 40 ? " ..." : ""}</Typography>
                      </Grid>
                       <Divider />
@@ -172,7 +181,9 @@ const BlogActivity = () => {
             </Grid>
           </>
         ) : (
-          <Grid item container sx={{ justifyContent: "center", color: "#d2d2d2", fontWeight: "500", fontSize: "1.5rem", mt: 20 }}>
+          <Grid
+            container
+            sx={{ justifyContent: "center", color: "#d2d2d2", fontWeight: "500", fontSize: "1.5rem", mt: 20 }}>
             No Blogs Available
           </Grid>
         )}

@@ -28,17 +28,35 @@ const Social = ({ followers, handle }) => {
   return (
     <a href={handle} target="_blank" style={{color: "#3b3bb6", textDecoration: "none"}}>
 
-    <Grid container mt={3} display={"flex"} alignItems="center" justifyContent={"center"} style={socialtheme} width={"180px"}>
-      <Grid item xs={2} pt={0.5} alignItems={"center"}>
-        <IconBrandLinkedin size={20} color="#0A66C2" />
+      <Grid
+        container
+        style={socialtheme}
+        sx={{
+          mt: 3,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "180px"
+        }}>
+        <Grid
+          sx={{
+            pt: 0.5,
+            alignItems: "center"
+          }}
+          size={2}>
+          <IconBrandLinkedin size={20} color="#0A66C2" />
+        </Grid>
+        <Grid
+          sx={{
+            alignItems: "center"
+          }}
+          size={10}>
+          <Typography variant="caption">
+            <span className={Styles.followers}>{followers} followers</span>
+          </Typography>
+        </Grid>
       </Grid>
-      <Grid item xs={10}  alignItems={"center"}>
-        <Typography variant="caption">
-          <span className={Styles.followers}>{followers} followers</span>
-        </Typography>
-      </Grid>
-    </Grid>
-     </a>
+    </a>
   );
 };
 
@@ -46,8 +64,13 @@ const AboutCombine = ({ companyData }) => {
   console.log("companfddyData", companyData);
   return (
     <>
-      <Grid container sx={12} columnSpacing={2} mb={2}>
-        <Grid item xs={4}>
+      <Grid
+        container
+        columnSpacing={2}
+        sx={[{
+          mb: 2
+        }, 12]}>
+        <Grid size={4}>
           <Component 
             title="Company Description"
             description={companyData?.company?.about?.description}
@@ -71,7 +94,7 @@ const AboutCombine = ({ companyData }) => {
         {companyData?.competitors?.map((value) => {
           return (
             <>
-              <Grid item xs={4}>
+              <Grid size={4}>
                 <Component
                   title="Company Description"
                   description={value?.about?.description}

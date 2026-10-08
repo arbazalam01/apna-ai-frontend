@@ -77,7 +77,11 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
 
   return (
     <Grid container sx={{ pt: 3 }}>
-      <Grid item xs={12} pl={4}>
+      <Grid
+        sx={{
+          pl: 4
+        }}
+        size={12}>
         <Typography variant="caption6-1">
           {" "}
           {startDateFormatted &&
@@ -87,19 +91,38 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
       </Grid>
       <Divider style={{ margin: "0.5rem 0rem" }} />
 
-      <Grid item xs={12} mt={2} pl={4}>
-        <Grid container spacing={2} mb={1}>
-          <Grid item xs={3} alignContent={"center"}>
+      <Grid
+        sx={{
+          mt: 2,
+          pl: 4
+        }}
+        size={12}>
+        <Grid container spacing={2} sx={{
+          mb: 1
+        }}>
+          <Grid
+            sx={{
+              alignContent: "center"
+            }}
+            size={3}>
             {" "}
             <Typography variant="h6">Content Mix</Typography>
           </Grid>
-          <Grid item xs={4} alignContent={"center"}>
+          <Grid
+            sx={{
+              alignContent: "center"
+            }}
+            size={4}>
             {" "}
             <Typography variant="caption" sx={{ mb: 5 }}>
               PRODUCTS / SERVICES
             </Typography>
           </Grid>
-          <Grid item xs={4} alignContent={"center"}>
+          <Grid
+            sx={{
+              alignContent: "center"
+            }}
+            size={4}>
             {" "}
             <Typography variant="caption" sx={{ mb: 5 }}>
               TARGET PERSONAS
@@ -112,15 +135,30 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
 
       {data?.contentMix.map((item, index) => (
         <>
-          <Grid item xs={12} mt={2} pl={4}>
+          <Grid
+            sx={{
+              mt: 2,
+              pl: 4
+            }}
+            size={12}>
             <Grid container spacing={2}>
-              <Grid item xs={3}>
-                <Box key={index} mb={1}>
-                  <Grid container alignItems="center" spacing={1}>
-                    <Grid item alignItems={"center"}>
+              <Grid size={3}>
+                <Box key={index} sx={{
+                  mb: 1
+                }}>
+                  <Grid container spacing={1} sx={{
+                    alignItems: "center"
+                  }}>
+                    <Grid
+                      sx={{
+                        alignItems: "center"
+                      }}>
                       <Typography variant="h6">{item?.count}</Typography>
                     </Grid>
-                    <Grid item alignItems={"center"}>
+                    <Grid
+                      sx={{
+                        alignItems: "center"
+                      }}>
                       <Typography variant="body2" color="textSecondary">
                         {item?.name}
                       </Typography>
@@ -128,29 +166,34 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={4}>
-                <Box key={index} mt={1.5}>
+              <Grid size={4}>
+                <Box key={index} sx={{
+                  mt: 1.5
+                }}>
                   <Grid container spacing={1}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                       <Grid container>
                         {item.productCounts.map((count, idx) => (
                           <Box
                             key={idx}
-                            width={`${(count / item.count) * 100}%`}
-                            bgcolor={data.productColors[idx]}
-                            height={5}
-                            sx={{ mb: 3 }}
-                          />
+                            sx={{
+                              width: `${(count / item.count) * 100}%`,
+                              bgcolor: data.productColors[idx],
+                              height: 5,
+                              mb: 3
+                            }} />
                         ))}
                       </Grid>
                     </Grid>
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={4}>
-                <Box key={index} mt={1.5}>
+              <Grid size={4}>
+                <Box key={index} sx={{
+                  mt: 1.5
+                }}>
                   <Grid container spacing={1}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                       <Grid container>
                         {item?.personaCounts.map(
                           (count, idx) => (
@@ -158,11 +201,12 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
                             (
                               <Box
                                 key={idx}
-                                width={`${(count / item.count) * 100}%`}
-                                bgcolor={data.personaColors[idx]}
-                                height={5}
-                                sx={{ mb: 3 }}
-                              />
+                                sx={{
+                                  width: `${(count / item.count) * 100}%`,
+                                  bgcolor: data.personaColors[idx],
+                                  height: 5,
+                                  mb: 3
+                                }} />
                             )
                           )
                         )}
@@ -177,10 +221,15 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
         </>
       ))}
 
-      <Grid item xs={12} mt={2} pl={4}>
+      <Grid
+        sx={{
+          mt: 2,
+          pl: 4
+        }}
+        size={12}>
         <Grid container spacing={2}>
-          <Grid item xs={3}></Grid>
-          <Grid item xs={4}>
+          <Grid size={3}></Grid>
+          <Grid size={4}>
             {data?.products.map((product, index) => (
               <Typography
                 variant="caption"
@@ -201,7 +250,7 @@ const SummaryModal = ({ handleCloseSummary, summaryData }) => {
               </Typography>
             ))}
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             {data?.persona.map((persona, index) => (
               <Typography
                 variant="caption"

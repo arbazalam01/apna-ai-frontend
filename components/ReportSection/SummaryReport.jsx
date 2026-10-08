@@ -18,59 +18,71 @@ const PaperHeight = {
 const SummaryReport = () => {
   return (
     <Box sx={{ height:"calc(100vh - 4rem)",overflowY:"scroll"}}>
-      <Grid container p={2}>
+      <Grid container sx={{
+        p: 2
+      }}>
         {/* for about and Products  */}
-        <Grid xs={12} item container columnSpacing={2}>
-          <Grid item xs={4.9}>
+        <Grid container columnSpacing={2} size={12}>
+          <Grid size={4.9}>
             <PaperComp style={PaperHeight}>
               <About />
             </PaperComp>
           </Grid>
-          <Grid item xs={4.5}>
+          <Grid size={4.5}>
             <PaperComp style={PaperHeight}>
               <ProductsAndServices />
             </PaperComp>
           </Grid>
-          <Grid item xs={2.6}>
+          <Grid size={2.6}>
             <PaperComp style={PaperHeight}>
               <SEO />
             </PaperComp>
           </Grid>
         </Grid>
 
-        <Grid item container columnSpacing={2} mt={2}>
-          <Grid item xs={8}>
-            <Grid item container columnSpacing={2}>
-              <Grid item xs={4}>
+        <Grid
+          container
+          columnSpacing={2}
+          sx={{
+            mt: 2
+          }}>
+          <Grid size={8}>
+            <Grid container columnSpacing={2}>
+              <Grid size={4}>
                 <PaperComp style={PaperHeight}>
                   <Industries />
                 </PaperComp>
               </Grid>
-              <Grid item xs={4}>
+              <Grid size={4}>
                 <PaperComp style={PaperHeight}>
                   <TopClients />{" "}
                 </PaperComp>
               </Grid>
-              <Grid item xs={4}>
+              <Grid size={4}>
                 <PaperComp style={PaperHeight}>
                   <Leadership />
                 </PaperComp>
               </Grid>
             </Grid>
-            <Grid item container columnSpacing={2} mt={2}>
-              <Grid item xs={6}>
+            <Grid
+              container
+              columnSpacing={2}
+              sx={{
+                mt: 2
+              }}>
+              <Grid size={6}>
                 <PaperComp style={PaperHeight}>
                   <Positioning />
                 </PaperComp>
               </Grid>
-              <Grid item xs={6}>
+              <Grid size={6}>
                 <PaperComp style={PaperHeight}>
                   <SWOT />
                 </PaperComp>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <PaperComp sx={{ height: "36.5rem" }}>
               <BlogActivity />
             </PaperComp>

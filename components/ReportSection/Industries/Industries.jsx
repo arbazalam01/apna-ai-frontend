@@ -17,16 +17,21 @@ const Industries = () => {
       <Typography variant="MainHeading">
         Target Audience
       </Typography>
-      <Grid container direction="column" mt={1} >
+      <Grid container direction="column" sx={{
+        mt: 1
+      }} >
         {companyIndustries?.slice(0, 5).map((item,index,array) => (
-          <Grid item mb={1}>
+          <Grid
+            sx={{
+              mb: 1
+            }}>
             <Typography variant="caption">{item.slice(0,29)}{item.length>29 && " ..."}</Typography><br/>
             {index !== array.length - 1 && <Divider />}
 
           </Grid>
         ))}
 
-        <Grid item>
+        <Grid>
           <Typography variant="caption">
           {companyIndustries?.length>5 && <Typography variant="caption">{companyIndustries.length-5}+ more</Typography>}
           </Typography>

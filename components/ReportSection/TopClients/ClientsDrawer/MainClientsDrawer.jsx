@@ -32,24 +32,28 @@ const MainClientsDrawer = ({ title }) => {
 
   return (
     <>
-    
-<Grid>
 
-      <Box>
-        
+      <Grid>
 
-            <Grid container p={"2rem 1rem 1rem 2rem"} column columnSpacing={2}>
-  {companyIndustries?.map((core, index) => (
-    <Grid item  key={index}>
-      <Typography mb={2}>
-        <Chip label={core} size="medium" variant="outlined" sx={{ fontSize:"0.9rem", fontWeight: "500",padding:"0rem 0.8rem" }} />
-      </Typography>
-</Grid>
-  ))}
-  </Grid>
-        
-      </Box>
-  </Grid>
+            <Box>
+              
+
+                  <Grid container column columnSpacing={2} sx={{
+                    p: "2rem 1rem 1rem 2rem"
+                  }}>
+        {companyIndustries?.map((core, index) => (
+          <Grid key={index}>
+            <Typography sx={{
+              mb: 2
+            }}>
+              <Chip label={core} size="medium" variant="outlined" sx={{ fontSize:"0.9rem", fontWeight: "500",padding:"0rem 0.8rem" }} />
+            </Typography>
+      </Grid>
+        ))}
+        </Grid>
+              
+            </Box>
+        </Grid>
     </>
   );
 };
